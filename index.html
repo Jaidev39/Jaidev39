@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="site-bg"></div>
   <header class="site-header">
     <div class="header-inner section-wrap">
       <a class="brand" href="#top" aria-label="Jai home">JAI</a>
@@ -60,7 +59,7 @@
         <p class="section-kicker">ADMISSIONS QUICK PATH</p>
       </div>
       <div class="quick-path-items">
-        <a href="#top-achievements">Top Achievements</a>
+        <a href="#proof">Achievements</a>
         <a href="#evidence">Certificates</a>
         <a href="#recommendations">Recommendations</a>
         <a href="#research">Research</a>
@@ -69,126 +68,62 @@
       </div>
     </section>
 
-    <section id="top-achievements" class="section-wrap section">
+    <section id="proof" class="section-wrap section">
       <div class="section-heading compact">
         <div>
           <p class="section-kicker">PROOF AT A GLANCE</p>
           <h2>Evidence-backed strengths.</h2>
         </div>
       </div>
-      <div class="proof-grid">
-        <article class="proof-card">
-          <span class="proof-tag">GQMC</span>
-          <h3>Silver Honour</h3>
-          <p>International finalist recognition with a top-tier signal in a highly competitive research and problem-solving environment.</p>
-          <a href="assets/evidence/gqmc-2026-silver-honour.jpg" target="_blank" rel="noopener">View certificate ↗</a>
-        </article>
-        <article class="proof-card">
-          <span class="proof-tag">YIP / IIT Kharagpur</span>
-          <h3>4th Place</h3>
-          <p>Young Innovators Program achievement for RuralConnect, a 3-person team project spanning AI, IoT, and smart-village systems.</p>
-          <a href="assets/evidence/yip-rural-pulsars.jpg" target="_blank" rel="noopener">View evidence ↗</a>
-        </article>
-        <article class="proof-card">
-          <span class="proof-tag">NUS AI Internship</span>
-          <h3>AI / Data Analytics</h3>
-          <p>National University of Singapore internship focused on AI and data analytics, including hands-on technical problem solving.</p>
-          <a href="assets/evidence/certificate-08.jpg" target="_blank" rel="noopener">View certificate ↗</a>
-        </article>
-        <article class="proof-card">
-          <span class="proof-tag">Plaksha YDS</span>
-          <h3>1st Prize</h3>
-          <p>Young Data Scientists competition recognition for applied work in data science and quantitative analysis.</p>
-          <a href="assets/evidence/plaksha-yds-certificate.jpg" target="_blank" rel="noopener">View certificate ↗</a>
-        </article>
-        <article class="proof-card">
-          <span class="proof-tag">Pan IIT Summit</span>
-          <h3>Certificate of Appreciation</h3>
-          <p>Recognition in quantum, AI, and semiconductor conversations and research-oriented public engagement.</p>
-          <a href="assets/evidence/pan-iit-summit-2026-certificate.png" target="_blank" rel="noopener">View certificate ↗</a>
-        </article>
-        <article class="proof-card">
-          <span class="proof-tag">Independent Research</span>
-          <h3>2 Research Papers</h3>
-          <p>Applied ML and RL work across adversarial stress testing and liquidity-aware trade execution research.</p>
-          <a href="#research">Read research ↗</a>
-        </article>
-      </div>
+      <div id="proof-grid" class="proof-grid"></div>
     </section>
 
     <section id="work" class="section-wrap section">
-      <div class="section-heading">
+      <div class="section-heading compact">
         <div>
           <p class="section-kicker">WORK</p>
           <h2>Featured work and technical depth.</h2>
         </div>
       </div>
-
       <div class="featured-work">
-        <article class="project-card project-feature">
-          <div class="project-header">
-            <span class="project-tag">YIP · IIT KHARAGPUR · TEAM LEAD</span>
+        <article class="feature-block">
+          <div class="feature-image-wrap">
+            <img src="assets/evidence/yip-rural-pulsars.jpg" alt="RuralConnect project evidence" loading="lazy">
+          </div>
+          <div class="feature-copy">
+            <span class="meta-tag">YIP · IIT KHARAGPUR</span>
             <h3>RuralConnect</h3>
-          </div>
-          <p>Led a three-person team building a smart-village systems concept with Raspberry Pi, Arduino, sensors, AI/IoT, and real-world utility across agriculture, energy, water, health, and digital skills.</p>
-          <div class="chip-row">
-            <span>Raspberry Pi</span>
-            <span>Arduino</span>
-            <span>Sensors</span>
-            <span>AI/IoT</span>
-          </div>
-          <div class="project-actions">
-            <a href="assets/evidence/yip-rural-pulsars.jpg" target="_blank" rel="noopener">View evidence ↗</a>
-            <a href="https://github.com/Jaidev39" target="_blank" rel="noopener">GitHub ↗</a>
+            <p>Led a three-person team building a smart-village systems concept spanning AI, sensors, Raspberry Pi, Arduino, and real-world community utility.</p>
+            <div class="chip-row">
+              <span>Raspberry Pi</span>
+              <span>Arduino</span>
+              <span>AI/IoT</span>
+              <span>Sensors</span>
+            </div>
+            <div class="project-actions">
+              <a href="assets/evidence/yip-rural-pulsars.jpg" target="_blank" rel="noopener">VIEW EVIDENCE ↗</a>
+              <a href="https://github.com/Jaidev39" target="_blank" rel="noopener">GITHUB ↗</a>
+            </div>
           </div>
         </article>
 
-        <article class="project-card">
-          <div class="project-header">
-            <span class="project-tag">AI · COMPUTER VISION · ACCESSIBILITY</span>
+        <article class="feature-block reversed">
+          <div class="feature-image-wrap">
+            <img src="assets/media/drive-photo-archive/drive-photo-04.jpg" alt="Indian Sign Language project media" loading="lazy">
+          </div>
+          <div class="feature-copy">
+            <span class="meta-tag">AI · COMPUTER VISION · ACCESSIBILITY</span>
             <h3>Indian Sign Language AI App</h3>
-          </div>
-          <p>Built a custom AI accessibility system for Indian Sign Language, using MediaPipe and TensorFlow Lite for gesture interpretation with offline capability.</p>
-          <div class="chip-row">
-            <span>MediaPipe</span>
-            <span>TensorFlow Lite</span>
-            <span>Python</span>
-            <span>Accessibility</span>
-          </div>
-          <div class="project-actions">
-            <a href="https://github.com/Jaidev39" target="_blank" rel="noopener">GitHub ↗</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-header">
-            <span class="project-tag">INDEPENDENT RESEARCH</span>
-            <h3>Research Portfolio</h3>
-          </div>
-          <p>Developed applied ML and quantitative research work spanning adversarial stress testing, financial risk, and execution optimization.</p>
-          <div class="chip-row">
-            <span>ML</span>
-            <span>RL</span>
-            <span>Quant Research</span>
-          </div>
-          <div class="project-actions">
-            <a href="#research">Read papers ↗</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-header">
-            <span class="project-tag">NUS · AI INTERNSHIP</span>
-            <h3>AI / Data Analytics</h3>
-          </div>
-          <p>Worked on a telecommunications churn problem using exploratory data analysis, outlier treatment, and model comparison with faculty feedback and structured presentation.</p>
-          <div class="chip-row">
-            <span>EDA</span>
-            <span>Analytics</span>
-            <span>Model Comparison</span>
-          </div>
-          <div class="project-actions">
-            <a href="assets/evidence/certificate-08.jpg" target="_blank" rel="noopener">View certificate ↗</a>
+            <p>Built a custom accessibility-focused Indian Sign Language system using MediaPipe and TensorFlow Lite with offline capability and practical deployment in a social-impact context.</p>
+            <div class="chip-row">
+              <span>MediaPipe</span>
+              <span>TensorFlow Lite</span>
+              <span>Python</span>
+              <span>Accessibility</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/Jaidev39" target="_blank" rel="noopener">GITHUB ↗</a>
+            </div>
           </div>
         </article>
       </div>
@@ -196,101 +131,68 @@
       <div class="archive-block">
         <div class="section-subhead">
           <p class="section-kicker">TECHNICAL ARCHIVE</p>
-          <h3>Broader AI and engineering work.</h3>
+          <h3>Additional engineering work.</h3>
         </div>
         <div class="archive-grid">
           <article class="archive-card">
             <h4>AI / Computer Vision Portfolio</h4>
             <p>Independent builds in computer vision, tracking, object detection, and interactive systems.</p>
-            <div class="chip-row"><span>OpenCV</span><span>Python</span><span>JavaScript</span></div>
-            <a href="https://github.com/Jaidev39" target="_blank" rel="noopener">GitHub archive ↗</a>
+            <div class="chip-row"><span>CV</span><span>Python</span><span>JavaScript</span></div>
+            <a href="https://github.com/Jaidev39" target="_blank" rel="noopener">GITHUB ARCHIVE ↗</a>
           </article>
           <article class="archive-card">
             <h4>AI Ping Pong</h4>
             <p>Computer-vision experimentation around tracking, interaction, and responsive gameplay.</p>
-            <div class="chip-row"><span>MediaPipe</span><span>JavaScript</span><span>CV</span></div>
-            <a href="https://github.com/Jaidev39/AI-PING-PONG" target="_blank" rel="noopener">View repository ↗</a>
+            <div class="chip-row"><span>MediaPipe</span><span>JavaScript</span><span>Computer Vision</span></div>
+            <a href="https://github.com/Jaidev39/AI-PING-PONG" target="_blank" rel="noopener">VIEW REPOSITORY ↗</a>
           </article>
           <article class="archive-card">
             <h4>Educational and community projects</h4>
-            <p>Tools, clubs, and teaching initiatives shaped by practical impact and sustained engagement.</p>
+            <p>Programs and service work shaped by practical impact and sustained engagement.</p>
             <div class="chip-row"><span>HEAL</span><span>Education</span><span>Community</span></div>
-            <a href="#impact">See impact ↗</a>
+            <a href="#impact">SEE IMPACT ↗</a>
           </article>
         </div>
       </div>
     </section>
 
     <section id="research" class="section-wrap section dark-panel">
-      <div class="section-heading">
+      <div class="section-heading compact">
         <div>
           <p class="section-kicker">RESEARCH</p>
           <h2>Applied AI and quantitative research.</h2>
         </div>
       </div>
-
-      <div class="research-grid">
-        <article class="research-card">
-          <div class="paper-index">01</div>
-          <span class="project-tag">GENERATIVE AI · FINANCIAL RISK</span>
-          <h3>Automated Adversarial Stress Testing Using Generative Adversarial Networks for Dynamic Risk Scenario Synthesis</h3>
-          <p>This work builds a three-part framework for scenario generation, adversarial stress amplification, and risk propagation using historical financial indicators to synthesize severe, previously unobserved risk states.</p>
-          <div class="detail-list">
-            <div><strong>Methods:</strong> GAN-based scenario generation; adversarial perturbation; systemic risk modeling.</div>
-            <div><strong>Verified findings:</strong> Dynamic stress scenarios can expand the risk surface and support stronger scenario testing.</div>
-            <div><strong>Contribution:</strong> Framed the system architecture and experimental analysis for dynamic stress synthesis.</div>
-          </div>
-          <div class="paper-actions">
-            <a href="research/automated-adversarial-stress-testing.pdf" target="_blank" rel="noopener">Open paper ↗</a>
-            <a href="research/automated-adversarial-stress-testing.docx" target="_blank" rel="noopener">DOCX ↗</a>
-          </div>
-        </article>
-
-        <article class="research-card">
-          <div class="paper-index">02</div>
-          <span class="project-tag">REINFORCEMENT LEARNING · TRADE EXECUTION</span>
-          <h3>Reinforcement Learning for Liquidity-Weighted Optimal Trade Execution Strategies</h3>
-          <p>The paper introduces a liquidity-weighted reinforcement-learning execution framework centered on order-book imbalance, market impact, slippage, execution risk, and policy learning for trade optimization.</p>
-          <div class="detail-list">
-            <div><strong>Methods:</strong> PPO / DQN framing; liquidity-aware reward; execution optimization.</div>
-            <div><strong>Verified findings:</strong> Execution outcomes improve when the policy incorporates liquidity dynamics and market impact.</div>
-            <div><strong>Contribution:</strong> Designed the execution policy framing and quantitative experiments for the study.</div>
-          </div>
-          <div class="paper-actions">
-            <a href="research/liquidity-weighted-optimal-trade-execution.pdf" target="_blank" rel="noopener">Open paper ↗</a>
-          </div>
-        </article>
-      </div>
+      <div id="research-grid" class="research-grid"></div>
     </section>
 
     <section id="impact" class="section-wrap section">
-      <div class="section-heading">
+      <div class="section-heading compact">
         <div>
           <p class="section-kicker">IMPACT</p>
           <h2>Quantitative literacy, access, and community impact.</h2>
         </div>
       </div>
-
       <div class="impact-grid">
         <article class="impact-card feature-impact">
           <span class="impact-number">01</span>
           <h3>HEAL</h3>
           <p>Built and sustained a quantitative-literacy program for 40+ students, covering percentages, interest, data interpretation, and applied problem solving in a long-term weekly commitment.</p>
           <strong>40+ students · weekly engagement</strong>
-          <div class="impact-note">The accessibility work also grew from the learning needs and students encountered through HEAL work.</div>
+          <a href="#recommendations" class="mini-link">OPEN HEAL RECOMMENDATION ↗</a>
         </article>
 
         <article class="impact-card">
           <span class="impact-number">02</span>
           <h3>Head Boy</h3>
-          <p>Served in escalating student leadership roles, bridging communication between students and school staff, including practical coordination work around school systems and lab access.</p>
+          <p>Served in escalating student leadership roles, bridging communication between students and school staff and supporting practical school operations and lab access.</p>
           <strong>House Captain → STEM Secretary → Head Boy</strong>
         </article>
 
         <article class="impact-card">
           <span class="impact-number">03</span>
           <h3>PAGE Club</h3>
-          <p>Built a sustained reading movement spanning apartments, clubs, and libraries, creating a visible reading culture and broad reach across school communities.</p>
+          <p>Built a sustained reading movement across apartments, clubs, and libraries, creating a visible reading culture and broad community reach.</p>
           <strong>2+ years · 15 outlets</strong>
         </article>
       </div>
@@ -303,75 +205,29 @@
           <h2>Direct evidence pathways.</h2>
         </div>
       </div>
-      <div class="recommendation-grid">
-        <article class="recommendation-card">
-          <span class="recommendation-tag">NUS AI INTERNSHIP</span>
-          <h3>Faculty Recommendation</h3>
-          <p>Recommendation available through the internal evidence record associated with the NUS AI Internship experience.</p>
-          <a href="assets/evidence/certificate-08.jpg" target="_blank" rel="noopener">Open evidence ↗</a>
-        </article>
-        <article class="recommendation-card">
-          <span class="recommendation-tag">HEAL</span>
-          <h3>Recommendation</h3>
-          <p>Recommendation associated with the HEAL educational and community-impact work.</p>
-          <a href="#impact">Open impact record ↗</a>
-        </article>
-      </div>
+      <div id="recommendation-grid" class="recommendation-grid"></div>
     </section>
 
     <section id="evidence" class="section-wrap section evidence-section">
-      <div class="section-heading">
+      <div class="section-heading compact">
         <div>
           <p class="section-kicker">EVIDENCE</p>
           <h2>Proof, not wallpaper.</h2>
         </div>
       </div>
 
-      <div class="featured-evidence">
-        <article class="evidence-feature">
-          <img src="assets/evidence/gqmc-2026-silver-honour.jpg" alt="GQMC Silver Honour certificate" loading="lazy">
-          <div class="feature-copy">
-            <span class="project-tag">FEATURED EVIDENCE</span>
-            <h3>GQMC Silver Honour</h3>
-            <p>International recognition and evidence of competitive problem-solving ability.</p>
-            <a href="assets/evidence/gqmc-2026-silver-honour.jpg" target="_blank" rel="noopener">View certificate ↗</a>
-          </div>
-        </article>
-        <article class="evidence-feature">
-          <img src="assets/evidence/yip-rural-pulsars.jpg" alt="RuralConnect YIP and project evidence image" loading="lazy">
-          <div class="feature-copy">
-            <span class="project-tag">FEATURED EVIDENCE</span>
-            <h3>YIP / RuralConnect</h3>
-            <p>Project evidence and contest recognition for the RuralConnect smart-village systems concept.</p>
-            <a href="assets/evidence/yip-rural-pulsars.jpg" target="_blank" rel="noopener">View evidence ↗</a>
-          </div>
-        </article>
-      </div>
-
+      <div class="featured-evidence" id="featured-evidence"></div>
       <div class="archive-section">
         <div class="section-subhead">
-          <p class="section-kicker">COMPLETE EVIDENCE ARCHIVE</p>
-          <h3>Certificates and supporting proof.</h3>
+          <p class="section-kicker">COMPLETE CERTIFICATE ARCHIVE</p>
+          <h3>All public certificate images and proof artifacts.</h3>
         </div>
-        <div class="evidence-gallery" aria-label="Evidence gallery">
-          <button class="evidence-thumb" data-full="assets/evidence/certificate-01.jpg" aria-label="Open certificate 01"><img src="assets/evidence/certificate-01.jpg" alt="Recognition certificate 01" loading="lazy"></button>
-          <button class="evidence-thumb" data-full="assets/evidence/certificate-02.jpg" aria-label="Open certificate 02"><img src="assets/evidence/certificate-02.jpg" alt="Recognition certificate 02" loading="lazy"></button>
-          <button class="evidence-thumb" data-full="assets/evidence/certificate-03.jpg" aria-label="Open certificate 03"><img src="assets/evidence/certificate-03.jpg" alt="Recognition certificate 03" loading="lazy"></button>
-          <button class="evidence-thumb" data-full="assets/evidence/certificate-04.jpg" aria-label="Open certificate 04"><img src="assets/evidence/certificate-04.jpg" alt="Recognition certificate 04" loading="lazy"></button>
-          <button class="evidence-thumb" data-full="assets/evidence/certificate-05.jpg" aria-label="Open certificate 05"><img src="assets/evidence/certificate-05.jpg" alt="Recognition certificate 05" loading="lazy"></button>
-          <button class="evidence-thumb" data-full="assets/evidence/certificate-06.jpg" aria-label="Open certificate 06"><img src="assets/evidence/certificate-06.jpg" alt="Recognition certificate 06" loading="lazy"></button>
-          <button class="evidence-thumb" data-full="assets/evidence/certificate-07.jpg" aria-label="Open certificate 07"><img src="assets/evidence/certificate-07.jpg" alt="Recognition certificate 07" loading="lazy"></button>
-          <button class="evidence-thumb" data-full="assets/evidence/certificate-08.jpg" aria-label="Open certificate 08"><img src="assets/evidence/certificate-08.jpg" alt="Recognition certificate 08" loading="lazy"></button>
-          <button class="evidence-thumb" data-full="assets/evidence/certificate-09.jpg" aria-label="Open certificate 09"><img src="assets/evidence/certificate-09.jpg" alt="Recognition certificate 09" loading="lazy"></button>
-          <button class="evidence-thumb" data-full="assets/evidence/pan-iit-summit-2026-certificate.png" aria-label="Open Pan IIT Summit certificate"><img src="assets/evidence/pan-iit-summit-2026-certificate.png" alt="Pan IIT Summit certificate" loading="lazy"></button>
-          <button class="evidence-thumb" data-full="assets/evidence/plaksha-yds-certificate.jpg" aria-label="Open Plaksha YDS certificate"><img src="assets/evidence/plaksha-yds-certificate.jpg" alt="Plaksha YDS certificate" loading="lazy"></button>
-          <button class="evidence-thumb" data-full="assets/evidence/gqmc-2026-silver-honour.jpg" aria-label="Open GQMC certificate"><img src="assets/evidence/gqmc-2026-silver-honour.jpg" alt="GQMC Silver Honour certificate" loading="lazy"></button>
-        </div>
+        <div id="certificate-grid" class="certificate-grid" aria-label="Certificate archive"></div>
       </div>
     </section>
 
     <section id="github" class="section-wrap section dark-panel">
-      <div class="section-heading">
+      <div class="section-heading compact">
         <div>
           <p class="section-kicker">GITHUB</p>
           <h2>Code and build evidence.</h2>
@@ -382,14 +238,11 @@
         <input id="repo-search" type="search" placeholder="Search repositories…" aria-label="Search repositories">
       </div>
       <div id="repo-grid" class="repo-grid" aria-live="polite"></div>
-      <div class="archive-note">
-        <span>✦</span>
-        <p>Sample-only repositories are intentionally excluded from this archive to keep the portfolio focused on active, evidence-backed work.</p>
-      </div>
+      <div class="archive-note"><span>✦</span><p>Sample-only repositories are intentionally excluded from this archive to keep the portfolio focused.</p></div>
     </section>
 
     <section id="media" class="section-wrap section">
-      <div class="section-heading">
+      <div class="section-heading compact">
         <div>
           <p class="section-kicker">MEDIA</p>
           <h2>Photo and media archive.</h2>
@@ -404,7 +257,7 @@
         <h2>Student researcher + builder + community-minded engineer.</h2>
       </div>
       <div class="about-copy">
-        <p>I work at the intersection of AI, data science, quantitative research, engineering, and accessibility. My projects are built to solve real problems, not only to demonstrate technical flair.</p>
+        <p>I work at the intersection of AI, data science, quantitative research, engineering, and accessibility. My projects are built to solve real problems, not simply to demonstrate technical flair.</p>
         <p>My strongest work sits across computer vision, machine learning, applied research, and community-building programs where learning must be visible, useful, and documented.</p>
         <div class="skill-cloud">
           <span>AI</span>
@@ -426,7 +279,7 @@
           <h2>AP Microeconomics · Score 5</h2>
         </div>
       </div>
-      <p class="rigor-copy">The school did not offer Economics, so I requested the course and the school declined. At the same time, I was balancing the CBSE curriculum with JEE preparation, so AP Microeconomics was taken as a deliberate additional economics rigor course rather than part of a large AP course load. This choice reflected the existing academic commitments already in place.</p>
+      <p class="rigor-copy">The school did not offer Economics, so I asked to take the course and the school declined. I was simultaneously completing the CBSE curriculum and preparing for JEE, so I chose AP Microeconomics as a deliberate additional economics-rigor choice rather than taking a large AP course load.</p>
     </section>
 
     <section id="contact" class="section-wrap section contact-panel">
@@ -448,6 +301,10 @@
   <div class="modal" id="image-modal" role="dialog" aria-modal="true" aria-label="Evidence preview">
     <button class="modal-close" aria-label="Close preview">×</button>
     <img id="modal-image" src="" alt="Expanded evidence preview">
+    <div class="modal-actions">
+      <button id="prev-image" aria-label="Previous image">← Prev</button>
+      <button id="next-image" aria-label="Next image">Next →</button>
+    </div>
   </div>
 
   <script src="script.js"></script>
