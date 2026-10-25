@@ -29,8 +29,8 @@ const repos = [
 
 const proofItems = [
   {title:'GQMC', subtitle:'Silver Honour', description:'International finalist recognition and problem-solving evidence in a competitive research environment.', image:'assets/evidence/gqmc-2026-silver-honour.jpg', document:'assets/evidence/gqmc-2026-silver-honour.jpg'},
-  {title:'YIP / IIT Kharagpur', subtitle:'4th Place', description:'Young Innovators Program achievement for RuralConnect and a 3-person team project spanning AI, IoT, and smart-village systems.', image:'assets/evidence/yip-rural-pulsars.jpg', document:'assets/evidence/yip-rural-pulsars.jpg'},
-  {title:'NUS AI Internship', subtitle:'AI / Data Analytics', description:'National University of Singapore experience in AI and data analytics with technical problem solving and faculty engagement.', image:'assets/evidence/certificate-08.jpg', document:'assets/evidence/certificate-08.jpg'},
+  {title:'YIP / IIT Kharagpur', subtitle:'4th Place · Supporting appreciation', description:'Young Innovators Program achievement for RuralConnect and a 3-person team project spanning AI, IoT, and smart-village systems. This image is the IIT-director appreciation artifact, not the YIP certificate.', image:'assets/evidence/yip-rural-pulsars.jpg', document:'assets/evidence/yip-rural-pulsars.jpg', linkLabel:'VIEW APPRECIATION ↗'},
+  {title:'NUS AI Internship', subtitle:'AI / Data Analytics · Faculty recommendation', description:'National University of Singapore experience in AI and data analytics with direct faculty recommendation evidence.', image:null, document:'assets/recommendations/LOR_Group1_Avirineni_Jaidev_Chowdary (1).pdf', linkLabel:'OPEN FACULTY RECOMMENDATION ↗'},
   {title:'Plaksha YDS', subtitle:'1st Prize', description:'Young Data Scientists recognition for applied work in data science and quantitative analysis.', image:'assets/evidence/plaksha-yds-certificate.jpg', document:'assets/evidence/plaksha-yds-certificate.jpg'},
   {title:'Pan IIT Summit', subtitle:'Certificate of Appreciation', description:'Recognition in quantum, AI, and semiconductor conversations and public research-oriented engagement.', image:'assets/evidence/pan-iit-summit-2026-certificate.png', document:'assets/evidence/pan-iit-summit-2026-certificate.png'},
   {title:'Independent Research', subtitle:'2 research papers', description:'Applied ML and RL work across adversarial stress testing and liquidity-aware trade execution research.', image:null, document:'research/liquidity-weighted-optimal-trade-execution.pdf'}
@@ -45,7 +45,9 @@ const researchItems = [
     findings:'Dynamic stress scenarios expand the risk surface and strengthen scenario testing in simulated high-stress conditions.',
     contribution:'Framed the architecture and experiments for dynamic adversarial stress synthesis.',
     document:'research/automated-adversarial-stress-testing.docx',
-    preview:null
+    preview:null,
+    articleUrl:'https://ijcsmc.com/docs/papers/March2026/V15I3202609.pdf',
+    journalUrl:'https://ijcsmc.com/index.php/volume-15-issue-3-march-2026/'
   },
   {
     title:'Reinforcement Learning for Liquidity-Weighted Optimal Trade Execution Strategies',
@@ -55,7 +57,9 @@ const researchItems = [
     findings:'Execution quality improves when the policy accounts for liquidity dynamics and market impact in real trading environments.',
     contribution:'Designed the trade-execution framing and quantitative experiment structure for the study.',
     document:'research/liquidity-weighted-optimal-trade-execution.pdf',
-    preview:null
+    preview:null,
+    articleUrl:'https://www.propulsiontechjournal.com/index.php/journal/article/view/10595',
+    journalUrl:'https://propulsiontechjournal.com/index.php/journal/issue/view/33'
   }
 ];
 
@@ -64,15 +68,15 @@ const recommendationItems = [
     title:'NUS AI Internship',
     subtitle:'Faculty Recommendation',
     image:null,
-    document:'assets/recommendations/LOR_Group1_Avirineni_Jaidev_Chowdary (1).pdf',
-    label:'OPEN NUS FACULTY RECOMMENDATION ↗'
+    pdf:'assets/recommendations/LOR_Group1_Avirineni_Jaidev_Chowdary (1).pdf',
+    docx:'assets/recommendations/NUS-Faculty-Recommendation-Editable.docx'
   },
   {
     title:'HEAL',
     subtitle:'Recommendation',
     image:null,
-    document:'assets/recommendations/HEAL Letter.pdf',
-    label:'OPEN HEAL RECOMMENDATION ↗'
+    pdf:'assets/recommendations/HEAL Letter.pdf',
+    docx:'assets/recommendations/HEAL-Recommendation-Editable.docx'
   }
 ];
 
@@ -84,7 +88,7 @@ const certificateItems = [
   {title:'Certificate 05', description:'Technical recognition', image:'assets/evidence/certificate-05.jpg', document:'assets/evidence/certificate-05.jpg'},
   {title:'Certificate 06', description:'Research or program certificate', image:'assets/evidence/certificate-06.jpg', document:'assets/evidence/certificate-06.jpg'},
   {title:'Certificate 07', description:'Participation and achievement', image:'assets/evidence/certificate-07.jpg', document:'assets/evidence/certificate-07.jpg'},
-  {title:'Certificate 08', description:'NUS internship evidence', image:'assets/evidence/certificate-08.jpg', document:'assets/evidence/certificate-08.jpg'},
+  {title:'Model United Nations', description:'MUN certificate', image:'assets/evidence/certificate-08.jpg', document:'assets/evidence/certificate-08.jpg'},
   {title:'Certificate 09', description:'Competition evidence', image:'assets/evidence/certificate-09.jpg', document:'assets/evidence/certificate-09.jpg'},
   {title:'Pan IIT Summit', description:'Certificate of appreciation', image:'assets/evidence/pan-iit-summit-2026-certificate.png', document:'assets/evidence/pan-iit-summit-2026-certificate.png'},
   {title:'Plaksha YDS', description:'1st Prize certificate', image:'assets/evidence/plaksha-yds-certificate.jpg', document:'assets/evidence/plaksha-yds-certificate.jpg'},
@@ -122,12 +126,10 @@ const mediaItems = [
   'assets/media/drive-photo-archive/drive-photo-28.jpg',
   'assets/media/drive-photo-archive/drive-photo-29.jpg',
   'assets/media/drive-photo-archive/drive-photo-30.jpg',
-  'assets/media/video-stills/headboy-ceremony-01.jpg',
   'assets/media/video-stills/headboy-ceremony-02.jpg',
   'assets/media/video-stills/headboy-ceremony-03.jpg',
-  'assets/media/video-stills/headboy-ceremony-04.jpg',
   'assets/media/video-stills/headboy-ceremony-05.jpg',
-  'assets/media/video-stills/headboy-ceremony-06.jpg'
+  'assets/media/video-stills/headboy-ceremony-05.jpg'
 ];
 
 const modal = document.getElementById('image-modal');
@@ -163,7 +165,7 @@ function renderProof() {
       <h3>${item.subtitle}</h3>
       <p>${item.description}</p>
       ${renderPreviewImage(item)}
-      <a href="${item.document}" target="_blank" rel="noopener">VIEW CERTIFICATE ↗</a>
+      <a href="${item.document}" target="_blank" rel="noopener">${item.linkLabel || 'VIEW EVIDENCE ↗'}</a>
     </article>
   `).join('');
 }
@@ -184,6 +186,8 @@ function renderResearch() {
       ${item.preview ? `<img src="${item.preview}" alt="${item.title} preview" loading="lazy">` : `<div class="document-preview"><span>${item.title}<br>Research paper</span></div>`}
       <div class="paper-actions">
         <a href="${item.document}" target="_blank" rel="noopener">READ PAPER ↗</a>
+        <a href="${item.articleUrl}" target="_blank" rel="noopener">JOURNAL ARTICLE ↗</a>
+        <a href="${item.journalUrl}" target="_blank" rel="noopener">JOURNAL ISSUE ↗</a>
       </div>
     </article>
   `).join('');
@@ -196,7 +200,10 @@ function renderRecommendations() {
       <span class="recommendation-tag">${item.title}</span>
       <h3>${item.subtitle}</h3>
       ${item.image ? `<img src="${item.image}" alt="${item.title} recommendation preview" loading="lazy">` : `<div class="document-preview"><span>${item.title}<br>${item.subtitle}</span></div>`}
-      ${item.document ? `<a href="${item.document}" target="_blank" rel="noopener">${item.label}</a>` : `<span class="muted-note">${item.label}</span>`}
+      <div class="recommendation-actions">
+        <a href="${item.pdf}" target="_blank" rel="noopener">OPEN PDF ↗</a>
+        <a href="${item.docx}" target="_blank" rel="noopener">OPEN DOCX ↗</a>
+      </div>
     </article>
   `).join('');
 }
@@ -205,19 +212,19 @@ function renderFeaturedEvidence() {
   const el = document.getElementById('featured-evidence');
   const featured = [
     {title:'GQMC Silver Honour', image:'assets/evidence/gqmc-2026-silver-honour.jpg', doc:'assets/evidence/gqmc-2026-silver-honour.jpg'},
-    {title:'YIP / RuralConnect', image:'assets/evidence/yip-rural-pulsars.jpg', doc:'assets/evidence/yip-rural-pulsars.jpg'},
-    {title:'NUS AI Internship', image:'assets/evidence/certificate-08.jpg', doc:'assets/recommendations/LOR_Group1_Avirineni_Jaidev_Chowdary (1).pdf'},
+    {title:'YIP / RuralConnect', image:'assets/evidence/yip-rural-pulsars.jpg', doc:'assets/evidence/yip-rural-pulsars.jpg', label:'VIEW APPRECIATION ↗', note:'IIT-director appreciation artifact, not the YIP certificate.'},
+    {title:'NUS AI Internship', image:null, doc:'assets/recommendations/LOR_Group1_Avirineni_Jaidev_Chowdary (1).pdf', label:'OPEN FACULTY RECOMMENDATION ↗', note:'Direct faculty recommendation evidence.'},
     {title:'Plaksha YDS', image:'assets/evidence/plaksha-yds-certificate.jpg', doc:'assets/evidence/plaksha-yds-certificate.jpg'},
     {title:'Pan IIT Summit', image:'assets/evidence/pan-iit-summit-2026-certificate.png', doc:'assets/evidence/pan-iit-summit-2026-certificate.png'}
   ];
   el.innerHTML = featured.map(item => `
     <article class="evidence-feature">
-      <img src="${item.image}" alt="${item.title} certificate preview" loading="lazy">
+      ${item.image ? `<img src="${item.image}" alt="${item.title} evidence preview" loading="lazy">` : `<div class="document-preview"><span>${item.title}<br>Faculty recommendation</span></div>`}
       <div class="feature-copy">
         <span class="meta-tag">FEATURED EVIDENCE</span>
         <h3>${item.title}</h3>
-        <p>Direct proof for the claim and corresponding achievement.</p>
-        <a href="${item.doc}" target="_blank" rel="noopener">VIEW CERTIFICATE ↗</a>
+        <p>${item.note || 'Direct proof for the claim and corresponding achievement.'}</p>
+        <a href="${item.doc}" target="_blank" rel="noopener">${item.label || 'VIEW EVIDENCE ↗'}</a>
       </div>
     </article>
   `).join('');
