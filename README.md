@@ -1,19 +1,25 @@
-# Jai Avirineni Portfolio
+# Jaidev Chowdary Avirineni
 
-Static portfolio site designed for GitHub Pages. No framework, no build step, no paid platform required.
+Admissions-focused portfolio for my academic work, research, AI/computer-vision projects, community initiatives, leadership, and supporting evidence.
 
-## Deploy to GitHub Pages
+## Website
 
-1. Create a new public repository named `jaidev39.github.io` under the GitHub account `Jaidev39`.
-2. Upload everything inside this folder to the repository root.
-3. In **Settings → Pages**, choose **Deploy from a branch**, select `main`, and choose `/ (root)`.
-4. Your site will be served from `https://jaidev39.github.io` once GitHub Pages finishes publishing.
+The site is published through GitHub Pages.
+
+## Structure
+
+- Evidence and achievement archive
+- Research papers and publication links
+- Project demonstrations
+- Public recommendation-letter evidence
+- GitHub project archive
+- Media archive
+- Academic and extracurricular profile
+
+## Technology
+
+The portfolio is implemented as a static site using HTML, CSS, and JavaScript, with no build step.
 
 ## Notes
 
-- Research Paper 1 is bundled locally as PDF + DOCX.
-- Research Paper 2 links to its publication page.
-- Sample-only repositories are intentionally excluded from the technical archive.
-- Recommendation letters and other confidential documents are not published.
-- Replace or extend the selected evidence gallery with public-safe certificates/photos when ready.
-- Search, mobile navigation, and the evidence lightbox are implemented in plain JavaScript.
+This repository is the authoritative source for the current portfolio site. Legacy portfolio repositories are retained separately as development history.
