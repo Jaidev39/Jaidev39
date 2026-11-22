@@ -371,6 +371,64 @@ function bindMotion() {
   }
 }
 
+
+function bindDynamicPolish() {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  document.querySelectorAll('[data-magnetic]').forEach(el => {
+    if (el.dataset.magneticBound) return;
+    el.dataset.magneticBound = '1';
+    el.addEventListener('pointermove', (event) => {
+      if (prefersReduced || window.matchMedia('(pointer: coarse)').matches) return;
+      const rect = el.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+      const y = ((event.clientY - rect.top) / rect.height) * 2 - 1;
+      el.style.transform = `translate3d(${x * 5}px,${y * 4}px,0)`;
+    });
+    el.addEventListener('pointerleave', () => { el.style.transform = ''; });
+  });
+
+  const spotlight = document.querySelector('.cursor-spotlight');
+  if (spotlight && !prefersReduced && window.matchMedia('(pointer:fine)').matches && !window.__spotlightBound) {
+    window.__spotlightBound = true;
+    window.addEventListener('pointermove', (event) => {
+      spotlight.style.transform = `translate3d(${event.clientX - 180}px,${event.clientY - 180}px,0)`;
+    }, {passive:true});
+  }
+
+  document.querySelectorAll('[data-count]').forEach(el => {
+    if (el.dataset.counted) return;
+    el.dataset.counted = '1';
+    const target = Number(el.dataset.count);
+    if (!Number.isFinite(target) || prefersReduced) return;
+    let start = null;
+    const duration = 850;
+    const tick = (time) => {
+      if (start === null) start = time;
+      const p = Math.min((time - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = `${Math.round(target * eased)}+`;
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  });
+
+  document.querySelectorAll('.filter-chip').forEach(button => {
+    if (button.dataset.transitionBound) return;
+    button.dataset.transitionBound = '1';
+    const original = button.onclick;
+    button.addEventListener('click', () => {
+      if (document.startViewTransition && !prefersReduced) {
+        const grid = document.getElementById('certificate-grid');
+        if (grid) {
+          grid.style.viewTransitionName = 'certificate-grid';
+          window.setTimeout(() => { grid.style.viewTransitionName = ''; }, 550);
+        }
+      }
+    }, {capture:true});
+  });
+}
+
 function init() {
   renderProof();
   renderResearch();
@@ -385,6 +443,7 @@ function init() {
   document.getElementById('repo-search').addEventListener('input', (e) => renderRepos(e.target.value));
   bindCertificateFilters();
   bindMotion();
+  bindDynamicPolish();
 }
 
 init();
