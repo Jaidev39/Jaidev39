@@ -1,4 +1,3 @@
-const yipCertificateDataUri = "data:image/jpeg;base64,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+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuJCAAEBQin1lE2AwuEAlvhCKGEPo0M+EUkbkeExdJoYoKQU1OCdHZOqShASd0CuE.../2Q==";
 
 const repos = [
   ['AI-mario-APP','AI / web build','https://github.com/Jaidev39/AI-mario-APP'],
@@ -31,11 +30,11 @@ const repos = [
 
 const proofItems = [
   {title:'GQMC', subtitle:'Silver Honour', description:'International final-round recognition with a Silver Honour, placing among the top 1% of participants.', image:'assets/evidence/gqmc-2026-silver-honour.jpg', document:'assets/evidence/gqmc-2026-silver-honour.jpg'},
-  {title:'YIP / IIT Kharagpur', subtitle:'4th Place · Certificate of Appreciation', description:'Young Innovators Program 2023 certificate of appreciation from IIT Kharagpur. The certificate records active participation and contribution; the 4th-place result is documented separately in the application record.', image:yipCertificateDataUri, document:yipCertificateDataUri, linkLabel:'VIEW YIP CERTIFICATE ↗'},
+  {title:'YIP / IIT Kharagpur', subtitle:'Final Round · 4th Place', description:'Reached the YIP 2023 final round and finished 4th. The displayed proof is the IIT Kharagpur appreciation artifact, not a separate 4th-place certificate.', image:'assets/evidence/certificate-04.jpg', document:'assets/evidence/certificate-04.jpg', linkLabel:'VIEW IIT APPRECIATION ↗'},
   {title:'NUS AI Internship', subtitle:'AI / Data Analytics · Faculty recommendation', description:'Built a churn-prediction pipeline across 7 models with a 26.5% baseline, 0.846 ROC-AUC, and 1,525 at-risk customers flagged, backed by direct NUS faculty recommendation.', image:null, document:'assets/recommendations/LOR_Group1_Avirineni_Jaidev_Chowdary (1).pdf', linkLabel:'OPEN FACULTY RECOMMENDATION ↗'},
   {title:'Plaksha YDS', subtitle:'1st Prize', description:'Young Data Scientists recognition for applied work in data science and quantitative analysis.', image:'assets/evidence/plaksha-yds-certificate.jpg', document:'assets/evidence/plaksha-yds-certificate.jpg'},
-  {title:'Pan IIT Summit', subtitle:'Certificate of Appreciation', description:'Recognition in quantum, AI, and semiconductor conversations and public research-oriented engagement.', image:'assets/evidence/pan-iit-summit-2026-certificate.png', document:'assets/evidence/pan-iit-summit-2026-certificate.png'},
-  {title:'Independent Research', subtitle:'2 research papers', description:'Applied ML and RL work across adversarial stress testing and liquidity-aware trade execution research.', image:null, document:'research/liquidity-weighted-optimal-trade-execution.pdf'}
+  {title:'Pan IIT Summit', subtitle:'Certificate of Appreciation', description:'Recognition in quantum, AI, and semiconductor conversations and public research-oriented engagement.', image:'assets/evidence/pan-iit-summit-2026-certificate.png', document:'assets/evidence/pan-iit-summit-2026-certificate.pdf'},
+  {title:'SignSethu', subtitle:'Publicly deployed · 10+ downloads', description:'Indian Sign Language-to-Telugu accessibility app built with MediaPipe and TensorFlow Lite, trained on 500 self-collected samples and deployed on Google Play.', image:null, document:'https://play.google.com/store/apps/developer?id=AVIRINENI+JAIDEV+CHOWDARY', linkLabel:'OPEN GOOGLE PLAY ↗'}
 ];
 
 const researchItems = [
@@ -44,7 +43,7 @@ const researchItems = [
     area:'Generative AI · Financial Risk',
     summary:'Builds a three-part framework for scenario generation, adversarial stress amplification, and risk propagation using historical financial indicators to synthesize severe, previously unobserved risk states.',
     methods:'GAN scenario generation · adversarial perturbation · systemic risk modeling',
-    findings:'Dynamic stress scenarios expand the risk surface and strengthen scenario testing in simulated high-stress conditions.',
+    findings:'Reported results include 19.4% stress-loss blind spots and a 0.79 diversity score in the scenario-generation evaluation.',
     contribution:'Framed the architecture and experiments for dynamic adversarial stress synthesis.',
     document:'research/automated-adversarial-stress-testing.docx',
     preview:null,
@@ -56,7 +55,7 @@ const researchItems = [
     area:'Reinforcement Learning · Trade Execution',
     summary:'Introduces a liquidity-weighted execution framework using order-book imbalance, market impact, slippage, and execution risk for policy learning in quantitative trading.',
     methods:'Policy learning · liquidity-aware reward · trade optimization',
-    findings:'Execution quality improves when the policy accounts for liquidity dynamics and market impact in real trading environments.',
+    findings:'The study compares learned execution against TWAP, VWAP, and Almgren–Chriss benchmarks in simulated limit-order-book environments.',
     contribution:'Designed the trade-execution framing and quantitative experiment structure for the study.',
     document:'research/liquidity-weighted-optimal-trade-execution.pdf',
     preview:null,
@@ -83,56 +82,23 @@ const recommendationItems = [
 ];
 
 const certificateItems = [
-  {title:'Certificate 01', description:'Recognition artifact', image:'assets/evidence/certificate-01.jpg', document:'assets/evidence/certificate-01.jpg'},
-  {title:'Certificate 02', description:'Academic recognition', image:'assets/evidence/certificate-02.jpg', document:'assets/evidence/certificate-02.jpg'},
-  {title:'Certificate 03', description:'Competitive achievement', image:'assets/evidence/certificate-03.jpg', document:'assets/evidence/certificate-03.jpg'},
-  {title:'Certificate 04', description:'Project recognition', image:'assets/evidence/certificate-04.jpg', document:'assets/evidence/certificate-04.jpg'},
-  {title:'Certificate 05', description:'Technical recognition', image:'assets/evidence/certificate-05.jpg', document:'assets/evidence/certificate-05.jpg'},
-  {title:'Certificate 06', description:'Research or program certificate', image:'assets/evidence/certificate-06.jpg', document:'assets/evidence/certificate-06.jpg'},
-  {title:'Certificate 07', description:'Participation and achievement', image:'assets/evidence/certificate-07.jpg', document:'assets/evidence/certificate-07.jpg'},
-  {title:'Model United Nations', description:'MUN certificate', image:'assets/evidence/certificate-08.jpg', document:'assets/evidence/certificate-08.jpg'},
-  {title:'Certificate 09 / Plaksha YDS', description:'Young Data Scientists certificate · 1st Prize', image:'assets/evidence/certificate-09.jpg', document:'assets/evidence/certificate-09.jpg'},
-  {title:'YIP 2023', description:'IIT Kharagpur Certificate of Appreciation', image:yipCertificateDataUri, document:yipCertificateDataUri},
-  {title:'Pan IIT Summit', description:'Certificate of appreciation', image:'assets/evidence/pan-iit-summit-2026-certificate.png', document:'assets/evidence/pan-iit-summit-2026-certificate.png'},
-  {title:'Plaksha YDS', description:'1st Prize certificate', image:'assets/evidence/plaksha-yds-certificate.jpg', document:'assets/evidence/plaksha-yds-certificate.jpg'},
-  {title:'GQMC Silver Honour', description:'International finalist recognition', image:'assets/evidence/gqmc-2026-silver-honour.jpg', document:'assets/evidence/gqmc-2026-silver-honour.jpg'}
+  {title:'Certificate of Merit', description:'School academic recognition · 2024–25', category:'academic', image:'assets/evidence/certificate-01.jpg', document:'assets/evidence/certificate-01.jpg'},
+  {title:'Academic Excellence · 485/500', description:'AISSE 2025 academic recognition', category:'academic', image:'assets/evidence/certificate-02.jpg', document:'assets/evidence/certificate-02.jpg'},
+  {title:'VIVA MUN · Delegate', description:'Futuristic Crisis Committee · 2024', category:'mun', image:'assets/evidence/certificate-03.jpg', document:'assets/evidence/certificate-03.jpg'},
+  {title:'WhiteHat Jr · Full Stack Developer', description:'Certified Full Stack Developer · 2021', category:'technical', image:'assets/evidence/certificate-05.jpg', document:'assets/evidence/certificate-05.jpg'},
+  {title:'Polygence · AI in STEM', description:'Certificate of Completion · 2024', category:'program', image:'assets/evidence/certificate-06.jpg', document:'assets/evidence/certificate-06.jpg'},
+  {title:'Radiance Annual Day · Certificate of Merit', description:'School recognition · 2023–24', category:'academic', image:'assets/evidence/certificate-07.jpg', document:'assets/evidence/certificate-07.jpg'},
+  {title:'IIMUN · Futuristic Crisis Committee', description:'Certificate of Participation · 2024', category:'mun', image:'assets/evidence/certificate-08.jpg', document:'assets/evidence/certificate-08.jpg'},
+  {title:'Plaksha Young Data Scientists', description:'Programme completion certificate · 2025', category:'program', image:'assets/evidence/plaksha-yds-certificate.jpg', document:'assets/evidence/plaksha-yds-certificate.jpg'},
+  {title:'GQMC 2026 · Silver Honour', description:'Final-round recognition · Top 1%', category:'academic', image:'assets/evidence/gqmc-2026-silver-honour.jpg', document:'assets/evidence/gqmc-2026-silver-honour.jpg'},
+  {title:'PAN IIT Summit 2026', description:'Certificate of Appreciation · Quantum, AI & Semiconductor', category:'program', image:'assets/evidence/pan-iit-summit-2026-certificate.png', document:'assets/evidence/pan-iit-summit-2026-certificate.pdf'}
 ];
 
 const mediaItems = [
-  'assets/media/drive-photo-archive/drive-photo-01.jpg',
-  'assets/media/drive-photo-archive/drive-photo-02.jpg',
-  'assets/media/drive-photo-archive/drive-photo-03.jpg',
-  'assets/media/drive-photo-archive/drive-photo-04.jpg',
-  'assets/media/drive-photo-archive/drive-photo-05.jpg',
-  'assets/media/drive-photo-archive/drive-photo-06.jpg',
-  'assets/media/drive-photo-archive/drive-photo-07.jpg',
-  'assets/media/drive-photo-archive/drive-photo-08.jpg',
-  'assets/media/drive-photo-archive/drive-photo-09.jpg',
-  'assets/media/drive-photo-archive/drive-photo-10.jpg',
-  'assets/media/drive-photo-archive/drive-photo-11.jpg',
-  'assets/media/drive-photo-archive/drive-photo-12.jpg',
-  'assets/media/drive-photo-archive/drive-photo-13.jpg',
-  'assets/media/drive-photo-archive/drive-photo-14.jpg',
-  'assets/media/drive-photo-archive/drive-photo-15.jpg',
-  'assets/media/drive-photo-archive/drive-photo-16.jpg',
-  'assets/media/drive-photo-archive/drive-photo-17.jpg',
-  'assets/media/drive-photo-archive/drive-photo-18.jpg',
-  'assets/media/drive-photo-archive/drive-photo-19.jpg',
-  'assets/media/drive-photo-archive/drive-photo-20.png',
-  'assets/media/drive-photo-archive/drive-photo-21.jpg',
-  'assets/media/drive-photo-archive/drive-photo-22.jpg',
-  'assets/media/drive-photo-archive/drive-photo-23.jpg',
-  'assets/media/drive-photo-archive/drive-photo-24.jpg',
-  'assets/media/drive-photo-archive/drive-photo-25.jpg',
-  'assets/media/drive-photo-archive/drive-photo-26.jpg',
-  'assets/media/drive-photo-archive/drive-photo-27.jpg',
-  'assets/media/drive-photo-archive/drive-photo-28.jpg',
-  'assets/media/drive-photo-archive/drive-photo-29.jpg',
-  'assets/media/drive-photo-archive/drive-photo-30.jpg',
-  'assets/media/video-stills/headboy-ceremony-02.jpg',
-  'assets/media/video-stills/headboy-ceremony-03.jpg',
-  'assets/media/video-stills/headboy-ceremony-05.jpg',
-  'assets/media/video-stills/headboy-ceremony-05.jpg'
+  ...Array.from({length:30}, (_,i) => ({id:i+1, src:`assets/media/drive-photo-archive/drive-photo-${String(i+1).padStart(2,'0')}${i===19?'.png':'.jpg'}`})),
+  {id:32, src:'assets/media/video-stills/headboy-ceremony-02.jpg'},
+  {id:33, src:'assets/media/video-stills/headboy-ceremony-03.jpg'},
+  {id:35, src:'assets/media/video-stills/headboy-ceremony-05.jpg'}
 ];
 
 const modal = document.getElementById('image-modal');
@@ -163,7 +129,7 @@ function renderPreviewImage(item) {
 function renderProof() {
   const grid = document.getElementById('proof-grid');
   grid.innerHTML = proofItems.map(item => `
-    <article class="proof-card">
+    <article class="proof-card" data-tilt data-reveal>
       <span class="proof-tag">${item.title}</span>
       <h3>${item.subtitle}</h3>
       <p>${item.description}</p>
@@ -176,7 +142,7 @@ function renderProof() {
 function renderResearch() {
   const grid = document.getElementById('research-grid');
   grid.innerHTML = researchItems.map(item => `
-    <article class="research-card">
+    <article class="research-card" data-tilt data-reveal>
       <div class="paper-index">${researchItems.indexOf(item)+1}</div>
       <span class="meta-tag">${item.area}</span>
       <h3>${item.title}</h3>
@@ -199,7 +165,7 @@ function renderResearch() {
 function renderRecommendations() {
   const grid = document.getElementById('recommendation-grid');
   grid.innerHTML = recommendationItems.map(item => `
-    <article class="recommendation-card">
+    <article class="recommendation-card" data-tilt data-reveal>
       <span class="recommendation-tag">${item.title}</span>
       <h3>${item.subtitle}</h3>
       ${item.image ? `<img src="${item.image}" alt="${item.title} recommendation preview" loading="lazy">` : `<div class="document-preview"><span>${item.title}<br>${item.subtitle}</span></div>`}
@@ -215,13 +181,13 @@ function renderFeaturedEvidence() {
   const el = document.getElementById('featured-evidence');
   const featured = [
     {title:'GQMC Silver Honour', image:'assets/evidence/gqmc-2026-silver-honour.jpg', doc:'assets/evidence/gqmc-2026-silver-honour.jpg'},
-    {title:'YIP / IIT Kharagpur', image:yipCertificateDataUri, doc:yipCertificateDataUri, label:'VIEW YIP CERTIFICATE ↗', note:'YIP 2023 Certificate of Appreciation from IIT Kharagpur.'},
+    {title:'YIP / IIT Kharagpur', image:'assets/evidence/certificate-04.jpg', doc:'assets/evidence/certificate-04.jpg', label:'VIEW IIT APPRECIATION ↗', note:'Final-round project result: 4th Place. Displayed proof is the IIT Kharagpur appreciation artifact.'},
     {title:'NUS AI Internship', image:null, doc:'assets/recommendations/LOR_Group1_Avirineni_Jaidev_Chowdary (1).pdf', label:'OPEN FACULTY RECOMMENDATION ↗', note:'Direct faculty recommendation evidence.'},
     {title:'Plaksha YDS', image:'assets/evidence/plaksha-yds-certificate.jpg', doc:'assets/evidence/plaksha-yds-certificate.jpg'},
     {title:'Pan IIT Summit', image:'assets/evidence/pan-iit-summit-2026-certificate.png', doc:'assets/evidence/pan-iit-summit-2026-certificate.png'}
   ];
   el.innerHTML = featured.map(item => `
-    <article class="evidence-feature">
+    <article class="evidence-feature" data-tilt data-reveal>
       ${item.image ? `<img src="${item.image}" alt="${item.title} evidence preview" loading="lazy">` : `<div class="document-preview"><span>${item.title}<br>Faculty recommendation</span></div>`}
       <div class="feature-copy">
         <span class="meta-tag">FEATURED EVIDENCE</span>
@@ -233,28 +199,30 @@ function renderFeaturedEvidence() {
   `).join('');
 }
 
-function renderCertificates() {
+function renderCertificates(filter = 'all') {
   const el = document.getElementById('certificate-grid');
-  el.innerHTML = certificateItems.map(item => `
-    <article class="certificate-card">
+  const items = filter === 'all' ? certificateItems : certificateItems.filter(item => item.category === filter);
+  el.innerHTML = items.map(item => `
+    <article class="certificate-card" data-tilt data-reveal>
       <img src="${item.image}" alt="${item.title} preview" loading="lazy">
+      <div class="certificate-topline"><span>${item.category.toUpperCase()}</span><span>PROOF</span></div>
       <h4>${item.title}</h4>
       <div class="card-meta">${item.description}</div>
-      <a href="${item.document}" target="_blank" rel="noopener">VIEW CERTIFICATE ↗</a>
+      <a href="${item.document}" target="_blank" rel="noopener">OPEN PROOF ↗</a>
     </article>
   `).join('');
 }
 
 function renderMediaGrid() {
   const el = document.getElementById('media-grid');
-  el.innerHTML = mediaItems.map((src, index) => `
-    <article class="media-card">
-      <img src="${src}" alt="Portfolio media asset ${index + 1}" loading="lazy" data-index="${index}">
-      <div class="media-caption">Media asset ${index + 1}</div>
+  el.innerHTML = mediaItems.map((item, index) => `
+    <article class="media-card" data-tilt data-reveal>
+      <img src="${item.src}" alt="Portfolio media asset ${item.id}" loading="lazy" data-index="${index}">
+      <div class="media-caption"><span>MEDIA ${String(item.id).padStart(2,'0')}</span><span>Open ↗</span></div>
     </article>
   `).join('');
   el.querySelectorAll('img').forEach(img => {
-    img.addEventListener('click', () => openModal(mediaItems, Number(img.dataset.index)));
+    img.addEventListener('click', () => openModal(mediaItems.map(item => item.src), Number(img.dataset.index)));
   });
 }
 
@@ -262,7 +230,7 @@ function renderRepos(filter = '') {
   const grid = document.getElementById('repo-grid');
   const q = filter.trim().toLowerCase();
   grid.innerHTML = repos.filter(([name, desc]) => `${name} ${desc}`.toLowerCase().includes(q)).map(([name, desc, url]) => `
-    <article class="repo-card">
+    <article class="repo-card" data-tilt data-reveal>
       <div>
         <h3>${name}</h3>
         <p>${desc}</p>
@@ -321,13 +289,83 @@ function bindEvidenceTiles() {
   });
 }
 
-function init() {
-  const yipLink = document.getElementById('yip-certificate-link');
-  if (yipLink) {
-    yipLink.href = yipCertificateDataUri;
-    yipLink.target = '_blank';
-    yipLink.rel = 'noopener';
+
+
+function bindCertificateFilters() {
+  const buttons = document.querySelectorAll('.filter-chip');
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      button.classList.add('active');
+      renderCertificates(button.dataset.filter);
+      bindEvidenceTiles();
+      bindMotion();
+    });
+  });
+}
+
+function bindMotion() {
+  const revealItems = document.querySelectorAll('[data-reveal]');
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.12});
+  revealItems.forEach((el, index) => {
+    el.style.setProperty('--reveal-delay', `${Math.min(index * 45, 320)}ms`);
+    observer.observe(el);
+  });
+
+  document.querySelectorAll('[data-tilt]').forEach(card => {
+    card.addEventListener('pointermove', (event) => {
+      if (window.matchMedia('(pointer: coarse)').matches) return;
+      const rect = card.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+      const y = ((event.clientY - rect.top) / rect.height) * 2 - 1;
+      card.style.setProperty('--rx', `${(-y * 3).toFixed(2)}deg`);
+      card.style.setProperty('--ry', `${(x * 3).toFixed(2)}deg`);
+      card.style.setProperty('--mx', `${(x * 50 + 50).toFixed(0)}%`);
+      card.style.setProperty('--my', `${(y * 50 + 50).toFixed(0)}%`);
+    });
+    card.addEventListener('pointerleave', () => {
+      card.style.setProperty('--rx','0deg');
+      card.style.setProperty('--ry','0deg');
+    });
+  });
+
+  const progress = document.querySelector('.scroll-progress span');
+  const setProgress = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = `${max > 0 ? (window.scrollY / max) * 100 : 0}%`;
+  };
+  window.addEventListener('scroll', setProgress, {passive:true});
+  setProgress();
+
+  const sections = [...document.querySelectorAll('main section[id]')];
+  const navLinks = [...document.querySelectorAll('.nav a')];
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
+      }
+    });
+  }, {rootMargin:'-35% 0px -50% 0px', threshold:0});
+  sections.forEach(section => navObserver.observe(section));
+
+  const hero = document.querySelector('.hero');
+  const heroVisual = document.querySelector('.hero-visual');
+  if (hero && heroVisual && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    window.addEventListener('scroll', () => {
+      const y = Math.min(window.scrollY, 500);
+      heroVisual.style.transform = `translate3d(0,${y * 0.06}px,0)`;
+    }, {passive:true});
   }
+}
+
+function init() {
   renderProof();
   renderResearch();
   renderRecommendations();
@@ -339,6 +377,8 @@ function init() {
   bindMenu();
   bindEvidenceTiles();
   document.getElementById('repo-search').addEventListener('input', (e) => renderRepos(e.target.value));
+  bindCertificateFilters();
+  bindMotion();
 }
 
 init();
