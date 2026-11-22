@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="cursor-spotlight" aria-hidden="true"></div>
   <div class="scroll-progress" aria-hidden="true"><span></span></div>
   <header class="site-header">
     <div class="header-inner section-wrap">
@@ -41,12 +42,12 @@
         <p class="lead">Building intelligent systems and quantitative research for real-world problems.</p>
 
         <div class="credibility-strip" aria-label="Key achievements">
-          <span>97% CBSE</span>
-          <span>GQMC Silver Honour</span>
-          <span>YIP 4th Place</span>
-          <span>NUS AI Internship</span>
-          <span>Plaksha YDS 1st Prize</span>
-          <span>2 Research Papers</span>
+          <span class="credibility-chip" data-magnetic>97% CBSE</span>
+          <span class="credibility-chip" data-magnetic>GQMC Silver Honour</span>
+          <span class="credibility-chip" data-magnetic>YIP 4th Place</span>
+          <span class="credibility-chip" data-magnetic>NUS AI Internship</span>
+          <span class="credibility-chip" data-magnetic>Plaksha YDS 1st Prize</span>
+          <span class="credibility-chip" data-magnetic>2 Research Papers</span>
         </div>
 
         <div class="hero-actions">
@@ -61,10 +62,10 @@
             <div class="signal-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
             <div class="signal-label">AI × RESEARCH × IMPACT</div>
             <div class="signal-stats">
-              <div><strong>10+</strong><span>CV systems</span></div>
-              <div><strong>2</strong><span>research papers</span></div>
-              <div><strong>40+</strong><span>students reached</span></div>
-              <div><strong>10+</strong><span>SignSethu downloads</span></div>
+              <div><strong data-count="10">10+</strong><span>CV systems</span></div>
+              <div><strong data-count="2">2</strong><span>research papers</span></div>
+              <div><strong data-count="40">40+</strong><span>students reached</span></div>
+              <div><strong data-count="10">10+</strong><span>SignSethu downloads</span></div>
             </div>
             <div class="signal-note">Evidence-first portfolio · real projects · public proof</div>
           </div>
@@ -125,9 +126,24 @@
           </div>
         </article>
 
-        <article class="feature-block reversed">
-          <div class="feature-image-wrap">
-            <img src="assets/media/drive-photo-archive/drive-photo-04.jpg" alt="Indian Sign Language project media" loading="lazy">
+        <article class="feature-block reversed signsethu-feature" data-reveal>
+          <div class="signsethu-panel" data-tilt aria-label="SignSethu deployment snapshot">
+            <div class="signsethu-glow"></div>
+            <div class="signsethu-head">
+              <span>DEPLOYED APP</span>
+              <span>GOOGLE PLAY</span>
+            </div>
+            <div class="signsethu-brand">Sign<span>Sethu</span></div>
+            <div class="signsethu-wave" aria-hidden="true">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <div class="signsethu-status"><b>ONLINE</b><span>ACCESSIBILITY · ISL</span></div>
+            <div class="signsethu-metrics">
+              <div><strong>500</strong><span>self-collected samples</span></div>
+              <div><strong>10+</strong><span>public downloads</span></div>
+              <div><strong>OFFLINE</strong><span>on-device inference</span></div>
+            </div>
+            <div class="signsethu-footer">MediaPipe · TensorFlow Lite</div>
           </div>
           <div class="feature-copy">
             <span class="meta-tag">AI · COMPUTER VISION · ACCESSIBILITY</span>
@@ -142,7 +158,6 @@
             </div>
             <div class="project-actions">
               <a href="https://play.google.com/store/apps/developer?id=AVIRINENI+JAIDEV+CHOWDARY" target="_blank" rel="noopener">SIGNSETHU ON GOOGLE PLAY ↗</a>
-              <a href="assets/media/drive-photo-archive/drive-photo-04.jpg" target="_blank" rel="noopener">VIEW PROJECT EVIDENCE ↗</a>
             </div>
           </div>
         </article>
