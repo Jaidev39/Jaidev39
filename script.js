@@ -6,7 +6,7 @@ const repos = [
   ['AI-PING-PONG','Computer vision / game','https://github.com/Jaidev39/AI-PING-PONG'],
   ['AI-MARIO-GAME','AI / game','https://github.com/Jaidev39/AI-MARIO-GAME'],
   ['AI-OBJECT-FINDER','Computer vision','https://github.com/Jaidev39/AI-OBJECT-FINDER'],
-  ['AI-VIDEO-SURVIENCE','Computer vision','https://github.com/Jaidev39/AI-VIDEO-SURVIENCE'],
+  ['AI-VIDEO-SURVILENCE','Computer vision','https://github.com/Jaidev39/AI-VIDEO-SURVIENCE'],
   ['AI-BABY-MONINTERING-APP','Computer vision / monitoring','https://github.com/Jaidev39/AI-BABY-MONINTERING-APP'],
   ['Real-Time-Image-Detection','Computer vision','https://github.com/Jaidev39/Real-Time-Image-Detection'],
   ['Real-Time-Object-Identification','Computer vision','https://github.com/Jaidev39/Real-Time-Object-Identification'],
@@ -181,7 +181,7 @@ function renderFeaturedEvidence() {
   const el = document.getElementById('featured-evidence');
   const featured = [
     {title:'GQMC Silver Honour', image:'assets/evidence/gqmc-2026-silver-honour.jpg', doc:'assets/evidence/gqmc-2026-silver-honour.jpg'},
-    {title:'YIP / IIT Kharagpur', image:'assets/evidence/certificate-04.jpg', doc:'assets/evidence/certificate-04.jpg', label:'VIEW IIT APPRECIATION ↗', note:'Final-round project result: 4th Place. Displayed proof is the IIT Kharagpur appreciation artifact.'},
+    {title:'YIP / IIT Kharagpur', image:'assets/evidence/certificate-04.jpg', doc:'assets/evidence/certificate-04.jpg', label:'VIEW IIT APPRECIATION ↗', note:'Final-round result: 4th Place. Displayed proof is the IIT Kharagpur appreciation artifact, not a separate 4th-place certificate.'},
     {title:'NUS AI Internship', image:null, doc:'assets/recommendations/LOR_Group1_Avirineni_Jaidev_Chowdary (1).pdf', label:'OPEN FACULTY RECOMMENDATION ↗', note:'Direct faculty recommendation evidence.'},
     {title:'Plaksha YDS', image:'assets/evidence/plaksha-yds-certificate.jpg', doc:'assets/evidence/plaksha-yds-certificate.jpg'},
     {title:'Pan IIT Summit', image:'assets/evidence/pan-iit-summit-2026-certificate.png', doc:'assets/evidence/pan-iit-summit-2026-certificate.png'}
@@ -305,7 +305,7 @@ function bindCertificateFilters() {
 }
 
 function bindMotion() {
-  const revealItems = document.querySelectorAll('[data-reveal]');
+  const revealItems = document.querySelectorAll('[data-reveal]:not(.motion-bound)');
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -313,13 +313,15 @@ function bindMotion() {
         obs.unobserve(entry.target);
       }
     });
-  }, {threshold: 0.12});
+  }, {threshold:0.12});
   revealItems.forEach((el, index) => {
+    el.classList.add('motion-bound');
     el.style.setProperty('--reveal-delay', `${Math.min(index * 45, 320)}ms`);
     observer.observe(el);
   });
 
-  document.querySelectorAll('[data-tilt]').forEach(card => {
+  document.querySelectorAll('[data-tilt]:not(.tilt-bound)').forEach(card => {
+    card.classList.add('tilt-bound');
     card.addEventListener('pointermove', (event) => {
       if (window.matchMedia('(pointer: coarse)').matches) return;
       const rect = card.getBoundingClientRect();
@@ -336,32 +338,36 @@ function bindMotion() {
     });
   });
 
-  const progress = document.querySelector('.scroll-progress span');
-  const setProgress = () => {
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    progress.style.width = `${max > 0 ? (window.scrollY / max) * 100 : 0}%`;
-  };
-  window.addEventListener('scroll', setProgress, {passive:true});
-  setProgress();
+  if (!window.__jaidevMotionEventsBound) {
+    window.__jaidevMotionEventsBound = true;
 
-  const sections = [...document.querySelectorAll('main section[id]')];
-  const navLinks = [...document.querySelectorAll('.nav a')];
-  const navObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
-      }
-    });
-  }, {rootMargin:'-35% 0px -50% 0px', threshold:0});
-  sections.forEach(section => navObserver.observe(section));
+    const progress = document.querySelector('.scroll-progress span');
+    const setProgress = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = `${max > 0 ? (window.scrollY / max) * 100 : 0}%`;
+    };
+    window.addEventListener('scroll', setProgress, {passive:true});
+    setProgress();
 
-  const hero = document.querySelector('.hero');
-  const heroVisual = document.querySelector('.hero-visual');
-  if (hero && heroVisual && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    window.addEventListener('scroll', () => {
-      const y = Math.min(window.scrollY, 500);
-      heroVisual.style.transform = `translate3d(0,${y * 0.06}px,0)`;
-    }, {passive:true});
+    const sections = [...document.querySelectorAll('main section[id]')];
+    const navLinks = [...document.querySelectorAll('.nav a')];
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
+        }
+      });
+    }, {rootMargin:'-35% 0px -50% 0px', threshold:0});
+    sections.forEach(section => navObserver.observe(section));
+
+    const hero = document.querySelector('.hero');
+    const heroVisual = document.querySelector('.hero-visual');
+    if (hero && heroVisual && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      window.addEventListener('scroll', () => {
+        const y = Math.min(window.scrollY, 500);
+        heroVisual.style.transform = `translate3d(0,${y * 0.06}px,0)`;
+      }, {passive:true});
+    }
   }
 }
 
