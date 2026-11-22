@@ -6,7 +6,7 @@ const repos = [
   ['AI-PING-PONG','Computer vision / game','https://github.com/Jaidev39/AI-PING-PONG'],
   ['AI-MARIO-GAME','AI / game','https://github.com/Jaidev39/AI-MARIO-GAME'],
   ['AI-OBJECT-FINDER','Computer vision','https://github.com/Jaidev39/AI-OBJECT-FINDER'],
-  ['AI-VIDEO-SURVILENCE','Computer vision','https://github.com/Jaidev39/AI-VIDEO-SURVIENCE'],
+  ['AI-VIDEO-SURVILENCE','Computer vision','https://github.com/Jaidev39/AI-VIDEO-SURVILENCE'],
   ['AI-BABY-MONINTERING-APP','Computer vision / monitoring','https://github.com/Jaidev39/AI-BABY-MONINTERING-APP'],
   ['Real-Time-Image-Detection','Computer vision','https://github.com/Jaidev39/Real-Time-Image-Detection'],
   ['Real-Time-Object-Identification','Computer vision','https://github.com/Jaidev39/Real-Time-Object-Identification'],
