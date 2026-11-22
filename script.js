@@ -28,9 +28,9 @@ const repos = [
 ];
 
 const proofItems = [
-  {title:'GQMC', subtitle:'Silver Honour', description:'International finalist recognition and problem-solving evidence in a competitive research environment.', image:'assets/evidence/gqmc-2026-silver-honour.jpg', document:'assets/evidence/gqmc-2026-silver-honour.jpg'},
-  {title:'YIP / IIT Kharagpur', subtitle:'4th Place · Supporting appreciation', description:'Young Innovators Program achievement for RuralConnect and a 3-person team project spanning AI, IoT, and smart-village systems. This image is the IIT-director appreciation artifact, not the YIP certificate.', image:'assets/evidence/yip-rural-pulsars.jpg', document:'assets/evidence/yip-rural-pulsars.jpg', linkLabel:'VIEW APPRECIATION ↗'},
-  {title:'NUS AI Internship', subtitle:'AI / Data Analytics · Faculty recommendation', description:'National University of Singapore experience in AI and data analytics with direct faculty recommendation evidence.', image:null, document:'assets/recommendations/LOR_Group1_Avirineni_Jaidev_Chowdary (1).pdf', linkLabel:'OPEN FACULTY RECOMMENDATION ↗'},
+  {title:'GQMC', subtitle:'Silver Honour', description:'International final-round recognition with a Silver Honour, placing among the top 1% of participants.', image:'assets/evidence/gqmc-2026-silver-honour.jpg', document:'assets/evidence/gqmc-2026-silver-honour.jpg'},
+  {title:'YIP / IIT Kharagpur', subtitle:'4th Place · Certificate of Appreciation', description:'Young Innovators Program 2023 certificate of appreciation from IIT Kharagpur. The certificate records active participation and contribution; the 4th-place result is documented separately in the application record.', image:'assets/evidence/yip-2023-certificate.jpg', document:'assets/evidence/yip-2023-certificate.jpg', linkLabel:'VIEW YIP CERTIFICATE ↗'},
+  {title:'NUS AI Internship', subtitle:'AI / Data Analytics · Faculty recommendation', description:'Built a churn-prediction pipeline across 7 models with a 26.5% baseline, 0.846 ROC-AUC, and 1,525 at-risk customers flagged, backed by direct NUS faculty recommendation.', image:null, document:'assets/recommendations/LOR_Group1_Avirineni_Jaidev_Chowdary (1).pdf', linkLabel:'OPEN FACULTY RECOMMENDATION ↗'},
   {title:'Plaksha YDS', subtitle:'1st Prize', description:'Young Data Scientists recognition for applied work in data science and quantitative analysis.', image:'assets/evidence/plaksha-yds-certificate.jpg', document:'assets/evidence/plaksha-yds-certificate.jpg'},
   {title:'Pan IIT Summit', subtitle:'Certificate of Appreciation', description:'Recognition in quantum, AI, and semiconductor conversations and public research-oriented engagement.', image:'assets/evidence/pan-iit-summit-2026-certificate.png', document:'assets/evidence/pan-iit-summit-2026-certificate.png'},
   {title:'Independent Research', subtitle:'2 research papers', description:'Applied ML and RL work across adversarial stress testing and liquidity-aware trade execution research.', image:null, document:'research/liquidity-weighted-optimal-trade-execution.pdf'}
@@ -89,7 +89,8 @@ const certificateItems = [
   {title:'Certificate 06', description:'Research or program certificate', image:'assets/evidence/certificate-06.jpg', document:'assets/evidence/certificate-06.jpg'},
   {title:'Certificate 07', description:'Participation and achievement', image:'assets/evidence/certificate-07.jpg', document:'assets/evidence/certificate-07.jpg'},
   {title:'Model United Nations', description:'MUN certificate', image:'assets/evidence/certificate-08.jpg', document:'assets/evidence/certificate-08.jpg'},
-  {title:'Certificate 09', description:'Competition evidence', image:'assets/evidence/certificate-09.jpg', document:'assets/evidence/certificate-09.jpg'},
+  {title:'Certificate 09 / Plaksha YDS', description:'Young Data Scientists certificate · 1st Prize', image:'assets/evidence/certificate-09.jpg', document:'assets/evidence/certificate-09.jpg'},
+  {title:'YIP 2023', description:'IIT Kharagpur Certificate of Appreciation', image:'assets/evidence/yip-2023-certificate.jpg', document:'assets/evidence/yip-2023-certificate.jpg'},
   {title:'Pan IIT Summit', description:'Certificate of appreciation', image:'assets/evidence/pan-iit-summit-2026-certificate.png', document:'assets/evidence/pan-iit-summit-2026-certificate.png'},
   {title:'Plaksha YDS', description:'1st Prize certificate', image:'assets/evidence/plaksha-yds-certificate.jpg', document:'assets/evidence/plaksha-yds-certificate.jpg'},
   {title:'GQMC Silver Honour', description:'International finalist recognition', image:'assets/evidence/gqmc-2026-silver-honour.jpg', document:'assets/evidence/gqmc-2026-silver-honour.jpg'}
@@ -212,7 +213,7 @@ function renderFeaturedEvidence() {
   const el = document.getElementById('featured-evidence');
   const featured = [
     {title:'GQMC Silver Honour', image:'assets/evidence/gqmc-2026-silver-honour.jpg', doc:'assets/evidence/gqmc-2026-silver-honour.jpg'},
-    {title:'YIP / RuralConnect', image:'assets/evidence/yip-rural-pulsars.jpg', doc:'assets/evidence/yip-rural-pulsars.jpg', label:'VIEW APPRECIATION ↗', note:'IIT-director appreciation artifact, not the YIP certificate.'},
+    {title:'YIP / IIT Kharagpur', image:'assets/evidence/yip-2023-certificate.jpg', doc:'assets/evidence/yip-2023-certificate.jpg', label:'VIEW YIP CERTIFICATE ↗', note:'YIP 2023 Certificate of Appreciation from IIT Kharagpur.'},
     {title:'NUS AI Internship', image:null, doc:'assets/recommendations/LOR_Group1_Avirineni_Jaidev_Chowdary (1).pdf', label:'OPEN FACULTY RECOMMENDATION ↗', note:'Direct faculty recommendation evidence.'},
     {title:'Plaksha YDS', image:'assets/evidence/plaksha-yds-certificate.jpg', doc:'assets/evidence/plaksha-yds-certificate.jpg'},
     {title:'Pan IIT Summit', image:'assets/evidence/pan-iit-summit-2026-certificate.png', doc:'assets/evidence/pan-iit-summit-2026-certificate.png'}
