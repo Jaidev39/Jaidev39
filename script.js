@@ -35,7 +35,7 @@ const proofItems = [
   {title:'GQMC', subtitle:'Silver Honour', description:'International final-round recognition with a Silver Honour, placing among the top 1% of participants.', image:'assets/evidence/gqmc-2026-silver-honour.jpg', document:'assets/evidence/gqmc-2026-silver-honour.jpg'},
   {title:'NUS AI Internship', subtitle:'AI / Data Analytics · Faculty recommendation', description:'Built a churn-prediction pipeline across 7 models with a 26.5% baseline, 0.846 ROC-AUC, and 1,525 at-risk customers flagged, backed by direct NUS faculty recommendation.', image:null, document:'assets/recommendations/LOR_Group1_Avirineni_Jaidev_Chowdary (1).pdf', linkLabel:'OPEN FACULTY RECOMMENDATION ↗'},
   {title:'Plaksha YDS', subtitle:'Programme completion', description:'Completed the Young Data Scientists programme in data science and quantitative analysis.', image:'assets/evidence/plaksha-yds-certificate.jpg', document:'assets/evidence/plaksha-yds-certificate.jpg'},
-  {title:'PAN IIT Summit', subtitle:'Certificate of Appreciation', description:'Certificate recognising contributions to the Quantum, AI & Semiconductor summit.', image:null, document:'assets/evidence/pan-iit-summit-2026-certificate.pdf', linkLabel:'OPEN CERTIFICATE ↗'},
+  {title:'PAN IIT Summit', subtitle:'Original Library certificate scan', description:'Clean full-page scan of the original Certificate of Appreciation for contributions to the Quantum, AI & Semiconductor summit.', image:'assets/evidence/pan-iit-summit-2026-original.jpg', document:'assets/evidence/pan-iit-summit-2026-original.jpg', linkLabel:'VIEW ORIGINAL CERTIFICATE ↗'},
   {title:'SignSethu', subtitle:'Publicly released on Google Play', description:'Indian Sign Language-to-Telugu accessibility app built with MediaPipe and TensorFlow Lite, trained on 500 self-collected samples and deployed on Google Play.', image:null, document:'https://play.google.com/store/apps/developer?id=AVIRINENI+JAIDEV+CHOWDARY', linkLabel:'OPEN GOOGLE PLAY ↗'}
 ];
 
@@ -96,7 +96,7 @@ const certificateItems = [
   {title:'IIMUN · Futuristic Crisis Committee', description:'Certificate of Participation · 2024', category:'mun', image:'assets/evidence/certificate-08.jpg', document:'assets/evidence/certificate-08.jpg'},
   {title:'Plaksha Young Data Scientists', description:'Programme completion certificate · 2025', category:'program', image:'assets/evidence/plaksha-yds-certificate.jpg', document:'assets/evidence/plaksha-yds-certificate.jpg'},
   {title:'GQMC 2026 · Silver Honour', description:'Final-round recognition · Top 1%', category:'academic', image:'assets/evidence/gqmc-2026-silver-honour.jpg', document:'assets/evidence/gqmc-2026-silver-honour.jpg'},
-  {title:'PAN IIT Summit 2026', description:'Certificate of Appreciation · Quantum, AI & Semiconductor', category:'program', image:null, document:'assets/evidence/pan-iit-summit-2026-certificate.pdf', linkLabel:'OPEN CERTIFICATE ↗'}
+  {title:'PAN IIT Summit 2026', description:'Original Library scan · Certificate of Appreciation · Quantum, AI & Semiconductor', category:'program', image:'assets/evidence/pan-iit-summit-2026-original.jpg', document:'assets/evidence/pan-iit-summit-2026-original.jpg', linkLabel:'VIEW ORIGINAL CERTIFICATE ↗'}
 ];
 
 const mediaGroups = [
@@ -215,7 +215,7 @@ function renderFeaturedEvidence() {
     {title:'NUS AI Internship', image:null, doc:'assets/recommendations/LOR_Group1_Avirineni_Jaidev_Chowdary (1).pdf', label:'OPEN FACULTY RECOMMENDATION ↗', note:'Direct faculty recommendation evidence.'},
     {title:'GQMC Silver Honour', image:'assets/evidence/gqmc-2026-silver-honour.jpg', doc:'assets/evidence/gqmc-2026-silver-honour.jpg'},
     {title:'Plaksha YDS', image:'assets/evidence/plaksha-yds-certificate.jpg', doc:'assets/evidence/plaksha-yds-certificate.jpg'},
-    {title:'PAN IIT Summit · Original Certificate', image:null, doc:'assets/evidence/pan-iit-summit-2026-certificate.pdf', label:'OPEN CERTIFICATE ↗', note:'The clean original was checked against the Library copy; no redacted variant is linked here.'}
+    {title:'PAN IIT Summit · Original Library Scan', image:'assets/evidence/pan-iit-summit-2026-original.jpg', doc:'assets/evidence/pan-iit-summit-2026-original.jpg', label:'VIEW ORIGINAL CERTIFICATE ↗', note:'Clean full-page scan checked against the original held in your Library; the old redacted variants are no longer linked.'}
   ];
   el.innerHTML = featured.map(item => `
     <article class="evidence-feature ${item.prominent ? 'evidence-feature-prominent' : ''}" data-tilt data-reveal>
