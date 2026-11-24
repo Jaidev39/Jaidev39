@@ -94,11 +94,35 @@ const certificateItems = [
   {title:'PAN IIT Summit 2026', description:'Certificate of Appreciation · Quantum, AI & Semiconductor', category:'program', image:'assets/evidence/pan-iit-summit-2026-certificate.png', document:'assets/evidence/pan-iit-summit-2026-certificate.pdf'}
 ];
 
-const mediaItems = [
-  ...Array.from({length:30}, (_,i) => ({id:i+1, src:`assets/media/drive-photo-archive/drive-photo-${String(i+1).padStart(2,'0')}${i===19?'.png':'.jpg'}`})),
-  {id:32, src:'assets/media/video-stills/headboy-ceremony-02.jpg'},
-  {id:33, src:'assets/media/video-stills/headboy-ceremony-03.jpg'},
-  {id:35, src:'assets/media/video-stills/headboy-ceremony-05.jpg'}
+const mediaGroups = [
+  {
+    gridId: 'yip-media-grid',
+    title: 'YIP / IIT Kharagpur',
+    items: Array.from({length:22}, (_,i) => {
+      const id = i + 1;
+      return {id, src:`assets/media/drive-photo-archive/drive-photo-${String(id).padStart(2,'0')}${id===20?'.png':'.jpg'}`};
+    })
+  },
+  {
+    gridId: 'heal-media-grid',
+    title: 'HEAL Paradise',
+    items: [23,24,25].map(id => ({id, src:`assets/media/drive-photo-archive/drive-photo-${String(id).padStart(2,'0')}.jpg`}))
+  },
+  {
+    gridId: 'page-club-media-grid',
+    title: 'The PAGE Club',
+    items: [26,27,28,29,30].map(id => ({id, src:`assets/media/drive-photo-archive/drive-photo-${String(id).padStart(2,'0')}.jpg`}))
+  },
+  {
+    gridId: 'headboy-media-grid',
+    title: 'Head Boy',
+    items: [
+      {id:32, src:'assets/media/video-stills/headboy-ceremony-02.jpg'},
+      {id:33, src:'assets/media/video-stills/headboy-ceremony-03.jpg'},
+      {id:34, src:'assets/media/video-stills/headboy-ceremony-04.jpg'},
+      {id:35, src:'assets/media/video-stills/headboy-ceremony-05.jpg'}
+    ]
+  }
 ];
 
 const modal = document.getElementById('image-modal');
@@ -214,15 +238,21 @@ function renderCertificates(filter = 'all') {
 }
 
 function renderMediaGrid() {
-  const el = document.getElementById('media-grid');
-  el.innerHTML = mediaItems.map((item, index) => `
-    <article class="media-card" data-tilt data-reveal>
-      <img src="${item.src}" alt="Portfolio media asset ${item.id}" loading="lazy" data-index="${index}">
-      <div class="media-caption"><span>MEDIA ${String(item.id).padStart(2,'0')}</span><span>Open ↗</span></div>
-    </article>
-  `).join('');
-  el.querySelectorAll('img').forEach(img => {
-    img.addEventListener('click', () => openModal(mediaItems.map(item => item.src), Number(img.dataset.index)));
+  mediaGroups.forEach(group => {
+    const el = document.getElementById(group.gridId);
+    if (!el) return;
+    el.innerHTML = group.items.map((item, index) => `
+      <article class="media-card" data-tilt data-reveal>
+        <img src="${item.src}" alt="${group.title} photograph ${String(item.id).padStart(2,'0')}" loading="lazy" data-index="${index}">
+        <div class="media-caption"><span>${group.title.toUpperCase()} · ${String(item.id).padStart(2,'0')}</span><span>Open ↗</span></div>
+      </article>
+    `).join('');
+    el.querySelectorAll('img').forEach(img => {
+      img.addEventListener('click', () => {
+        openModal(group.items.map(item => item.src), Number(img.dataset.index));
+        modalImage.alt = `${group.title} photograph ${img.alt}`;
+      });
+    });
   });
 }
 
