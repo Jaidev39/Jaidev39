@@ -207,7 +207,7 @@ function renderFeaturedEvidence() {
   const el = document.getElementById('featured-evidence');
   const featured = [
     {title:'GQMC Silver Honour', image:'assets/evidence/gqmc-2026-silver-honour.jpg', doc:'assets/evidence/gqmc-2026-silver-honour.jpg'},
-    {title:'YIP / IIT Kharagpur', image:'assets/evidence/certificate-04.jpg', doc:'assets/evidence/certificate-04.jpg', label:'VIEW IIT APPRECIATION ↗', note:'Final-round result: 4th Place. Displayed proof is the IIT Kharagpur appreciation artifact, not a separate 4th-place certificate.'},
+    {title:'YIP / IIT Kharagpur', image:'assets/evidence/certificate-04.jpg', doc:'https://at.adobe.com/0kMwSFlTR3UFsktj', label:'OPEN YIP CERTIFICATE ↗', note:'IIT Kharagpur Certificate of Appreciation for active participation and contribution to YIP 2023; the team’s fourth-place result is shown in the RuralConnect project feature.'},
     {title:'NUS AI Internship', image:null, doc:'assets/recommendations/LOR_Group1_Avirineni_Jaidev_Chowdary (1).pdf', label:'OPEN FACULTY RECOMMENDATION ↗', note:'Direct faculty recommendation evidence.'},
     {title:'Plaksha YDS', image:'assets/evidence/plaksha-yds-certificate.jpg', doc:'assets/evidence/plaksha-yds-certificate.jpg'},
     {title:'Pan IIT Summit', image:'assets/evidence/pan-iit-summit-2026-certificate.png', doc:'assets/evidence/pan-iit-summit-2026-certificate.png'}
@@ -230,7 +230,7 @@ function renderCertificates(filter = 'all') {
   const items = filter === 'all' ? certificateItems : certificateItems.filter(item => item.category === filter);
   el.innerHTML = items.map(item => `
     <article class="certificate-card" data-tilt data-reveal>
-      <img src="${item.image}" alt="${item.title} preview" loading="lazy">
+      ${renderPreviewImage(item)}
       <div class="certificate-topline"><span>${item.category.toUpperCase()}</span><span>PROOF</span></div>
       <h4>${item.title}</h4>
       <div class="card-meta">${item.description}</div>
