@@ -22,10 +22,10 @@ jobs:
           set -euo pipefail
           mkdir -p assets/evidence
           curl --fail --location --retry 2 \
-            'https://at.adobe.com/7YxYtxkZnCe3LCfR' \
+            'https://at.adobe.com/geXZ14HaVF2yoc3q' \
             --output assets/evidence/YIP_IIT_Kharagpur_Official_Certificate.pdf
           curl --fail --location --retry 2 \
-            'https://at.adobe.com/cbWMseUKPR3WpHSO' \
+            'https://at.adobe.com/vElsyz503vBbC3Wq' \
             --output assets/evidence/Cognivance_International_Internship_Completion_Certificate.pdf
           for f in \
             assets/evidence/YIP_IIT_Kharagpur_Official_Certificate.pdf \
