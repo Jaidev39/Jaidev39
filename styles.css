@@ -103,3 +103,65 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;back
 .credibility-chip{will-change:transform;transition:transform .14s ease}
 @media (prefers-reduced-motion:reduce){.cursor-spotlight,.signsethu-glow,.signsethu-wave i,.live-dot{animation:none!important;display:none}.cursor-spotlight{opacity:0}}
 @media (max-width:620px){.signsethu-panel{min-height:300px}.signsethu-metrics{grid-template-columns:1fr}.hero-live-row{gap:7px}.live-divider{width:12px}}
+
+
+/* Focused activity anchors and grouped media archive */
+html { scroll-padding-top: 112px; }
+#page-club-impact, #heal-impact, #headboy-impact,
+#yip-media, #heal-media, #page-club-media, #headboy-media {
+  scroll-margin-top: 112px;
+}
+.impact-links {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 16px;
+  margin-top:10px;
+}
+.impact-links .mini-link { display:inline-flex; align-items:center; }
+.media-groups { display:grid; gap:26px; }
+.media-group {
+  scroll-margin-top:112px;
+  padding:22px;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:22px;
+  background:linear-gradient(145deg,rgba(12,25,39,.86),rgba(8,18,29,.7));
+}
+.media-group-heading {
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:14px;
+}
+.media-group-heading .section-kicker { margin:0 0 5px; color:#83d5d1; letter-spacing:.1em; }
+.media-group-heading h3 { margin:0; color:#f1f8ff; font-size:clamp(1.05rem,2vw,1.35rem); line-height:1.2; }
+.media-group-heading .media-note { margin:7px 0 0; color:#b8cad8; font-size:.9rem; max-width:700px; }
+.media-range {
+  flex:0 0 auto;
+  padding:6px 10px;
+  border:1px solid rgba(131,213,209,.25);
+  border-radius:999px;
+  color:#b7eeea;
+  background:rgba(8,127,140,.12);
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:.04em;
+}
+.media-group .media-grid {
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+  margin-top:0;
+}
+.media-group .media-card { padding:0; }
+.media-group .media-card img { height:205px; width:100%; object-fit:cover; cursor:zoom-in; }
+.media-group .media-caption { display:flex; justify-content:space-between; gap:8px; padding:10px 12px; color:#dcebf5; font-size:.74rem; }
+@media (max-width:900px) {
+  .media-group .media-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+}
+@media (max-width:620px) {
+  .media-group { padding:15px; }
+  .media-group-heading { display:block; }
+  .media-range { display:inline-flex; margin-top:10px; }
+  .media-group .media-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .media-group .media-card img { height:165px; }
+}
