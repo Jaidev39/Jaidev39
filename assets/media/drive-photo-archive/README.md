@@ -34,3 +34,12 @@ Source: Google Drive export supplied by the user on 2026-10-16.
 | `drive-photo-28.jpg` | `WhatsApp Image 2026-10-16 at 09.29.06 (3).jpeg` |
 | `drive-photo-29.jpg` | `WhatsApp Image 2026-10-16 at 09.29.06 (4).jpeg` |
 | `drive-photo-30.jpg` | `WhatsApp Image 2026-10-16 at 09.29.06.jpeg` |
+
+## Portfolio gallery grouping
+
+The admissions portfolio presents the imported photos in activity-specific groups:
+
+- **YIP / IIT Kharagpur:** `drive-photo-01.jpg` through `drive-photo-22.jpg` (gallery labels 01–22).
+- **HEAL Paradise:** `drive-photo-23.jpg` through `drive-photo-25.jpg` (gallery labels 23–25; limited first-class documentation because classroom photography is restricted).
+- **The PAGE Club:** `drive-photo-26.jpg` through `drive-photo-30.jpg` (gallery labels 26–30).
+- **Head Boy:** selected ceremony stills are listed separately in `video-stills/` and appear as gallery labels 32–35.
