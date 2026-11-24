@@ -165,3 +165,25 @@ html { scroll-padding-top: 112px; }
   .media-group .media-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .media-group .media-card img { height:165px; }
 }
+
+
+/* Featured credential card: Cognivance International Internship Program */
+.evidence-feature-prominent {
+  border-color: rgba(109, 219, 203, .48);
+  background: linear-gradient(145deg, rgba(15, 48, 57, .96), rgba(10, 23, 36, .96));
+  box-shadow: 0 22px 48px rgba(0, 0, 0, .24), 0 0 0 1px rgba(109, 219, 203, .10);
+}
+.evidence-feature-prominent .meta-tag {
+  color: #8fe3d7;
+}
+.evidence-feature-prominent h3 {
+  color: #ffffff;
+}
+.evidence-feature-prominent .feature-copy {
+  gap: 14px;
+}
+.evidence-feature-prominent a {
+  color: #9deee1;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
