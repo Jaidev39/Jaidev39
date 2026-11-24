@@ -209,12 +209,13 @@ function renderFeaturedEvidence() {
     {title:'GQMC Silver Honour', image:'assets/evidence/gqmc-2026-silver-honour.jpg', doc:'assets/evidence/gqmc-2026-silver-honour.jpg'},
     {title:'YIP / IIT Kharagpur', image:'assets/evidence/certificate-04.jpg', doc:'https://at.adobe.com/0kMwSFlTR3UFsktj', label:'OPEN YIP CERTIFICATE ↗', note:'IIT Kharagpur Certificate of Appreciation for active participation and contribution to YIP 2023; the team’s fourth-place result is shown in the RuralConnect project feature.'},
     {title:'NUS AI Internship', image:null, doc:'assets/recommendations/LOR_Group1_Avirineni_Jaidev_Chowdary (1).pdf', label:'OPEN FACULTY RECOMMENDATION ↗', note:'Direct faculty recommendation evidence.'},
+    {title:'Cognivance International Internship', image:null, doc:'https://at.adobe.com/slKAgxQ2lDFf6ERF', label:'OPEN COMPLETION CERTIFICATE ↗', note:'200-hour programme certificate; confirms 15 students selected from an initial pool of 350 participants.'},
     {title:'Plaksha YDS', image:'assets/evidence/plaksha-yds-certificate.jpg', doc:'assets/evidence/plaksha-yds-certificate.jpg'},
     {title:'Pan IIT Summit', image:'assets/evidence/pan-iit-summit-2026-certificate.png', doc:'assets/evidence/pan-iit-summit-2026-certificate.png'}
   ];
   el.innerHTML = featured.map(item => `
     <article class="evidence-feature" data-tilt data-reveal>
-      ${item.image ? `<img src="${item.image}" alt="${item.title} evidence preview" loading="lazy">` : `<div class="document-preview"><span>${item.title}<br>Faculty recommendation</span></div>`}
+      ${item.image ? `<img src="${item.image}" alt="${item.title} evidence preview" loading="lazy">` : renderPreviewImage(item)}
       <div class="feature-copy">
         <span class="meta-tag">FEATURED EVIDENCE</span>
         <h3>${item.title}</h3>
