@@ -90,8 +90,8 @@ const certificateItems = [
   {title:'Radiance Annual Day · Certificate of Merit', description:'School recognition · 2023–24', category:'academic', image:'assets/evidence/certificate-07.jpg', document:'assets/evidence/certificate-07.jpg'},
   {title:'IIMUN · Futuristic Crisis Committee', description:'Certificate of Participation · 2024', category:'mun', image:'assets/evidence/certificate-08.jpg', document:'assets/evidence/certificate-08.jpg'},
   {title:'Plaksha Young Data Scientists', description:'Programme completion certificate · 2025', category:'program', image:'assets/evidence/plaksha-yds-certificate.jpg', document:'assets/evidence/plaksha-yds-certificate.jpg'},
-  {title:'Young Innovators Program 2023 · IIT Kharagpur', description:'Certificate of Appreciation for active participation and contribution to YIP 2023.', category:'program', image:null, document:'https://at.adobe.com/0kMwSFlTR3UFsktj', linkLabel:'OPEN YIP CERTIFICATE ↗'},
-  {title:'Cognivance Inc. · International Internship Program', description:'Certificate of Internship Completion · AI, Machine Learning, DeepTech & Business Innovation · 200 hours · 25 April–30 May 2026 · 15 selected from an initial pool of 350 participants.', category:'program', image:null, document:'https://at.adobe.com/slKAgxQ2lDFf6ERF', linkLabel:'OPEN INTERNSHIP CERTIFICATE ↗'},
+  {title:'Young Innovators Program 2023 · IIT Kharagpur', description:'Certificate of Appreciation for active participation and contribution to YIP 2023.', category:'program', image:null, document:'https://at.adobe.com/7YxYtxkZnCe3LCfR', linkLabel:'OPEN YIP CERTIFICATE ↗'},
+  {title:'Cognivance Inc. · International Internship Program', description:'Certificate of Internship Completion · AI, Machine Learning, DeepTech & Business Innovation · 200 hours · 25 April–30 May 2026 · 15 selected from an initial pool of 350 participants.', category:'program', image:null, document:'https://at.adobe.com/cbWMseUKPR3WpHSO', linkLabel:'OPEN INTERNSHIP CERTIFICATE ↗'},
   {title:'GQMC 2026 · Silver Honour', description:'Final-round recognition · Top 1%', category:'academic', image:'assets/evidence/gqmc-2026-silver-honour.jpg', document:'assets/evidence/gqmc-2026-silver-honour.jpg'},
   {title:'PAN IIT Summit 2026', description:'Certificate of Appreciation · Quantum, AI & Semiconductor', category:'program', image:'assets/evidence/pan-iit-summit-2026-certificate.png', document:'assets/evidence/pan-iit-summit-2026-certificate.pdf'}
 ];
@@ -207,9 +207,9 @@ function renderFeaturedEvidence() {
   const el = document.getElementById('featured-evidence');
   const featured = [
     {title:'GQMC Silver Honour', image:'assets/evidence/gqmc-2026-silver-honour.jpg', doc:'assets/evidence/gqmc-2026-silver-honour.jpg'},
-    {title:'YIP / IIT Kharagpur', image:'assets/evidence/certificate-04.jpg', doc:'https://at.adobe.com/0kMwSFlTR3UFsktj', label:'OPEN YIP CERTIFICATE ↗', note:'IIT Kharagpur Certificate of Appreciation for active participation and contribution to YIP 2023; the team’s fourth-place result is shown in the RuralConnect project feature.'},
+    {title:'YIP / IIT Kharagpur', image:'assets/evidence/certificate-04.jpg', doc:'https://at.adobe.com/7YxYtxkZnCe3LCfR', label:'OPEN YIP CERTIFICATE ↗', note:'IIT Kharagpur Certificate of Appreciation for active participation and contribution to YIP 2023; the team’s fourth-place result is shown in the RuralConnect project feature.'},
     {title:'NUS AI Internship', image:null, doc:'assets/recommendations/LOR_Group1_Avirineni_Jaidev_Chowdary (1).pdf', label:'OPEN FACULTY RECOMMENDATION ↗', note:'Direct faculty recommendation evidence.'},
-    {title:'Cognivance International Internship', image:null, doc:'https://at.adobe.com/slKAgxQ2lDFf6ERF', label:'OPEN COMPLETION CERTIFICATE ↗', note:'200-hour programme certificate; confirms 15 students selected from an initial pool of 350 participants.'},
+    {title:'Cognivance International Internship', image:null, doc:'https://at.adobe.com/cbWMseUKPR3WpHSO', label:'OPEN COMPLETION CERTIFICATE ↗', note:'200-hour programme certificate; confirms 15 students selected from an initial pool of 350 participants.'},
     {title:'Plaksha YDS', image:'assets/evidence/plaksha-yds-certificate.jpg', doc:'assets/evidence/plaksha-yds-certificate.jpg'},
     {title:'Pan IIT Summit', image:'assets/evidence/pan-iit-summit-2026-certificate.png', doc:'assets/evidence/pan-iit-summit-2026-certificate.png'}
   ];
