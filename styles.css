@@ -187,3 +187,26 @@ html { scroll-padding-top: 112px; }
   font-weight: 700;
   letter-spacing: .02em;
 }
+
+
+/* Make the Cognivance International Internship Program unmissable. */
+.evidence-feature-prominent {
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(240px, .9fr) minmax(0, 1.1fr);
+  padding: clamp(20px, 3vw, 30px);
+}
+.evidence-feature-prominent h3 {
+  font-size: clamp(1.6rem, 2.4vw, 2.15rem);
+  line-height: 1.12;
+}
+.proof-card-prominent {
+  border-color: rgba(109, 219, 203, .48);
+  background: linear-gradient(145deg, rgba(15, 48, 57, .96), rgba(10, 23, 36, .96));
+  box-shadow: 0 18px 38px rgba(0, 0, 0, .22), 0 0 0 1px rgba(109, 219, 203, .10);
+}
+.proof-card-prominent .proof-tag,
+.proof-card-prominent h3,
+.proof-card-prominent a { color: #9deee1; }
+@media (max-width: 620px) {
+  .evidence-feature-prominent { grid-template-columns: 1fr; }
+}
