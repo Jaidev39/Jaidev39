@@ -29,7 +29,7 @@ const repos = [
 ];
 
 const proofItems = [
-  {title:'Cognivance Inc.', subtitle:'International Internship Program · 200 hours', description:'Completed the AI, Machine Learning, DeepTech & Business Innovation programme. Selected for a 15-student cohort from an initial pool of 350 participants.', image:null, document:'assets/evidence/Cognivance_International_Internship_Completion_Certificate.pdf', linkLabel:'OPEN COMPLETION CERTIFICATE ↗'},
+  {title:'Cognivance Inc. · International Internship Program', subtitle:'200 hours · AI, Machine Learning, DeepTech & Business Innovation', description:'Completed the selective international programme. Selected for a 15-student cohort from an initial pool of 350 participants.', image:null, document:'assets/evidence/Cognivance_International_Internship_Completion_Certificate.pdf', linkLabel:'OPEN INTERNSHIP CERTIFICATE ↗', prominent:true},
   {title:'YIP / IIT Kharagpur', subtitle:'Official Certificate of Appreciation · 2023', description:'IIT Kharagpur certificate recognising active participation and contribution to the Young Innovators Program 2023.', image:null, document:'assets/evidence/YIP_IIT_Kharagpur_Official_Certificate.pdf', linkLabel:'OPEN OFFICIAL YIP CERTIFICATE ↗'},
   {title:'Rural Pulsars · IIT Kharagpur', subtitle:'Project appreciation artifact', description:'Supporting appreciation page for the Rural Pulsars team and smart-village project. The team’s fourth-place result is described separately in the project entry.', image:'assets/evidence/certificate-04.jpg', document:'assets/evidence/certificate-04.jpg', linkLabel:'VIEW IIT APPRECIATION ↗'},
   {title:'GQMC', subtitle:'Silver Honour', description:'International final-round recognition with a Silver Honour, placing among the top 1% of participants.', image:'assets/evidence/gqmc-2026-silver-honour.jpg', document:'assets/evidence/gqmc-2026-silver-honour.jpg'},
@@ -158,7 +158,7 @@ function renderPreviewImage(item) {
 function renderProof() {
   const grid = document.getElementById('proof-grid');
   grid.innerHTML = proofItems.map(item => `
-    <article class="proof-card" data-tilt data-reveal>
+    <article class="proof-card ${item.prominent ? 'proof-card-prominent' : ''}" data-tilt data-reveal>
       <span class="proof-tag">${item.title}</span>
       <h3>${item.subtitle}</h3>
       <p>${item.description}</p>
