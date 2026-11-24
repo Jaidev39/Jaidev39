@@ -1,0 +1,44 @@
+name: Import internship and YIP certificates
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/import-evidence-certificates.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  import-certificates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out portfolio
+        uses: actions/checkout@v4
+
+      - name: Download the original user-provided certificates
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/evidence
+          curl --fail --location --retry 2 \
+            'https://at.adobe.com/7YxYtxkZnCe3LCfR' \
+            --output assets/evidence/YIP_IIT_Kharagpur_Official_Certificate.pdf
+          curl --fail --location --retry 2 \
+            'https://at.adobe.com/cbWMseUKPR3WpHSO' \
+            --output assets/evidence/Cognivance_International_Internship_Completion_Certificate.pdf
+          for f in \
+            assets/evidence/YIP_IIT_Kharagpur_Official_Certificate.pdf \
+            assets/evidence/Cognivance_International_Internship_Completion_Certificate.pdf; do
+            test "$(head -c 5 "$f")" = '%PDF-'
+            test "$(wc -c < "$f")" -gt 10000
+          done
+
+      - name: Commit permanent certificate files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/evidence/YIP_IIT_Kharagpur_Official_Certificate.pdf
+          git add assets/evidence/Cognivance_International_Internship_Completion_Certificate.pdf
+          git commit -m "Add original YIP and Cognivance certificates"
+          git push
