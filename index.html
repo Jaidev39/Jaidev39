@@ -121,7 +121,7 @@
             </div>
             <div class="project-actions">
               <a href="assets/evidence/certificate-04.jpg" target="_blank" rel="noopener">VIEW IIT APPRECIATION ↗</a>
-              <a href="#media" rel="noopener">VIEW PROJECT MEDIA ↗</a>
+              <a href="#yip-media" rel="noopener">VIEW YIP / IIT KHARAGPUR PHOTOS (01–22) ↗</a>
             </div>
           </div>
         </article>
@@ -209,26 +209,33 @@
         </div>
       </div>
       <div class="impact-grid">
-        <article class="impact-card feature-impact">
+        <article class="impact-card feature-impact" id="heal-impact">
           <span class="impact-number">01</span>
           <h3>HEAL</h3>
           <p>Built and sustained a quantitative-literacy program for 40+ rural students over 16 months, teaching percentages, simple and compound interest, data analysis, computer skills, and applied problem solving every weekend.</p>
           <strong>40+ students · 16 months · every weekend</strong>
-          <a href="#recommendations" class="mini-link">OPEN HEAL RECOMMENDATION ↗</a>
+          <div class="impact-links">
+            <a href="#recommendations" class="mini-link">OPEN HEAL RECOMMENDATION ↗</a>
+            <a href="#heal-media" class="mini-link">FIRST-CLASS DOCUMENTATION (23–25) ↗</a>
+          </div>
         </article>
 
-        <article class="impact-card">
+        <article class="impact-card" id="headboy-impact">
           <span class="impact-number">02</span>
           <h3>Head Boy</h3>
           <p>Served in escalating student leadership roles, bridging communication between students and school staff and supporting practical school operations and lab access.</p>
           <strong>House Captain → STEM Secretary → Head Boy</strong>
+          <a href="#headboy-media" class="mini-link">SELECTED CEREMONY STILLS (32–35) ↗</a>
         </article>
 
-        <article class="impact-card">
+        <article class="impact-card" id="page-club-impact">
           <span class="impact-number">03</span>
           <h3>PAGE Club</h3>
           <p>Built a sustained reading movement across apartments, clubs, and libraries, creating a visible reading culture and broad community reach.</p>
           <strong>2+ years · 15 newspaper outlets</strong>
+          <div class="impact-links">
+            <a href="#page-club-media" class="mini-link">SELECTED PAGE CLUB PHOTOS (26–30) ↗</a>
+          </div>
           <div class="impact-media">
             <img src="assets/media/drive-photo-archive/drive-photo-20.png" alt="Jaidev Chowdary Avirineni with PAGE Club members and former Vice President M. Venkaiah Naidu" loading="lazy">
             <span>Recognition and meeting with former Vice President M. Venkaiah Naidu</span>
@@ -332,11 +339,41 @@
     <section id="media" class="section-wrap section">
       <div class="section-heading compact">
         <div>
-          <p class="section-kicker">MEDIA</p>
-          <h2>Photo and media archive.</h2>
+          <p class="section-kicker">MEDIA ARCHIVE</p>
+          <h2>Selected photographs, organised by activity.</h2>
+          <p class="section-note">Open a group directly from the CV. Each image opens in a focused viewer with previous/next navigation for that group.</p>
         </div>
       </div>
-      <div id="media-grid" class="media-grid" aria-live="polite"></div>
+      <div id="media-grid" class="media-groups" aria-live="polite">
+        <section class="media-group" id="yip-media">
+          <div class="media-group-heading">
+            <div><p class="section-kicker">01–22 · YIP / IIT KHARAGPUR</p><h3>RuralConnect and national-final photographs</h3></div>
+            <span class="media-range">22 images</span>
+          </div>
+          <div id="yip-media-grid" class="media-grid"></div>
+        </section>
+        <section class="media-group" id="heal-media">
+          <div class="media-group-heading">
+            <div><p class="section-kicker">23–25 · HEAL PARADISE</p><h3>First-class documentation</h3><p class="media-note">A small permitted selection from the first class; classroom photography is otherwise restricted.</p></div>
+            <span class="media-range">3 images</span>
+          </div>
+          <div id="heal-media-grid" class="media-grid"></div>
+        </section>
+        <section class="media-group" id="page-club-media">
+          <div class="media-group-heading">
+            <div><p class="section-kicker">26–30 · THE PAGE CLUB</p><h3>Reading campaigns and community events</h3></div>
+            <span class="media-range">5 images</span>
+          </div>
+          <div id="page-club-media-grid" class="media-grid"></div>
+        </section>
+        <section class="media-group" id="headboy-media">
+          <div class="media-group-heading">
+            <div><p class="section-kicker">32–35 · HEAD BOY</p><h3>Student leadership and Head Boy ceremony stills</h3></div>
+            <span class="media-range">4 images</span>
+          </div>
+          <div id="headboy-media-grid" class="media-grid"></div>
+        </section>
+      </div>
     </section>
 
     <section id="about" class="section-wrap section about-grid">
