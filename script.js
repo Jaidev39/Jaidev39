@@ -29,12 +29,14 @@ const repos = [
 ];
 
 const proofItems = [
+  {title:'Cognivance Inc.', subtitle:'International Internship Program · 200 hours', description:'Completed the AI, Machine Learning, DeepTech & Business Innovation programme. Selected for a 15-student cohort from an initial pool of 350 participants.', image:null, document:'assets/evidence/Cognivance_International_Internship_Completion_Certificate.pdf', linkLabel:'OPEN COMPLETION CERTIFICATE ↗'},
+  {title:'YIP / IIT Kharagpur', subtitle:'Official Certificate of Appreciation · 2023', description:'IIT Kharagpur certificate recognising active participation and contribution to the Young Innovators Program 2023.', image:null, document:'assets/evidence/YIP_IIT_Kharagpur_Official_Certificate.pdf', linkLabel:'OPEN OFFICIAL YIP CERTIFICATE ↗'},
+  {title:'Rural Pulsars · IIT Kharagpur', subtitle:'Project appreciation artifact', description:'Supporting appreciation page for the Rural Pulsars team and smart-village project. The team’s fourth-place result is described separately in the project entry.', image:'assets/evidence/certificate-04.jpg', document:'assets/evidence/certificate-04.jpg', linkLabel:'VIEW IIT APPRECIATION ↗'},
   {title:'GQMC', subtitle:'Silver Honour', description:'International final-round recognition with a Silver Honour, placing among the top 1% of participants.', image:'assets/evidence/gqmc-2026-silver-honour.jpg', document:'assets/evidence/gqmc-2026-silver-honour.jpg'},
-  {title:'YIP / IIT Kharagpur', subtitle:'Final Round · 4th Place', description:'Reached the YIP 2023 final round and finished 4th. The displayed proof is the IIT Kharagpur appreciation artifact, not a separate 4th-place certificate.', image:'assets/evidence/certificate-04.jpg', document:'assets/evidence/certificate-04.jpg', linkLabel:'VIEW IIT APPRECIATION ↗'},
   {title:'NUS AI Internship', subtitle:'AI / Data Analytics · Faculty recommendation', description:'Built a churn-prediction pipeline across 7 models with a 26.5% baseline, 0.846 ROC-AUC, and 1,525 at-risk customers flagged, backed by direct NUS faculty recommendation.', image:null, document:'assets/recommendations/LOR_Group1_Avirineni_Jaidev_Chowdary (1).pdf', linkLabel:'OPEN FACULTY RECOMMENDATION ↗'},
-  {title:'Plaksha YDS', subtitle:'1st Prize', description:'Young Data Scientists recognition for applied work in data science and quantitative analysis.', image:'assets/evidence/plaksha-yds-certificate.jpg', document:'assets/evidence/plaksha-yds-certificate.jpg'},
-  {title:'Pan IIT Summit', subtitle:'Certificate of Appreciation', description:'Recognition in quantum, AI, and semiconductor conversations and public research-oriented engagement.', image:'assets/evidence/pan-iit-summit-2026-certificate.png', document:'assets/evidence/pan-iit-summit-2026-certificate.pdf'},
-  {title:'SignSethu', subtitle:'Publicly deployed · 10+ downloads', description:'Indian Sign Language-to-Telugu accessibility app built with MediaPipe and TensorFlow Lite, trained on 500 self-collected samples and deployed on Google Play.', image:null, document:'https://play.google.com/store/apps/developer?id=AVIRINENI+JAIDEV+CHOWDARY', linkLabel:'OPEN GOOGLE PLAY ↗'}
+  {title:'Plaksha YDS', subtitle:'Programme completion', description:'Completed the Young Data Scientists programme in data science and quantitative analysis.', image:'assets/evidence/plaksha-yds-certificate.jpg', document:'assets/evidence/plaksha-yds-certificate.jpg'},
+  {title:'PAN IIT Summit', subtitle:'Certificate of Appreciation', description:'Certificate recognising contributions to the Quantum, AI & Semiconductor summit.', image:null, document:'assets/evidence/pan-iit-summit-2026-certificate.pdf', linkLabel:'OPEN CERTIFICATE ↗'},
+  {title:'SignSethu', subtitle:'Publicly released on Google Play', description:'Indian Sign Language-to-Telugu accessibility app built with MediaPipe and TensorFlow Lite, trained on 500 self-collected samples and deployed on Google Play.', image:null, document:'https://play.google.com/store/apps/developer?id=AVIRINENI+JAIDEV+CHOWDARY', linkLabel:'OPEN GOOGLE PLAY ↗'}
 ];
 
 const researchItems = [
@@ -82,6 +84,9 @@ const recommendationItems = [
 ];
 
 const certificateItems = [
+  {title:'Cognivance Inc. · International Internship Program', description:'Certificate of Internship Completion · AI, Machine Learning, DeepTech & Business Innovation · 200 hours · 25 April–30 May 2026 · 15 selected from an initial pool of 350 participants.', category:'program', image:null, document:'assets/evidence/Cognivance_International_Internship_Completion_Certificate.pdf', linkLabel:'OPEN INTERNSHIP CERTIFICATE ↗'},
+  {title:'Young Innovators Program 2023 · IIT Kharagpur | Official Certificate', description:'Certificate of Appreciation for active participation and contribution to YIP 2023.', category:'program', image:null, document:'assets/evidence/YIP_IIT_Kharagpur_Official_Certificate.pdf', linkLabel:'OPEN OFFICIAL YIP CERTIFICATE ↗'},
+  {title:'Rural Pulsars · IIT Kharagpur | Appreciation Artifact', description:'Supporting appreciation page for the Rural Pulsars smart-village project.', category:'program', image:'assets/evidence/certificate-04.jpg', document:'assets/evidence/certificate-04.jpg', linkLabel:'VIEW IIT APPRECIATION ↗'},
   {title:'Certificate of Merit', description:'School academic recognition · 2024–25', category:'academic', image:'assets/evidence/certificate-01.jpg', document:'assets/evidence/certificate-01.jpg'},
   {title:'Academic Excellence · 485/500', description:'AISSE 2025 academic recognition', category:'academic', image:'assets/evidence/certificate-02.jpg', document:'assets/evidence/certificate-02.jpg'},
   {title:'VIVA MUN · Delegate', description:'Futuristic Crisis Committee · 2024', category:'mun', image:'assets/evidence/certificate-03.jpg', document:'assets/evidence/certificate-03.jpg'},
@@ -90,10 +95,8 @@ const certificateItems = [
   {title:'Radiance Annual Day · Certificate of Merit', description:'School recognition · 2023–24', category:'academic', image:'assets/evidence/certificate-07.jpg', document:'assets/evidence/certificate-07.jpg'},
   {title:'IIMUN · Futuristic Crisis Committee', description:'Certificate of Participation · 2024', category:'mun', image:'assets/evidence/certificate-08.jpg', document:'assets/evidence/certificate-08.jpg'},
   {title:'Plaksha Young Data Scientists', description:'Programme completion certificate · 2025', category:'program', image:'assets/evidence/plaksha-yds-certificate.jpg', document:'assets/evidence/plaksha-yds-certificate.jpg'},
-  {title:'Young Innovators Program 2023 · IIT Kharagpur', description:'Certificate of Appreciation for active participation and contribution to YIP 2023.', category:'program', image:null, document:'https://at.adobe.com/7YxYtxkZnCe3LCfR', linkLabel:'OPEN YIP CERTIFICATE ↗'},
-  {title:'Cognivance Inc. · International Internship Program', description:'Certificate of Internship Completion · AI, Machine Learning, DeepTech & Business Innovation · 200 hours · 25 April–30 May 2026 · 15 selected from an initial pool of 350 participants.', category:'program', image:null, document:'https://at.adobe.com/cbWMseUKPR3WpHSO', linkLabel:'OPEN INTERNSHIP CERTIFICATE ↗'},
   {title:'GQMC 2026 · Silver Honour', description:'Final-round recognition · Top 1%', category:'academic', image:'assets/evidence/gqmc-2026-silver-honour.jpg', document:'assets/evidence/gqmc-2026-silver-honour.jpg'},
-  {title:'PAN IIT Summit 2026', description:'Certificate of Appreciation · Quantum, AI & Semiconductor', category:'program', image:'assets/evidence/pan-iit-summit-2026-certificate.png', document:'assets/evidence/pan-iit-summit-2026-certificate.pdf'}
+  {title:'PAN IIT Summit 2026', description:'Certificate of Appreciation · Quantum, AI & Semiconductor', category:'program', image:null, document:'assets/evidence/pan-iit-summit-2026-certificate.pdf', linkLabel:'OPEN CERTIFICATE ↗'}
 ];
 
 const mediaGroups = [
@@ -206,15 +209,16 @@ function renderRecommendations() {
 function renderFeaturedEvidence() {
   const el = document.getElementById('featured-evidence');
   const featured = [
-    {title:'GQMC Silver Honour', image:'assets/evidence/gqmc-2026-silver-honour.jpg', doc:'assets/evidence/gqmc-2026-silver-honour.jpg'},
-    {title:'YIP / IIT Kharagpur', image:'assets/evidence/certificate-04.jpg', doc:'https://at.adobe.com/7YxYtxkZnCe3LCfR', label:'OPEN YIP CERTIFICATE ↗', note:'IIT Kharagpur Certificate of Appreciation for active participation and contribution to YIP 2023; the team’s fourth-place result is shown in the RuralConnect project feature.'},
+    {title:'Cognivance Inc. · International Internship Program', image:null, doc:'assets/evidence/Cognivance_International_Internship_Completion_Certificate.pdf', label:'OPEN INTERNSHIP CERTIFICATE ↗', note:'200-hour international programme in AI, Machine Learning, DeepTech & Business Innovation. Selected for a 15-student cohort from an initial pool of 350 participants.', prominent:true},
+    {title:'YIP / IIT Kharagpur · Official Certificate', image:null, doc:'assets/evidence/YIP_IIT_Kharagpur_Official_Certificate.pdf', label:'OPEN OFFICIAL YIP CERTIFICATE ↗', note:'Certificate of Appreciation for active participation and contribution to YIP 2023.'},
+    {title:'Rural Pulsars · IIT Kharagpur Appreciation', image:'assets/evidence/certificate-04.jpg', doc:'assets/evidence/certificate-04.jpg', label:'VIEW IIT APPRECIATION ↗', note:'Separate appreciation artifact for the Rural Pulsars project; the team’s fourth-place result is described in the RuralConnect project feature.'},
     {title:'NUS AI Internship', image:null, doc:'assets/recommendations/LOR_Group1_Avirineni_Jaidev_Chowdary (1).pdf', label:'OPEN FACULTY RECOMMENDATION ↗', note:'Direct faculty recommendation evidence.'},
-    {title:'Cognivance International Internship', image:null, doc:'https://at.adobe.com/cbWMseUKPR3WpHSO', label:'OPEN COMPLETION CERTIFICATE ↗', note:'200-hour programme certificate; confirms 15 students selected from an initial pool of 350 participants.'},
+    {title:'GQMC Silver Honour', image:'assets/evidence/gqmc-2026-silver-honour.jpg', doc:'assets/evidence/gqmc-2026-silver-honour.jpg'},
     {title:'Plaksha YDS', image:'assets/evidence/plaksha-yds-certificate.jpg', doc:'assets/evidence/plaksha-yds-certificate.jpg'},
-    {title:'Pan IIT Summit', image:'assets/evidence/pan-iit-summit-2026-certificate.png', doc:'assets/evidence/pan-iit-summit-2026-certificate.png'}
+    {title:'PAN IIT Summit · Original Certificate', image:null, doc:'assets/evidence/pan-iit-summit-2026-certificate.pdf', label:'OPEN CERTIFICATE ↗', note:'The clean original was checked against the Library copy; no redacted variant is linked here.'}
   ];
   el.innerHTML = featured.map(item => `
-    <article class="evidence-feature" data-tilt data-reveal>
+    <article class="evidence-feature ${item.prominent ? 'evidence-feature-prominent' : ''}" data-tilt data-reveal>
       ${item.image ? `<img src="${item.image}" alt="${item.title} evidence preview" loading="lazy">` : renderPreviewImage(item)}
       <div class="feature-copy">
         <span class="meta-tag">FEATURED EVIDENCE</span>
@@ -235,7 +239,7 @@ function renderCertificates(filter = 'all') {
       <div class="certificate-topline"><span>${item.category.toUpperCase()}</span><span>PROOF</span></div>
       <h4>${item.title}</h4>
       <div class="card-meta">${item.description}</div>
-      <a href="${item.document}" target="_blank" rel="noopener">OPEN PROOF ↗</a>
+      <a href="${item.document}" target="_blank" rel="noopener">${item.linkLabel || 'OPEN PROOF ↗'}</a>
     </article>
   `).join('');
 }
