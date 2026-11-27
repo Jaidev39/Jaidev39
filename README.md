@@ -1,10 +1,10 @@
 # Jaidev Chowdary Avirineni
 
-Admissions-focused portfolio for my academic work, research, AI/computer-vision projects, community initiatives, leadership, and supporting evidence.
+Official portfolio of **Jaidev Chowdary Avirineni**, covering academic work, AI and computer-vision projects, quantitative research, publications, community initiatives, leadership, and supporting evidence.
 
 ## Website
 
-The site is published through GitHub Pages.
+The site is published through GitHub Pages: **[Jaidev Chowdary Avirineni | Official Portfolio](https://jaidev39.github.io/Jaidev39/)**.
 
 ## Structure
 
