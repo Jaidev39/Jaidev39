@@ -5,62 +5,387 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,follow">
   <title>Visual Lab | Jaidev Chowdary Avirineni</title>
-  <meta name="description" content="An interactive comparison of potential visual directions for Jaidev Chowdary Avirineni's research portfolio.">
+  <meta name="description" content="Explore eight interactive visual directions for Jaidev Chowdary Avirineni's research and engineering portfolio.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    *{box-sizing:border-box}body{margin:0;background:#07131e;color:#eef7ff;font-family:"DM Sans",sans-serif}a{color:inherit;text-decoration:none}.shell{width:min(1240px,calc(100% - 36px));margin:auto}.top{display:flex;justify-content:space-between;align-items:center;padding:25px 0;border-bottom:1px solid #ffffff18}.top strong{font:700 1rem "Space Grotesk",sans-serif;letter-spacing:.08em}.back{color:#9deee1;font-size:.85rem}.intro{padding:54px 0 28px}.eyebrow{color:#86d9ca;text-transform:uppercase;letter-spacing:.18em;font-size:.7rem;font-weight:700}.intro h1{max-width:850px;margin:12px 0;font:700 clamp(2.3rem,6vw,4.5rem)/1.02 "Space Grotesk",sans-serif;letter-spacing:-.06em}.intro p{max-width:700px;color:#9fb7c8;line-height:1.7}.lab-layout{display:grid;grid-template-columns:330px 1fr;gap:22px;align-items:start;padding-bottom:70px}.options{display:grid;gap:10px}.option{display:flex;gap:12px;align-items:center;padding:13px;border:1px solid #ffffff14;border-radius:14px;background:#0c1c29;color:#eaf6ff;text-align:left;cursor:pointer;transition:.2s}.option:hover,.option.active{border-color:#76d9c8;background:#102d39}.swatch{width:47px;height:42px;border-radius:10px;flex:0 0 auto;border:1px solid #ffffff30}.option strong{display:block;font-size:.86rem}.option small{display:block;margin-top:3px;color:#8da8bd;font-size:.7rem}.preview-wrap{position:sticky;top:18px}.preview-label{display:flex;justify-content:space-between;gap:12px;padding:0 3px 10px;color:#8fa9bd;font:500 .65rem "DM Mono",monospace;text-transform:uppercase;letter-spacing:.1em}.preview{--ink:#eaf7ff;--muted:#99b4c8;--accent:#70dfc9;--bg:#091823;--panel:#102633;--line:#ffffff1e;min-height:610px;padding:clamp(18px,3vw,34px);overflow:hidden;border:1px solid var(--line);border-radius:24px;background:var(--bg);color:var(--ink);transition:background .35s,color .35s,border-color .35s;position:relative}.preview:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.4;background-image:radial-gradient(var(--accent) .7px,transparent .7px);background-size:22px 22px;mask-image:linear-gradient(120deg,transparent 10%,#000 100%)}.preview>*{position:relative;z-index:1}.preview-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:16px;color:var(--muted);font:500 .64rem "DM Mono",monospace;letter-spacing:.08em}.preview-kicker{margin-top:62px;color:var(--accent);font:500 .67rem "DM Mono",monospace;letter-spacing:.14em}.preview h2{max-width:650px;margin:12px 0;font:800 clamp(2rem,4.6vw,4rem)/.99 "Manrope",sans-serif;letter-spacing:-.06em}.preview-sub{color:var(--muted);font-size:.92rem}.preview-actions{display:flex;gap:9px;flex-wrap:wrap;margin:23px 0 42px}.preview-actions span{padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--panel);font-size:.68rem}.preview-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.preview-card{min-height:120px;padding:14px;border:1px solid var(--line);border-radius:13px;background:var(--panel)}.preview-card span{display:block;color:var(--accent);font:500 .6rem "DM Mono",monospace}.preview-card strong{display:block;margin-top:15px;font:700 1.3rem "Space Grotesk",sans-serif}.preview-card small{color:var(--muted);font-size:.65rem}.preview-foot{display:flex;justify-content:space-between;gap:10px;margin-top:35px;padding-top:15px;border-top:1px solid var(--line);color:var(--muted);font:500 .62rem "DM Mono",monospace}.preview.theme-orbit{--bg:#081521;--panel:#102b3b;--accent:#8dbdff;--muted:#a4bbd0}.preview.theme-editorial{--bg:#eee9df;--panel:#e4ded2;--ink:#161d23;--muted:#5d6468;--accent:#1a67db;--line:#202d3926}.preview.theme-editorial:before{opacity:.16;background-image:linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:60px 100%}.preview.theme-quant{--bg:#0a1518;--panel:#101f20;--accent:#b0f078;--muted:#94aea4}.preview.theme-glass{--bg:#111c35;--panel:#1b2d4a;--accent:#c4adff;--muted:#b9c6df}.preview.theme-mono{--bg:#080808;--panel:#151515;--accent:#f1f1f1;--muted:#a2a2a2;--line:#ffffff2b}.preview.theme-mono h2{font-family:"DM Mono",monospace;font-weight:500;letter-spacing:-.07em}.preview.theme-aurora{--bg:#061b21;--panel:#0c2b31;--accent:#75eed4;--muted:#a2cbc3}.preview.theme-aurora:before{opacity:.75;background:radial-gradient(ellipse at 75% 15%,#37bda64a,transparent 48%),radial-gradient(ellipse at 15% 80%,#4b85df33,transparent 40%)}.swatch.aurora{background:linear-gradient(135deg,#061b21,#0c4d4c,#79e4c0)}.swatch.orbit{background:radial-gradient(circle at 50% 50%,#8dbdff 0 4px,transparent 5px),repeating-radial-gradient(circle at 50% 50%,#193e62 0 2px,#081521 3px 8px)}.swatch.editorial{background:linear-gradient(135deg,#eee9df 50%,#1a67db 50%)}.swatch.quant{background:linear-gradient(135deg,#0a1518,#b0f078)}.swatch.glass{background:linear-gradient(135deg,#c4adff,#1b2d4a)}.swatch.mono{background:linear-gradient(135deg,#050505 50%,#f1f1f1 50%)}.style-note{margin-top:13px;padding:14px;border-left:2px solid #75dfca;background:#ffffff07;color:#a8bdce;font-size:.77rem;line-height:1.65}.style-note strong{color:#eaf7ff}.choose-note{margin-top:10px;color:#7892a6;font-size:.68rem}.@media(max-width:850px){.lab-layout{grid-template-columns:1fr}.options{grid-template-columns:repeat(2,1fr)}.preview-wrap{position:static}}@media(max-width:560px){.options{grid-template-columns:1fr}.preview{min-height:520px;padding:18px}.preview-cards{grid-template-columns:1fr}.preview-card{min-height:auto}.preview-kicker{margin-top:40px}.intro{padding-top:36px}.top{padding:18px 0}}
+    :root{color-scheme:dark;--page:#06111b;--panel:#0c1c29;--line:rgba(255,255,255,.1);--muted:#8ea6ba;--mint:#8ce3d1;--white:#edf7ff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(ellipse at 12% 0%,rgba(34,99,112,.18),transparent 34%),var(--page);color:var(--white);font-family:"DM Sans",sans-serif}
+    button,a{font:inherit}
+    button{color:inherit}
+    a{color:inherit;text-decoration:none}
+    .shell{width:min(1480px,calc(100% - 44px));margin:auto}
+    .topbar{height:72px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.09)}
+    .brand{display:flex;align-items:center;gap:11px;font:700 .86rem "Space Grotesk",sans-serif;letter-spacing:.11em}
+    .brand-mark{display:grid;place-items:center;width:29px;height:29px;border:1px solid rgba(140,227,209,.46);border-radius:9px;color:var(--mint);font-size:1rem}
+    .top-actions{display:flex;align-items:center;gap:17px;color:#9db1c3;font-size:.78rem}
+    .back-link{color:var(--mint);font-weight:700}
+    .intro{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;padding:48px 0 30px}
+    .eyebrow,.mono{font:500 .65rem "DM Mono",monospace;letter-spacing:.15em;text-transform:uppercase;color:var(--mint)}
+    h1{max-width:860px;margin:13px 0 11px;font:700 clamp(2.25rem,5.5vw,4.6rem)/.99 "Space Grotesk",sans-serif;letter-spacing:-.065em}
+    .intro-copy{max-width:740px;margin:0;color:#9fb4c6;font-size:.96rem;line-height:1.7}
+    .live-pill{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid rgba(140,227,209,.2);border-radius:999px;background:rgba(140,227,209,.055);color:#bcefe5;font:500 .66rem "DM Mono",monospace;white-space:nowrap}
+    .live-dot{width:7px;height:7px;border-radius:50%;background:#76e0b8;box-shadow:0 0 12px #76e0b8}
+    .workspace{display:grid;grid-template-columns:320px minmax(0,1fr);gap:23px;align-items:start;padding-bottom:65px}
+    .control-panel{position:sticky;top:16px;min-width:0;padding:16px;border:1px solid rgba(255,255,255,.09);border-radius:19px;background:linear-gradient(160deg,rgba(17,36,50,.92),rgba(8,21,32,.94));box-shadow:0 18px 55px rgba(0,0,0,.18)}
+    .panel-heading{display:flex;justify-content:space-between;align-items:center;margin:2px 1px 13px}
+    .panel-heading strong{font:600 .84rem "Space Grotesk",sans-serif}
+    .count{color:#7994a9;font:500 .63rem "DM Mono",monospace}
+    .direction-list{display:grid;gap:8px}
+    .direction{position:relative;display:grid;grid-template-columns:78px minmax(0,1fr);gap:12px;align-items:center;width:100%;padding:8px;border:1px solid transparent;border-radius:13px;background:rgba(255,255,255,.025);text-align:left;cursor:pointer;transition:border-color .22s,background .22s,transform .22s}
+    .direction:hover{transform:translateX(2px);background:rgba(255,255,255,.055)}
+    .direction.active{border-color:rgba(140,227,209,.56);background:linear-gradient(100deg,rgba(140,227,209,.12),rgba(140,227,209,.035))}
+    .direction.active:after{content:"";position:absolute;right:10px;top:10px;width:6px;height:6px;border-radius:50%;background:var(--mint);box-shadow:0 0 12px var(--mint)}
+    .direction strong{display:block;padding-right:8px;color:#eef7ff;font-size:.78rem;font-weight:700}
+    .direction small{display:block;margin-top:4px;color:#8ba3b7;font-size:.64rem;line-height:1.4}
+    .swatch{position:relative;height:54px;overflow:hidden;border:1px solid rgba(255,255,255,.12);border-radius:9px}
+    .swatch:before,.swatch:after{content:"";position:absolute}
+    .swatch i{position:absolute;display:block}
+    .swatch.aurora{background:radial-gradient(circle at 75% 20%,#176e69,transparent 42%),linear-gradient(140deg,#071722,#0e2732)}
+    .swatch.aurora:before{inset:8px 8px 8px 38px;border:1px solid #83dfcd66;border-radius:50%;transform:rotate(-25deg)}
+    .swatch.aurora:after{width:5px;height:5px;left:50px;top:13px;border-radius:50%;background:#a6f5e5;box-shadow:12px 10px #89c6ff,-12px 19px #a6f5e5,3px 25px #a6f5e5}
+    .swatch.orbit{background:radial-gradient(circle at 50% 50%,#8dbdff 0 3px,transparent 4px),#09182a}
+    .swatch.orbit:before{width:43px;height:24px;left:17px;top:14px;border:1px solid #8dbdff;border-radius:50%;transform:rotate(45deg)}
+    .swatch.orbit:after{width:43px;height:24px;left:17px;top:14px;border:1px solid #8dbdff88;border-radius:50%;transform:rotate(-45deg)}
+    .swatch.editorial{background:#eee9df}
+    .swatch.editorial:before{left:8px;right:8px;top:10px;height:2px;background:#18232b;box-shadow:0 7px #18232b,0 14px #1a67db}
+    .swatch.editorial:after{right:9px;bottom:9px;width:17px;height:17px;background:#1a67db}
+    .swatch.quant{background:linear-gradient(90deg,#0a1518,#122b27)}
+    .swatch.quant:before{inset:0;background:linear-gradient(90deg,transparent 24%,#b0f07822 25%,transparent 26%),linear-gradient(0deg,transparent 24%,#b0f07822 25%,transparent 26%);background-size:19px 19px}
+    .swatch.quant:after{left:14px;bottom:9px;width:7px;height:18px;background:#b0f078;box-shadow:10px -8px #85dcae,20px -1px #b0f078,30px -20px #85dcae}
+    .swatch.glass{background:radial-gradient(circle at 75% 30%,#7458b4,transparent 50%),#131b36}
+    .swatch.glass:before{width:40px;height:30px;left:18px;top:11px;border:1px solid #e2d8ff8a;border-radius:9px;background:#c4adff22;backdrop-filter:blur(3px);transform:rotate(-9deg)}
+    .swatch.glass:after{width:34px;height:26px;left:32px;top:18px;border:1px solid #c4adff88;border-radius:8px;background:#c4adff18;transform:rotate(8deg)}
+    .swatch.mono{background:#090909}
+    .swatch.mono:before{inset:0;background:repeating-linear-gradient(90deg,transparent 0 17px,#ffffff20 18px 19px)}
+    .swatch.mono:after{left:8px;top:9px;width:45px;height:5px;background:#fff;box-shadow:0 9px #fff,0 18px #888}
+    .swatch.signal{background:linear-gradient(120deg,#1610a0,#ea4d35 70%,#ffbd53)}
+    .swatch.signal:before{inset:6px;background:repeating-linear-gradient(145deg,transparent 0 7px,#ffffff6b 8px 9px);clip-path:polygon(0 50%,18% 15%,35% 70%,55% 10%,73% 80%,100% 30%,100% 100%,0 100%)}
+    .swatch.signal:after{width:19px;height:19px;right:10px;top:10px;border-radius:50%;background:#ffd06c;mix-blend-mode:screen}
+    .swatch.field{background:#e9dfc9}
+    .swatch.field:before{inset:7px;border:1px solid #8b7761}
+    .swatch.field:after{left:14px;top:14px;width:25px;height:2px;background:#645747;box-shadow:0 7px #645747,0 14px #b85e3c}
+    .panel-tip{margin:14px 2px 1px;padding:12px 12px 11px;border-left:2px solid rgba(140,227,209,.6);background:rgba(140,227,209,.045);color:#92aabd;font-size:.69rem;line-height:1.6}
+    .panel-tip strong{color:#dff9f1}
+    .stage{min-width:0}
+    .stage-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
+    .stage-label{color:#91aabe;font:500 .65rem "DM Mono",monospace;letter-spacing:.13em;text-transform:uppercase}
+    .toolbar-groups{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .segmented{display:inline-flex;gap:3px;padding:3px;border:1px solid rgba(255,255,255,.1);border-radius:10px;background:#0d1d2a}
+    .segmented button,.replay{padding:7px 9px;border:0;border-radius:7px;background:transparent;color:#93aabc;font-size:.68rem;cursor:pointer}
+    .segmented button.active{background:rgba(140,227,209,.13);color:#c9f6ed}
+    .replay{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03);color:#d2e2ee}
+    .replay:hover{border-color:rgba(140,227,209,.45);color:var(--mint)}
+    .browser-frame{position:relative;padding:12px;border:1px solid rgba(255,255,255,.1);border-radius:20px;background:linear-gradient(145deg,#142535,#091621);box-shadow:0 35px 90px rgba(0,0,0,.34)}
+    .browser-chrome{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:3px 5px 12px;color:#7892a5;font:500 .63rem "DM Mono",monospace}
+    .window-dots{display:flex;gap:5px}
+    .window-dots i{width:7px;height:7px;border-radius:50%;background:#5a7183}
+    .browser-url{padding:5px 12px;border:1px solid rgba(255,255,255,.08);border-radius:999px;background:rgba(255,255,255,.035)}
+    .viewport-wrap{display:flex;justify-content:center;min-height:650px;overflow:auto;border-radius:12px;background:#08131d;padding:0;transition:padding .25s}
+    .viewport-wrap[data-size="tablet"]{padding:0 8%}
+    .viewport-wrap[data-size="mobile"]{padding:0 25%}
+    .mock-site{--bg:#081823;--panel:#102a35;--ink:#edf9ff;--muted:#9cb8c7;--accent:#83e3cf;--accent2:#91baff;--line:rgba(255,255,255,.12);--display:"Space Grotesk",sans-serif;--body:"DM Sans",sans-serif;--shape:18px;position:relative;width:100%;min-height:650px;overflow:hidden;padding:26px clamp(20px,4vw,54px);color:var(--ink);background:var(--bg);font-family:var(--body);transition:width .28s,background .3s,color .3s,border-radius .3s}
+    .viewport-wrap[data-size="tablet"] .mock-site{width:780px;flex:0 0 780px}
+    .viewport-wrap[data-size="mobile"] .mock-site{width:390px;min-height:760px;flex:0 0 390px;padding:22px 19px}
+    .mock-site:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;background-image:radial-gradient(var(--accent) .65px,transparent .75px);background-size:24px 24px;mask-image:linear-gradient(120deg,transparent 0%,#000 100%)}
+    .mock-site>*{position:relative;z-index:1}
+    .mock-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:2px 0 17px;border-bottom:1px solid var(--line);font:500 .61rem "DM Mono",monospace;letter-spacing:.08em}
+    .mock-brand{font:700 .77rem var(--display);letter-spacing:.035em}
+    .mock-menu{display:flex;gap:20px;color:var(--muted)}
+    .mock-status{display:inline-flex;align-items:center;gap:6px;color:var(--accent);font-size:.57rem;letter-spacing:.12em}
+    .mock-status:before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);box-shadow:0 0 9px var(--accent)}
+    .mock-scene{display:none;animation:scene-in .55s cubic-bezier(.2,.8,.2,1) both}
+    .mock-scene.active{display:block}
+    @keyframes scene-in{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+    .mock-hero{display:grid;grid-template-columns:1.15fr .85fr;gap:25px;align-items:center;min-height:365px;padding:48px 0 34px}
+    .mock-kicker{margin-bottom:17px;color:var(--accent);font:500 .6rem "DM Mono",monospace;letter-spacing:.16em;text-transform:uppercase}
+    .mock-hero h2{max-width:620px;margin:0;font:700 clamp(2.4rem,5vw,5rem)/.94 var(--display);letter-spacing:-.065em}
+    .mock-lede{max-width:510px;margin:17px 0 0;color:var(--muted);font-size:.83rem;line-height:1.7}
+    .mock-cta{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+    .mock-cta span{padding:9px 12px;border:1px solid var(--line);border-radius:999px;color:var(--ink);font-size:.62rem;font-weight:700}
+    .mock-cta span:first-child{border-color:var(--accent);background:var(--accent);color:var(--bg)}
+    .artboard{position:relative;display:grid;place-items:center;min-height:265px;overflow:hidden;border:1px solid var(--line);border-radius:var(--shape);background:var(--panel)}
+    .art-orbit,.art-orbit:before,.art-orbit:after{position:absolute;width:190px;height:115px;border:1px solid var(--accent);border-radius:50%;content:"";transform:rotate(-28deg)}
+    .art-orbit:before{width:150px;height:90px;left:18px;top:10px;opacity:.55;transform:rotate(67deg)}
+    .art-orbit:after{width:110px;height:68px;left:38px;top:23px;opacity:.4;transform:rotate(120deg)}
+    .art-core{width:49px;height:49px;border:1px solid var(--accent);border-radius:50%;background:radial-gradient(circle,var(--accent),transparent 72%);box-shadow:0 0 40px color-mix(in srgb,var(--accent),transparent 65%)}
+    .art-node{position:absolute;width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+    .art-node.n1{top:26%;left:24%}.art-node.n2{top:65%;right:19%}.art-node.n3{bottom:18%;left:37%}
+    .art-terminal{position:absolute;inset:15px;display:grid;align-content:center;gap:9px;padding:16px;border:1px solid var(--line);border-radius:11px;background:rgba(3,12,16,.3);font:500 .62rem "DM Mono",monospace;color:var(--accent)}
+    .art-terminal span{display:flex;justify-content:space-between;gap:14px}
+    .art-terminal i{display:block;height:4px;background:var(--accent);border-radius:9px;opacity:.8}
+    .art-glass{position:absolute;width:145px;height:176px;border:1px solid rgba(255,255,255,.4);border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.3),rgba(255,255,255,.015));backdrop-filter:blur(8px);box-shadow:inset 0 0 30px rgba(255,255,255,.1);transform:rotate(-12deg)}
+    .art-glass:after{content:"";position:absolute;inset:18px;border:1px solid rgba(255,255,255,.35);border-radius:15px}
+    .art-rings{position:absolute;width:190px;height:190px;border:1px solid var(--accent);border-radius:50%;box-shadow:0 0 0 15px color-mix(in srgb,var(--accent),transparent 91%),0 0 0 31px color-mix(in srgb,var(--accent),transparent 94%),inset 0 0 36px color-mix(in srgb,var(--accent),transparent 88%)}
+    .art-burst{position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 50% 50%,color-mix(in srgb,var(--accent),transparent 56%) 0 2deg,transparent 2deg 13deg);mask-image:radial-gradient(circle,transparent 0 24%,#000 25% 65%,transparent 70%);animation:slow-spin 30s linear infinite}
+    @keyframes slow-spin{to{transform:rotate(360deg)}}
+    .art-field{position:absolute;inset:23px;border:1px solid color-mix(in srgb,var(--accent),transparent 30%);background:repeating-linear-gradient(0deg,transparent 0 19px,color-mix(in srgb,var(--accent),transparent 88%) 20px),repeating-linear-gradient(90deg,transparent 0 19px,color-mix(in srgb,var(--accent),transparent 88%) 20px)}
+    .art-wave{position:absolute;width:220px;height:125px;border:2px solid var(--accent);border-color:var(--accent) transparent transparent transparent;border-radius:50%;filter:drop-shadow(0 0 13px var(--accent));transform:rotate(-18deg)}
+    .art-wave:nth-of-type(2){transform:translateY(19px) rotate(8deg);opacity:.65}.art-wave:nth-of-type(3){transform:translateY(40px) rotate(-7deg);opacity:.4}
+    .art-paper{position:absolute;width:175px;height:210px;background:#f0e7d7;color:#3e352c;padding:19px;transform:rotate(-7deg);box-shadow:12px 14px 0 rgba(0,0,0,.22);font:500 .55rem "DM Mono",monospace}
+    .art-paper:before{content:"FIELD NOTE / 026";display:block;padding-bottom:14px;border-bottom:1px solid #8b7861}
+    .art-paper:after{content:"MODEL\A 0.846\A\A SCENARIO\A 0.79";white-space:pre;display:block;margin-top:15px;line-height:1.7;font-size:.8rem}
+    .mock-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .mock-stat{padding:15px;border:1px solid var(--line);border-radius:calc(var(--shape) - 5px);background:var(--panel)}
+    .mock-stat small{display:block;color:var(--muted);font:500 .55rem "DM Mono",monospace;letter-spacing:.1em}
+    .mock-stat strong{display:block;margin-top:10px;color:var(--accent);font:700 1.55rem var(--display)}
+    .mock-stat span{display:block;margin-top:4px;color:var(--muted);font-size:.61rem}
+    .mock-section-head{display:flex;justify-content:space-between;align-items:end;gap:14px;margin:37px 0 15px}
+    .mock-section-head small{color:var(--accent);font:500 .58rem "DM Mono",monospace;letter-spacing:.13em}
+    .mock-section-head strong{display:block;margin-top:6px;font:600 1.5rem var(--display);letter-spacing:-.04em}
+    .mock-section-head em{color:var(--muted);font-size:.65rem;font-style:normal}
+    .mock-work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+    .mock-work-card{overflow:hidden;border:1px solid var(--line);border-radius:var(--shape);background:var(--panel)}
+    .mock-work-art{position:relative;display:grid;place-items:center;height:130px;overflow:hidden;background:linear-gradient(140deg,color-mix(in srgb,var(--accent),transparent 88%),transparent),var(--panel)}
+    .mock-work-art:before{content:"";width:70px;height:70px;border:1px solid var(--accent);border-radius:50%;box-shadow:0 0 28px color-mix(in srgb,var(--accent),transparent 70%)}
+    .mock-work-card:nth-child(2) .mock-work-art:before{border-radius:10px;transform:rotate(45deg)}
+    .mock-work-card:nth-child(3) .mock-work-art:before{width:96px;height:35px;border-radius:50%;transform:rotate(-24deg)}
+    .mock-work-copy{padding:14px}
+    .mock-work-copy small{color:var(--accent);font:500 .55rem "DM Mono",monospace}
+    .mock-work-copy strong{display:block;margin:7px 0 4px;font:600 .96rem var(--display)}
+    .mock-work-copy p{margin:0;color:var(--muted);font-size:.65rem;line-height:1.5}
+    .mock-research{display:grid;grid-template-columns:1.15fr .85fr;gap:14px;margin-top:34px}
+    .mock-paper,.mock-chart{padding:18px;border:1px solid var(--line);border-radius:var(--shape);background:var(--panel)}
+    .mock-paper small,.mock-chart small{color:var(--accent);font:500 .56rem "DM Mono",monospace;letter-spacing:.12em}
+    .mock-paper h3{max-width:520px;margin:14px 0 9px;font:600 1.45rem/1.08 var(--display)}
+    .mock-paper p{margin:0;color:var(--muted);font-size:.7rem;line-height:1.6}
+    .mock-chart{display:flex;flex-direction:column;justify-content:space-between;min-height:200px}
+    .bar-chart{display:flex;align-items:end;gap:10px;height:118px;padding:12px 4px 0;border-bottom:1px solid var(--line)}
+    .bar-chart i{flex:1;min-width:9px;border-radius:5px 5px 0 0;background:linear-gradient(180deg,var(--accent),color-mix(in srgb,var(--accent),transparent 70%));box-shadow:0 0 17px color-mix(in srgb,var(--accent),transparent 79%)}
+    .chart-legend{display:flex;justify-content:space-between;margin-top:10px;color:var(--muted);font:500 .55rem "DM Mono",monospace}
+    .mock-foot{display:flex;justify-content:space-between;gap:12px;margin-top:30px;padding-top:13px;border-top:1px solid var(--line);color:var(--muted);font:500 .55rem "DM Mono",monospace;letter-spacing:.08em}
+    .scene-research .mock-hero{min-height:0;padding:28px 0 12px}
+    .scene-research .mock-hero h2{font-size:clamp(2rem,4vw,3.6rem)}
+    .scene-research .artboard{min-height:190px}
+    .scene-research .mock-stats{margin-top:14px}
+    .scene-work .mock-hero{min-height:0;padding:27px 0 12px}
+    .scene-work .mock-hero h2{font-size:clamp(2.1rem,4vw,3.5rem)}
+    .scene-work .artboard{min-height:180px}
+    .theme-orbit .mock-site{--bg:#07172b;--panel:#0d2543;--ink:#ecf4ff;--muted:#a0b8d5;--accent:#8dbdff;--accent2:#d0e3ff;--line:rgba(141,189,255,.23);--shape:9px}
+    .theme-orbit .mock-site:before{background:radial-gradient(circle at 82% 17%,rgba(80,145,224,.25),transparent 25%),linear-gradient(90deg,transparent 49.8%,rgba(141,189,255,.06) 50%,transparent 50.2%);background-size:auto,40px 40px;opacity:.55}
+    .theme-orbit .artboard{background:radial-gradient(circle,#173a5f,#08182d 72%)}
+    .theme-editorial .mock-site{--bg:#eee9df;--panel:#e4ded2;--ink:#17232a;--muted:#606b6d;--accent:#1768d8;--accent2:#bb4d38;--line:rgba(23,35,42,.2);--display:"DM Serif Display",serif;--shape:1px}
+    .theme-editorial .mock-site:before{opacity:.25;background:linear-gradient(90deg,transparent 49.8%,#192b3710 50%,transparent 50.2%);background-size:60px 100%}
+    .theme-editorial .mock-nav{font-family:"DM Sans",sans-serif}
+    .theme-editorial .mock-hero h2{font-size:clamp(3rem,6vw,5.6rem);font-weight:400}
+    .theme-editorial .mock-cta span{border-radius:0}
+    .theme-editorial .mock-cta span:first-child{background:var(--ink);border-color:var(--ink);color:#fff}
+    .theme-editorial .artboard{background:#ddd4c5}
+    .theme-editorial .art-paper{transform:rotate(4deg)}
+    .theme-quant .mock-site{--bg:#071311;--panel:#0d201b;--ink:#e8f8ee;--muted:#91afa0;--accent:#b0f078;--accent2:#67d8ae;--line:rgba(176,240,120,.2);--display:"DM Mono",monospace;--shape:5px}
+    .theme-quant .mock-site:before{opacity:.5;background:repeating-linear-gradient(0deg,transparent 0 23px,rgba(176,240,120,.07) 24px),repeating-linear-gradient(90deg,transparent 0 23px,rgba(176,240,120,.07) 24px)}
+    .theme-quant .mock-hero h2{font-size:clamp(2rem,4vw,4.1rem);letter-spacing:-.08em}
+    .theme-quant .mock-cta span{border-radius:3px}
+    .theme-quant .mock-cta span:first-child{background:transparent;color:var(--accent)}
+    .theme-quant .artboard{background:linear-gradient(140deg,#0d2119,#08120f)}
+    .theme-glass .mock-site{--bg:#11182d;--panel:rgba(41,52,83,.52);--ink:#f6f4ff;--muted:#bbc3de;--accent:#c4adff;--accent2:#8ee6e0;--line:rgba(232,224,255,.2);--shape:23px}
+    .theme-glass .mock-site:before{opacity:.8;background:radial-gradient(ellipse at 80% 18%,rgba(168,127,255,.3),transparent 34%),radial-gradient(ellipse at 14% 84%,rgba(90,209,207,.18),transparent 34%)}
+    .theme-glass .mock-nav,.theme-glass .mock-stat,.theme-glass .mock-work-card,.theme-glass .mock-paper,.theme-glass .mock-chart,.theme-glass .artboard{backdrop-filter:blur(14px);background-color:rgba(255,255,255,.045)}
+    .theme-glass .mock-cta span,.theme-glass .mock-stat,.theme-glass .mock-work-card{border-radius:20px}
+    .theme-glass .artboard{background:linear-gradient(145deg,rgba(210,190,255,.15),rgba(105,221,213,.08))}
+    .theme-mono .mock-site{--bg:#080808;--panel:#111;--ink:#f6f6f6;--muted:#a3a3a3;--accent:#f7f7f7;--accent2:#aaa;--line:rgba(255,255,255,.27);--display:"DM Mono",monospace;--shape:0px}
+    .theme-mono .mock-site:before{opacity:.27;background:repeating-linear-gradient(90deg,transparent 0 69px,#fff 70px,transparent 71px)}
+    .theme-mono .mock-hero h2{font-size:clamp(2.5rem,5vw,5.5rem);text-transform:uppercase;letter-spacing:-.1em}
+    .theme-mono .mock-cta span{border-radius:0;text-transform:uppercase}
+    .theme-mono .mock-cta span:first-child{background:#fff;color:#080808}
+    .theme-mono .artboard{background:repeating-conic-gradient(#151515 0 15deg,#090909 15deg 30deg)}
+    .theme-signal .mock-site{--bg:#11105a;--panel:#252092;--ink:#fff6e8;--muted:#c9c4ff;--accent:#ffd269;--accent2:#ff6b57;--line:rgba(255,255,255,.23);--display:"Manrope",sans-serif;--shape:28px}
+    .theme-signal .mock-site:before{opacity:.7;background:radial-gradient(ellipse at 80% 18%,#f15b52 0,transparent 36%),radial-gradient(ellipse at 15% 80%,#3c38c7 0,transparent 36%)}
+    .theme-signal .mock-hero h2{font-weight:800;letter-spacing:-.075em}
+    .theme-signal .mock-cta span{border:0;background:rgba(255,255,255,.14)}
+    .theme-signal .mock-cta span:first-child{background:var(--accent);color:#24145a}
+    .theme-signal .artboard{background:linear-gradient(135deg,#2920a0,#ec5148)}
+    .theme-signal .art-wave{border-width:4px}
+    .theme-field .mock-site{--bg:#eee5d2;--panel:#e4dac5;--ink:#3e382f;--muted:#756958;--accent:#b65c3d;--accent2:#496d5b;--line:rgba(62,56,47,.2);--display:"DM Serif Display",serif;--shape:3px}
+    .theme-field .mock-site:before{opacity:.3;background:repeating-linear-gradient(0deg,transparent 0 31px,rgba(74,65,50,.14) 32px)}
+    .theme-field .mock-nav{font-family:"DM Mono",monospace}
+    .theme-field .mock-hero h2{font-size:clamp(2.7rem,5vw,5rem);font-weight:400}
+    .theme-field .mock-cta span{border-radius:2px}
+    .theme-field .mock-cta span:first-child{background:var(--ink);border-color:var(--ink);color:#eee5d2}
+    .theme-field .artboard{background:#d9cbb0}
+    .theme-field .art-paper{box-shadow:9px 10px 0 rgba(66,51,37,.15)}
+    .theme-field .mock-work-card,.theme-field .mock-stat,.theme-field .mock-paper,.theme-field .mock-chart{box-shadow:3px 4px 0 rgba(62,56,47,.12)}
+    .mock-site.replay .mock-hero h2{animation:headline-in .75s cubic-bezier(.17,.8,.2,1) both}
+    .mock-site.replay .artboard{animation:art-in .8s cubic-bezier(.16,.8,.2,1) both}
+    .mock-site.replay .mock-stat,.mock-site.replay .mock-work-card{animation:card-in .55s ease both}
+    .mock-site.replay .mock-stat:nth-child(2),.mock-site.replay .mock-work-card:nth-child(2){animation-delay:.08s}
+    .mock-site.replay .mock-stat:nth-child(3),.mock-site.replay .mock-work-card:nth-child(3){animation-delay:.16s}
+    @keyframes headline-in{from{opacity:0;transform:translateY(22px);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}
+    @keyframes art-in{from{opacity:0;transform:translateY(15px) scale(.94)}to{opacity:1;transform:none}}
+    @keyframes card-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+    .below-stage{display:grid;grid-template-columns:1.1fr .9fr;gap:13px;margin-top:14px}
+    .design-summary,.design-spec{padding:16px 18px;border:1px solid rgba(255,255,255,.09);border-radius:14px;background:rgba(13,29,42,.8)}
+    .design-summary .summary-kicker,.design-spec .summary-kicker{color:#7d9aaf;font:500 .58rem "DM Mono",monospace;letter-spacing:.15em;text-transform:uppercase}
+    .design-summary h2{margin:7px 0 6px;font:600 1.07rem "Space Grotesk",sans-serif}
+    .design-summary p{margin:0;color:#91a8ba;font-size:.72rem;line-height:1.6}
+    .spec-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+    .spec-tags span{padding:5px 7px;border:1px solid rgba(255,255,255,.1);border-radius:999px;color:#b0c5d5;font-size:.61rem}
+    .shortlist{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:13px;padding:12px 14px;border:1px solid rgba(140,227,209,.18);border-radius:13px;background:rgba(140,227,209,.045)}
+    .shortlist span{color:#9ab1c4;font-size:.68rem}
+    .shortlist strong{color:#d9fff4;font-size:.74rem}
+    .shortlist button{padding:8px 11px;border:1px solid rgba(140,227,209,.34);border-radius:8px;background:rgba(140,227,209,.09);color:#cafff1;font-size:.68rem;font-weight:700;cursor:pointer}
+    .references{display:flex;gap:14px;flex-wrap:wrap;padding:17px 0 35px;color:#70899d;font-size:.67rem}
+    .references a{color:#9bdacc;text-decoration:underline;text-underline-offset:3px}
+    @media(max-width:1020px){.workspace{grid-template-columns:270px minmax(0,1fr)}.direction{grid-template-columns:68px minmax(0,1fr)}.viewport-wrap{min-height:620px}.mock-site{min-height:620px}.mock-hero{grid-template-columns:1fr .7fr}.artboard{min-height:225px}}
+    @media(max-width:760px){.shell{width:min(100% - 26px,700px)}.intro{grid-template-columns:1fr;padding:34px 0 23px}.live-pill{width:max-content}.workspace{grid-template-columns:1fr}.control-panel{position:static}.direction-list{grid-template-columns:repeat(2,minmax(0,1fr))}.direction{grid-template-columns:62px minmax(0,1fr);padding:7px}.swatch{height:47px}.stage-toolbar{align-items:flex-start;flex-direction:column}.toolbar-groups{width:100%;justify-content:space-between}.viewport-wrap{min-height:590px}.viewport-wrap[data-size="mobile"]{padding:0 8px}.viewport-wrap[data-size="tablet"]{padding:0 4px}.below-stage{grid-template-columns:1fr}.mock-hero{grid-template-columns:1fr;gap:18px;padding:34px 0 25px}.mock-hero h2{font-size:clamp(2.7rem,12vw,4.2rem)}.artboard{min-height:190px}.mock-stats{gap:6px}.mock-stat{padding:10px}.mock-stat strong{font-size:1.2rem}.mock-stat span{font-size:.55rem}.mock-work-grid{grid-template-columns:1fr 1fr}.mock-work-card:nth-child(3){display:none}.mock-research{grid-template-columns:1fr}.mock-menu{gap:9px}.mock-menu span:nth-child(n+3){display:none}.scene-research .mock-hero,.scene-work .mock-hero{grid-template-columns:1fr}.scene-research .mock-hero .artboard,.scene-work .mock-hero .artboard{display:none}}
+    @media(max-width:480px){.topbar{height:60px}.brand{font-size:.75rem}.top-actions{gap:10px;font-size:.7rem}.intro h1{font-size:2.7rem}.direction-list{gap:6px}.direction{grid-template-columns:53px minmax(0,1fr);gap:8px}.direction strong{font-size:.7rem}.direction small{font-size:.58rem}.swatch{height:43px}.browser-frame{padding:7px;border-radius:14px}.browser-chrome{padding:3px 3px 8px}.browser-url{font-size:.55rem}.viewport-wrap{min-height:650px}.viewport-wrap[data-size="mobile"] .mock-site{min-height:720px}.mock-site{padding:20px 15px}.mock-nav{font-size:.52rem}.mock-brand{font-size:.65rem}.mock-hero h2{font-size:2.55rem}.mock-lede{font-size:.75rem}.mock-work-copy{padding:10px}.mock-work-art{height:92px}.mock-work-copy strong{font-size:.81rem}.mock-foot{font-size:.48rem}.shortlist{align-items:flex-start;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
   </style>
 </head>
 <body>
-  <header class="shell top"><strong>JAIDEV · VISUAL LAB</strong><a class="back" href="index.html">← Back to portfolio</a></header>
+  <header class="shell topbar">
+    <div class="brand"><span class="brand-mark">✳</span> JAIDEV · VISUAL LAB</div>
+    <div class="top-actions"><span>ART DIRECTION EXPLORER / 2026</span><a class="back-link" href="index.html">← Back to portfolio</a></div>
+  </header>
   <main class="shell">
-    <section class="intro"><span class="eyebrow">INTERFACE EXPLORATION · 06 DIRECTIONS</span><h1>Choose the visual language, not just the animation.</h1><p>These are separate visual directions for a future redesign. Switch between them to compare typography, contrast, density, accent colours, and interface character. Nothing here changes the main portfolio.</p></section>
-    <section class="lab-layout">
+    <section class="intro">
       <div>
-        <div class="options" role="group" aria-label="Choose a visual direction">
-          <button class="option active" data-theme="aurora"><span class="swatch aurora"></span><span><strong>01 · Neural Aurora</strong><small>Atmospheric · teal network · cinematic</small></span></button>
-          <button class="option" data-theme="orbit"><span class="swatch orbit"></span><span><strong>02 · Orbital Research</strong><small>Scientific · spatial · precise</small></span></button>
-          <button class="option" data-theme="editorial"><span class="swatch editorial"></span><span><strong>03 · Editorial Precision</strong><small>Light · typographic · academic</small></span></button>
-          <button class="option" data-theme="quant"><span class="swatch quant"></span><span><strong>04 · Quant Terminal</strong><small>Data-rich · restrained · technical</small></span></button>
-          <button class="option" data-theme="glass"><span class="swatch glass"></span><span><strong>05 · Glass Observatory</strong><small>Layered · soft glow · translucent</small></span></button>
-          <button class="option" data-theme="mono"><span class="swatch mono"></span><span><strong>06 · Monochrome Architecture</strong><small>Minimal · bold type · gallery-like</small></span></button>
-        </div>
-        <div class="style-note" id="style-note"><strong>Neural Aurora:</strong> Keeps the site's existing navy and teal DNA, adding restrained atmospheric light and a living network texture.</div>
-        <p class="choose-note">Choose one later. The main portfolio remains unchanged by this preview.</p>
+        <div class="eyebrow">INTERACTIVE DESIGN PLAYGROUND · 08 DIRECTIONS</div>
+        <h1>Eight visual worlds.<br>One body of work.</h1>
+        <p class="intro-copy">Explore how the same research, projects and achievements feel across eight distinct art directions. Switch page views, resize the canvas and replay the motion. This is a design study only; your main portfolio stays unchanged until we choose a direction.</p>
       </div>
-      <div class="preview-wrap">
-        <div class="preview-label"><span>LIVE INTERFACE PREVIEW</span><span id="preview-index">01 / 06</span></div>
-        <div class="preview theme-aurora" id="preview">
-          <div class="preview-head"><span>JAIDEV CHOWDARY AVIRINENI</span><span>AI · RESEARCH · SYSTEMS</span></div>
-          <div class="preview-kicker">STUDENT RESEARCHER / BUILDER</div>
-          <h2>Engineering ideas into useful systems.</h2>
-          <p class="preview-sub">A portfolio of research, machine learning, accessibility, and community work.</p>
-          <div class="preview-actions"><span>EXPLORE RESEARCH ↗</span><span>VIEW PROJECTS ↗</span><span>OPEN EVIDENCE ↗</span></div>
-          <div class="preview-cards"><div class="preview-card"><span>01 / RESEARCH</span><strong>02</strong><small>Published papers</small></div><div class="preview-card"><span>02 / MODEL WORK</span><strong>0.846</strong><small>ROC-AUC · NUS project</small></div><div class="preview-card"><span>03 / COMMUNITY</span><strong>40+</strong><small>Students reached</small></div></div>
-          <div class="preview-foot"><span>INTERFACE STUDY · 2026</span><span>SCROLL / EXPLORE / BUILD</span></div>
+      <div class="live-pill"><span class="live-dot"></span> LIVE PREVIEW / SELECT A DIRECTION</div>
+    </section>
+
+    <section class="workspace">
+      <aside class="control-panel">
+        <div class="panel-heading"><strong>Choose a visual language</strong><span class="count" id="direction-count">01 / 08</span></div>
+        <div class="direction-list" role="group" aria-label="Visual design directions">
+          <button class="direction active" type="button" data-theme="aurora" aria-pressed="true"><span class="swatch aurora"><i></i></span><span><strong>01 · Neural Aurora</strong><small>Atmospheric / connected / teal</small></span></button>
+          <button class="direction" type="button" data-theme="orbit" aria-pressed="false"><span class="swatch orbit"><i></i></span><span><strong>02 · Orbital Research</strong><small>Scientific / spatial / precise</small></span></button>
+          <button class="direction" type="button" data-theme="editorial" aria-pressed="false"><span class="swatch editorial"><i></i></span><span><strong>03 · Editorial Precision</strong><small>Light / typographic / academic</small></span></button>
+          <button class="direction" type="button" data-theme="quant" aria-pressed="false"><span class="swatch quant"><i></i></span><span><strong>04 · Quant Terminal</strong><small>Data-rich / restrained / technical</small></span></button>
+          <button class="direction" type="button" data-theme="glass" aria-pressed="false"><span class="swatch glass"><i></i></span><span><strong>05 · Glass Observatory</strong><small>Layered / soft glow / translucent</small></span></button>
+          <button class="direction" type="button" data-theme="mono" aria-pressed="false"><span class="swatch mono"><i></i></span><span><strong>06 · Monochrome Architecture</strong><small>Minimal / grid / high contrast</small></span></button>
+          <button class="direction" type="button" data-theme="signal" aria-pressed="false"><span class="swatch signal"><i></i></span><span><strong>07 · Signal Bloom</strong><small>Expressive / kinetic / electric</small></span></button>
+          <button class="direction" type="button" data-theme="field" aria-pressed="false"><span class="swatch field"><i></i></span><span><strong>08 · Field Notes</strong><small>Warm / tactile / editorial research</small></span></button>
+        </div>
+        <div class="panel-tip"><strong>How to compare:</strong> The words and facts stay the same. What changes is the visual system: typography, colour, geometry, rhythm, contrast and motion.</div>
+      </aside>
+
+      <div class="stage">
+        <div class="stage-toolbar">
+          <div class="stage-label">LIVE CANVAS <span style="color:#526c80">/</span> <span id="preview-index">01 · HOME</span></div>
+          <div class="toolbar-groups">
+            <div class="segmented" role="group" aria-label="Preview page">
+              <button class="active" type="button" data-scene="home" aria-pressed="true">Home</button>
+              <button type="button" data-scene="work" aria-pressed="false">Work</button>
+              <button type="button" data-scene="research" aria-pressed="false">Research</button>
+            </div>
+            <div class="segmented" role="group" aria-label="Preview size">
+              <button class="active" type="button" data-size="desktop" aria-pressed="true">Desktop</button>
+              <button type="button" data-size="tablet" aria-pressed="false">Tablet</button>
+              <button type="button" data-size="mobile" aria-pressed="false">Mobile</button>
+            </div>
+            <button class="replay" type="button" id="replay-motion">↻ Replay motion</button>
+          </div>
+        </div>
+
+        <div class="browser-frame">
+          <div class="browser-chrome"><span class="window-dots"><i></i><i></i><i></i></span><span class="browser-url">jaidev39.github.io / portfolio-preview</span><span>LIVE STUDY</span></div>
+          <div class="viewport-wrap" id="viewport-wrap" data-size="desktop">
+            <div class="mock-site theme-aurora" id="mock-site">
+              <nav class="mock-nav"><span class="mock-brand">JAIDEV CHOWDARY AVIRINENI</span><span class="mock-menu"><span>WORK</span><span>RESEARCH</span><span>ABOUT</span></span><span class="mock-status">AVAILABLE TO EXPLORE</span></nav>
+
+              <section class="mock-scene scene-home active" data-scene-panel="home">
+                <div class="mock-hero">
+                  <div><div class="mock-kicker">STUDENT RESEARCHER / AI DEVELOPER / BUILDER</div><h2>Engineering ideas into useful systems.</h2><p class="mock-lede">Researching intelligent systems, building accessible technology, and creating tools that work beyond the screen.</p><div class="mock-cta"><span>EXPLORE WORK ↗</span><span>READ RESEARCH ↗</span></div></div>
+                  <div class="artboard"><div class="art-orbit"></div><div class="art-core"></div><span class="art-node n1"></span><span class="art-node n2"></span><span class="art-node n3"></span><div class="art-burst"></div></div>
+                </div>
+                <div class="mock-stats"><div class="mock-stat"><small>RESEARCH / 01</small><strong>02</strong><span>Published papers</span></div><div class="mock-stat"><small>MODEL WORK / 02</small><strong>0.846</strong><span>NUS XGBoost ROC-AUC</span></div><div class="mock-stat"><small>COMMUNITY / 03</small><strong>40+</strong><span>Students reached</span></div></div>
+                <div class="mock-foot"><span>AI × RESEARCH × IMPACT</span><span>SCROLL TO EXPLORE ↓</span></div>
+              </section>
+
+              <section class="mock-scene scene-work" data-scene-panel="work">
+                <div class="mock-hero"><div><div class="mock-kicker">SELECTED BUILDS / 2023—2026</div><h2>Projects with a reason to exist.</h2><p class="mock-lede">From village-service systems to offline accessibility tools and real-time computer vision.</p></div><div class="artboard"><div class="art-rings"></div><div class="art-core"></div></div></div>
+                <div class="mock-section-head"><div><small>01 / SELECTED WORK</small><strong>Built, tested, documented.</strong></div><em>Three projects · one archive</em></div>
+                <div class="mock-work-grid">
+                  <article class="mock-work-card"><div class="mock-work-art"><div class="art-orbit"></div></div><div class="mock-work-copy"><small>AI × IOT</small><strong>RuralConnect</strong><p>Smart-village systems · YIP / IIT Kharagpur</p></div></article>
+                  <article class="mock-work-card"><div class="mock-work-art"><div class="art-glass"></div></div><div class="mock-work-copy"><small>ACCESSIBILITY AI</small><strong>SignSethu</strong><p>Offline ISL-to-Telugu · 500 samples</p></div></article>
+                  <article class="mock-work-card"><div class="mock-work-art"><div class="art-wave"></div></div><div class="mock-work-copy"><small>COMPUTER VISION</small><strong>AI Object Finder</strong><p>Real-time detection and speech feedback</p></div></article>
+                </div>
+              </section>
+
+              <section class="mock-scene scene-research" data-scene-panel="research">
+                <div class="mock-hero"><div><div class="mock-kicker">RESEARCH / GENERATIVE AI / QUANT FINANCE</div><h2>Questions, models, evidence.</h2><p class="mock-lede">Published work exploring adversarial financial stress scenarios and reinforcement-learning-based execution.</p></div><div class="artboard"><div class="art-terminal"><span>MODEL <b>0.846</b></span><i style="width:86%"></i><span>SCENARIO <b>0.79</b></span><i style="width:72%"></i><span>RISK <b>19.4%</b></span><i style="width:64%"></i></div></div></div>
+                <div class="mock-research"><article class="mock-paper"><small>01 / GENERATIVE AI · FINANCIAL RISK</small><h3>Automated adversarial stress testing with GANs.</h3><p>Scenario generation, adversarial stress amplification, and risk propagation. Reported scenario-diversity score: 0.79.</p></article><article class="mock-chart"><small>MODEL EVALUATION / ILLUSTRATIVE</small><div class="bar-chart"><i style="height:40%"></i><i style="height:60%"></i><i style="height:49%"></i><i style="height:83%"></i><i style="height:68%"></i><i style="height:94%"></i></div><div class="chart-legend"><span>MODEL COMPARISON</span><span>ROC-AUC</span></div></article></div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <div class="below-stage">
+          <div class="design-summary"><div class="summary-kicker">CURRENT ART DIRECTION</div><h2 id="direction-title">01 · Neural Aurora</h2><p id="direction-description">A cinematic but restrained network atmosphere. The existing navy and teal identity evolves into a living research interface.</p><div class="spec-tags" id="direction-tags"><span>Atmospheric</span><span>Network</span><span>Dark</span><span>Teal</span></div></div>
+          <div class="design-spec"><div class="summary-kicker">DESIGN CHARACTER</div><div class="spec-tags" id="direction-specs"><span>Motion: Ambient</span><span>Density: Balanced</span><span>Type: Geometric</span><span>Contrast: High</span></div><div class="shortlist"><div><span>Direction shortlist</span><br><strong id="shortlist-state">No direction selected yet</strong></div><button type="button" id="shortlist-button">＋ Shortlist this</button></div></div>
         </div>
       </div>
     </section>
+    <footer class="references"><span>INSPIRATION / </span><a href="https://porto.1stdev.space/showcase/" target="_blank" rel="noopener">1stdev Design Lab</a><a href="https://www.a1.gallery/websites/interactive-portfolio" target="_blank" rel="noopener">A1 Interactive Portfolios</a><a href="https://www.gleamstudio.design/blog-post/best-portfolio-websites" target="_blank" rel="noopener">Portfolio patterns 2026</a><a href="index.html">Return to the main portfolio ↗</a></footer>
   </main>
+
   <script>
-    const notes={
-      aurora:'<strong>Neural Aurora:</strong> Keeps the site\'s existing navy and teal DNA, adding restrained atmospheric light and a living network texture.',
-      orbit:'<strong>Orbital Research:</strong> A more scientific visual language: precise rings, orbiting data, thin outlines, and a sense of connected systems.',
-      editorial:'<strong>Editorial Precision:</strong> A confident light-mode alternative with strong typography, generous whitespace, clear reading hierarchy, and academic credibility.',
-      quant:'<strong>Quant Terminal:</strong> A technical research-lab direction with subtle grid lines, terminal-inspired labels, and chart-first information design.',
-      glass:'<strong>Glass Observatory:</strong> Layered translucent panels, soft violet highlights, and depth without turning the interface into a glassmorphism wall.',
-      mono:'<strong>Monochrome Architecture:</strong> A black-and-white editorial gallery with dramatic type, thin rules, and almost no decorative colour.'
+    const directions={
+      aurora:{name:'Neural Aurora',description:'A cinematic but restrained network atmosphere. The existing navy and teal identity evolves into a living research interface.',tags:['Atmospheric','Network','Dark','Teal'],specs:['Motion: Ambient','Density: Balanced','Type: Geometric','Contrast: High']},
+      orbit:{name:'Orbital Research',description:'A scientific visual system built from orbital geometry, fine coordinates, measured spacing and cool blue light.',tags:['Scientific','Spatial','Precise','Blue'],specs:['Motion: Orbital','Density: Balanced','Type: Technical','Contrast: High']},
+      editorial:{name:'Editorial Precision',description:'An academic publication aesthetic. Large serif typography, warm paper, strong hierarchy and generous white space.',tags:['Light mode','Editorial','Serif','Academic'],specs:['Motion: Subtle','Density: Open','Type: Serif','Contrast: Strong']},
+      quant:{name:'Quant Terminal',description:'A data-first research terminal. Grid structures, monospaced labels and chart-led storytelling make technical work feel at home.',tags:['Terminal','Data-first','Grid','Lime'],specs:['Motion: Functional','Density: High','Type: Mono','Contrast: High']},
+      glass:{name:'Glass Observatory',description:'Translucent research panels and soft violet lighting create depth while keeping content legible and structured.',tags:['Glass','Layered','Soft glow','Violet'],specs:['Motion: Floating','Density: Balanced','Type: Modern','Contrast: Medium']},
+      mono:{name:'Monochrome Architecture',description:'A gallery-like black-and-white system. Strong grids, hard edges and typography carry the entire visual identity.',tags:['Monochrome','Grid','Minimal','Bold'],specs:['Motion: Restrained','Density: Open','Type: Mono','Contrast: Maximum']},
+      signal:{name:'Signal Bloom',description:'An expressive, high-energy visual language with saturated gradients, sculptural waves and oversized typography.',tags:['Expressive','Gradient','Kinetic','Colour'],specs:['Motion: Energetic','Density: Bold','Type: Display','Contrast: High']},
+      field:{name:'Field Notes',description:'A tactile research notebook: warm paper, annotated details, editorial serif type and a sense of process and discovery.',tags:['Warm paper','Notebook','Tactile','Research'],specs:['Motion: Gentle','Density: Editorial','Type: Serif + mono','Contrast: Soft']}
     };
-    const preview=document.getElementById('preview'),note=document.getElementById('style-note'),index=document.getElementById('preview-index');
-    const buttons=[...document.querySelectorAll('.option')];
-    buttons.forEach((button,i)=>button.addEventListener('click',()=>{
-      buttons.forEach(x=>x.classList.toggle('active',x===button));
-      preview.className='preview theme-'+button.dataset.theme;
-      note.innerHTML=notes[button.dataset.theme];
-      index.textContent=String(i+1).padStart(2,'0')+' / 06';
-    }));
+    const themeButtons=[...document.querySelectorAll('[data-theme]')];
+    const preview=document.getElementById('mock-site');
+    const count=document.getElementById('direction-count');
+    const index=document.getElementById('preview-index');
+    let activeTheme='aurora',activeScene='home',activeSize='desktop',shortlisted=new Set();
+    function setTheme(theme){
+      if(!directions[theme])return;
+      activeTheme=theme;
+      preview.className='mock-site theme-'+theme+' replay';
+      requestAnimationFrame(()=>preview.classList.remove('replay'));
+      const item=directions[theme],ordinal=themeButtons.findIndex(b=>b.dataset.theme===theme)+1;
+      themeButtons.forEach(b=>{const active=b.dataset.theme===theme;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
+      count.textContent=String(ordinal).padStart(2,'0')+' / 08';
+      document.getElementById('direction-title').textContent=String(ordinal).padStart(2,'0')+' · '+item.name;
+      document.getElementById('direction-description').textContent=item.description;
+      document.getElementById('direction-tags').innerHTML=item.tags.map(x=>'<span>'+x+'</span>').join('');
+      document.getElementById('direction-specs').innerHTML=item.specs.map(x=>'<span>'+x+'</span>').join('');
+      document.getElementById('shortlist-state').textContent=shortlisted.size?Array.from(shortlisted).join(' · '):'No direction selected yet';
+      document.getElementById('shortlist-button').textContent=shortlisted.has(item.name)?'✓ Shortlisted':'＋ Shortlist this';
+    }
+    function setScene(scene){
+      activeScene=scene;
+      document.querySelectorAll('[data-scene]').forEach(b=>{const active=b.dataset.scene===scene;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
+      document.querySelectorAll('[data-scene-panel]').forEach(panel=>panel.classList.toggle('active',panel.dataset.scenePanel===scene));
+      const suffix={home:'HOME',work:'WORK',research:'RESEARCH'}[scene]||'HOME';
+      index.textContent=String(themeButtons.findIndex(b=>b.dataset.theme===activeTheme)+1).padStart(2,'0')+' · '+suffix;
+      replay();
+    }
+    function setSize(size){
+      activeSize=size;
+      document.getElementById('viewport-wrap').dataset.size=size;
+      document.querySelectorAll('[data-size]').forEach(b=>{const active=b.dataset.size===size;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
+    }
+    function replay(){
+      preview.classList.remove('replay');
+      void preview.offsetWidth;
+      preview.classList.add('replay');
+    }
+    themeButtons.forEach(b=>b.addEventListener('click',()=>setTheme(b.dataset.theme)));
+    document.querySelectorAll('[data-scene]').forEach(b=>b.addEventListener('click',()=>setScene(b.dataset.scene)));
+    document.querySelectorAll('[data-size]').forEach(b=>b.addEventListener('click',()=>setSize(b.dataset.size)));
+    document.getElementById('replay-motion').addEventListener('click',replay);
+    document.getElementById('shortlist-button').addEventListener('click',()=>{
+      const name=directions[activeTheme].name;
+      if(shortlisted.has(name))shortlisted.delete(name);else shortlisted.add(name);
+      document.getElementById('shortlist-state').textContent=shortlisted.size?Array.from(shortlisted).join(' · '):'No direction selected yet';
+      document.getElementById('shortlist-button').textContent=shortlisted.has(name)?'✓ Shortlisted':'＋ Shortlist this';
+    });
+    setTheme('aurora');setScene('home');setSize('desktop');
   </script>
 </body>
 </html>
