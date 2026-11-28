@@ -306,3 +306,49 @@ body.dialog-open{overflow:hidden}
   .neural-canvas{opacity:.12}
   .journey-card,.dialog-panel,.command-panel{transition:none}
 }
+
+
+/* A quiet accent for the Visual Lab navigation link */
+.nav a.visual-lab-link{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:.43rem .72rem;
+  margin-left:1px;
+  border:1px solid rgba(119,225,207,.34);
+  border-radius:999px;
+  background:linear-gradient(115deg,rgba(68,190,172,.15),rgba(91,155,237,.10));
+  color:#d9fff5;
+  opacity:1;
+  font-weight:700;
+  letter-spacing:.01em;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 0 18px rgba(65,194,175,.07);
+  transition:background .22s ease,border-color .22s ease,box-shadow .22s ease,transform .22s ease;
+}
+.nav a.visual-lab-link:hover,
+.nav a.visual-lab-link:focus-visible{
+  color:#f4fffd;
+  border-color:rgba(119,225,207,.68);
+  background:linear-gradient(115deg,rgba(68,190,172,.25),rgba(91,155,237,.18));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.11),0 0 23px rgba(65,194,175,.17);
+  transform:translateY(-1px);
+  outline:none;
+}
+.visual-lab-mark{
+  display:grid;
+  place-items:center;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:rgba(119,225,207,.15);
+  color:#9cf0df;
+  font-size:.72rem;
+  line-height:1;
+}
+@media(max-width:980px){
+  .nav a.visual-lab-link{margin:2px 0;padding:.48rem .78rem}
+}
+@media(prefers-reduced-motion:reduce){
+  .nav a.visual-lab-link{transition:none}
+}
