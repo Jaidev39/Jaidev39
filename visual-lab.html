@@ -400,6 +400,12 @@
       .theme-apply-heading strong{text-align:left}
     }
 
+    /* The ninth picker swatch represents the site's unmodified published baseline. */
+    .swatch.base{background:linear-gradient(135deg,#07121f 0 55%,#78e2c2 56% 76%,#9bc5ff 77%);border-color:rgba(120,226,194,.45)}
+    .swatch.base:before{left:9px;right:9px;top:9px;height:2px;background:#f1f6fb;box-shadow:0 7px rgba(241,246,251,.8),0 14px rgba(241,246,251,.55)}
+    .swatch.base:after{right:10px;bottom:8px;width:8px;height:8px;border-radius:50%;background:#78e2c2;box-shadow:0 0 12px #78e2c2}
+    .direction[data-theme="base"].active{border-color:rgba(120,226,194,.75);background:linear-gradient(100deg,rgba(120,226,194,.16),rgba(120,226,194,.045))}
+    .direction[data-theme="base"] strong{color:#c8f6e9}
 </style>
 </head>
 <body>
@@ -410,9 +416,9 @@
   <main class="shell">
     <section class="intro">
       <div>
-        <div class="eyebrow">INTERACTIVE DESIGN PLAYGROUND · 08 DIRECTIONS</div>
-        <h1>Eight visual worlds.<br>One body of work.</h1>
-        <p class="intro-copy">Explore the same research, projects and achievements across eight distinct art directions. Switch page views, resize the canvas and replay the motion. When a direction feels right, apply it to the live portfolio. Your choice stays active until you reset it.</p>
+        <div class="eyebrow">INTERACTIVE DESIGN PLAYGROUND · 08 DIRECTIONS + ORIGINAL</div>
+        <h1>Eight visual worlds.<br>One original. One body of work.</h1>
+        <p class="intro-copy">Compare eight custom art directions with the original portfolio design. Switch page views, resize the canvas and replay the motion. Apply any option to the full website, including the original navy-and-teal look.</p>
       </div>
       <div class="live-pill"><span class="live-dot"></span> LIVE PREVIEW / SELECT A DIRECTION</div>
     </section>
@@ -429,6 +435,7 @@
           <button class="direction" type="button" data-theme="mono" aria-pressed="false"><span class="swatch mono"><i></i></span><span><strong>06 · Monochrome Gallery</strong><small>Paper white / ink black / hard lines</small></span></button>
           <button class="direction" type="button" data-theme="signal" aria-pressed="false"><span class="swatch signal"><i></i></span><span><strong>07 · Signal Bloom</strong><small>Royal plum / hot coral / solar yellow</small></span></button>
           <button class="direction" type="button" data-theme="field" aria-pressed="false"><span class="swatch field"><i></i></span><span><strong>08 · Field Notes</strong><small>Parchment / terracotta / forest green</small></span></button>
+          <button class="direction" type="button" data-theme="base" aria-pressed="false"><span class="swatch base"><i></i></span><span><strong>09 · Original Portfolio</strong><small>Published navy / teal / original layout</small></span></button>
         </div>
         <div class="panel-tip"><strong>How to compare:</strong> The words and facts stay the same. What changes is the visual system: typography, colour, geometry, rhythm, contrast and motion.</div>
       </aside>
@@ -516,7 +523,8 @@
       glass:{name:'Violet Observatory',description:'A rich aubergine atmosphere with lilac and aqua light. Translucent glass panels, large rounded forms, layered depth, and soft optical glow.',tags:['Aubergine','Lilac','Aqua','Glass layers'],specs:['Motion: Floating','Density: Layered','Type: Modern geometric','Contrast: AA+'],palette:{bg:'#160F30',panel:'#2A1D52',ink:'#FCF9FF',muted:'#DBD1F4',accent:'#E3A7FF',accent2:'#7CF1DD'}},
       mono:{name:'Monochrome Gallery',description:'A bright paper-white gallery with ink-black typography, thick graphic rules, hard-edged cards, and no decorative hue. The content becomes the visual.',tags:['Paper white','Ink black','Grayscale','Brutalist grid'],specs:['Motion: Restrained','Density: Gallery','Type: Bold sans','Contrast: AA+'],palette:{bg:'#F4F4F4',panel:'#FFFFFF',ink:'#080808',muted:'#444444',accent:'#111111',accent2:'#555555'}},
       signal:{name:'Signal Bloom',description:'A maximalist poster-like direction: deep royal plum, hot coral, solar yellow, organic silhouettes, oversized type, and energetic colour blocks.',tags:['Royal plum','Hot coral','Solar yellow','Organic forms'],specs:['Motion: Kinetic','Density: Bold','Type: Display sans','Contrast: AA+'],palette:{bg:'#2D0B42',panel:'#4B145B',ink:'#FFF8F0',muted:'#F4D8E8',accent:'#FFE45E',accent2:'#FF765E'}},
-      field:{name:'Field Notes',description:'An archival research notebook in parchment, terracotta, and forest green. Ruled-paper details, annotated labels, serif headlines, and tactile paper cards.',tags:['Parchment','Terracotta','Forest green','Notebook'],specs:['Motion: Gentle','Density: Editorial','Type: Serif + mono','Contrast: AA+'],palette:{bg:'#F1E5C9',panel:'#FFF8E8',ink:'#29231C',muted:'#595044',accent:'#963817',accent2:'#1F5140'}}
+      field:{name:'Field Notes',description:'An archival research notebook in parchment, terracotta, and forest green. Ruled-paper details, annotated labels, serif headlines, and tactile paper cards.',tags:['Parchment','Terracotta','Forest green','Notebook'],specs:['Motion: Gentle','Density: Editorial','Type: Serif + mono','Contrast: AA+'],palette:{bg:'#F1E5C9',panel:'#FFF8E8',ink:'#29231C',muted:'#595044',accent:'#963817',accent2:'#1F5140'}},
+      base:{name:'Original Portfolio',description:'The published portfolio exactly as it was before choosing a Visual Lab theme: deep navy surfaces, teal accents, the original typography, and the existing page layout.',tags:['Original navy','Teal accents','Original typography','Default layout'],specs:['Motion: Original','Density: Original','Type: Space Grotesk + DM Sans','Contrast: Original'],palette:{bg:'#07121F',panel:'#0C1D2B',ink:'#F1F6FB',muted:'#B5C7D7',accent:'#78E2C2',accent2:'#9BC5FF'}}
     };
     function luminance(hex){
       const value=hex.replace('#','');
@@ -573,7 +581,7 @@
       requestAnimationFrame(()=>preview.classList.remove('replay'));
       const item=directions[theme],ordinal=themeButtons.findIndex(b=>b.dataset.theme===theme)+1;
       themeButtons.forEach(b=>{const active=b.dataset.theme===theme;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
-      count.textContent=String(ordinal).padStart(2,'0')+' / 08';
+      count.textContent=String(ordinal).padStart(2,'0')+' / 09';
       document.getElementById('direction-title').textContent=String(ordinal).padStart(2,'0')+' · '+item.name;
       document.getElementById('direction-description').textContent=item.description;
       document.getElementById('direction-tags').innerHTML=item.tags.map(x=>'<span>'+x+'</span>').join('');
@@ -617,7 +625,7 @@
       document.getElementById('shortlist-state').textContent=shortlisted.size?Array.from(shortlisted).join(' · '):'No direction selected yet';
       document.getElementById('shortlist-button').textContent=shortlisted.has(name)?'✓ Shortlisted':'＋ Shortlist this';
     });
-    setTheme('aurora');setScene('home');setSize('desktop');syncApplyThemeControls();
+    setTheme(getAppliedTheme()||'base');setScene('home');setSize('desktop');syncApplyThemeControls();
   </script>
 </body>
 </html>
