@@ -33,7 +33,7 @@ const proofItems = [
   {title:'YIP / IIT Kharagpur', subtitle:'Official Certificate of Appreciation · 2023', description:'IIT Kharagpur certificate recognising active participation and contribution to the Young Innovators Program 2023.', image:null, document:'assets/evidence/YIP_IIT_Kharagpur_Official_Certificate.pdf', linkLabel:'OPEN OFFICIAL YIP CERTIFICATE ↗'},
   {title:'Rural Pulsars · IIT Kharagpur', subtitle:'Project appreciation artifact', description:'Supporting appreciation page for the Rural Pulsars team and smart-village project. The team’s fourth-place result is described separately in the project entry.', image:'assets/evidence/certificate-04.jpg', document:'assets/evidence/certificate-04.jpg', linkLabel:'VIEW IIT APPRECIATION ↗'},
   {title:'GQMC', subtitle:'Silver Honour', description:'International final-round recognition with a Silver Honour, placing among the top 1% of participants.', image:'assets/evidence/gqmc-2026-silver-honour.jpg', document:'assets/evidence/gqmc-2026-silver-honour.jpg'},
-  {title:'NUS AI Internship', subtitle:'AI / Data Analytics · Faculty recommendation', description:'Built a churn-prediction pipeline across 7 models with a 26.5% baseline, 0.846 ROC-AUC, and 1,525 at-risk customers flagged, backed by direct NUS faculty recommendation.', image:null, document:'assets/recommendations/LOR_Group1_Avirineni_Jaidev_Chowdary (1).pdf', linkLabel:'OPEN FACULTY RECOMMENDATION ↗'},
+  {title:'NUS AI Internship', subtitle:'AI / Data Analytics · Faculty recommendation', description:'Worked with the IBM Telco Customer Churn dataset and compared seven models. The tuned XGBoost model reached 0.846 ROC-AUC; K-means identified a 1,525-customer high-risk segment.', image:null, document:'assets/recommendations/LOR_Group1_Avirineni_Jaidev_Chowdary (1).pdf', linkLabel:'OPEN FACULTY RECOMMENDATION ↗', caseStudy:'nus-churn'},
   {title:'Plaksha YDS', subtitle:'Programme completion', description:'Completed the Young Data Scientists programme in data science and quantitative analysis.', image:'assets/evidence/plaksha-yds-certificate.jpg', document:'assets/evidence/plaksha-yds-certificate.jpg'},
   {title:'PAN IIT Summit', subtitle:'Original Library certificate scan', description:'Clean full-page scan of the original Certificate of Appreciation for contributions to the Quantum, AI & Semiconductor summit.', image:'assets/evidence/pan-iit-summit-2026-original.jpg', document:'assets/evidence/pan-iit-summit-2026-original.jpg', linkLabel:'VIEW ORIGINAL CERTIFICATE ↗'},
   {title:'SignSethu', subtitle:'Publicly released on Google Play', description:'Indian Sign Language-to-Telugu accessibility app built with MediaPipe and TensorFlow Lite, trained on 500 self-collected samples and deployed on Google Play.', image:null, document:'https://play.google.com/store/apps/developer?id=AVIRINENI+JAIDEV+CHOWDARY', linkLabel:'OPEN GOOGLE PLAY ↗'}
@@ -42,6 +42,7 @@ const proofItems = [
 const researchItems = [
   {
     title:'Automated Adversarial Stress Testing Using Generative Adversarial Networks for Dynamic Risk Scenario Synthesis',
+    caseStudy:'gan-stress',
     area:'Generative AI · Financial Risk',
     summary:'Builds a three-part framework for scenario generation, adversarial stress amplification, and risk propagation using historical financial indicators to synthesize severe, previously unobserved risk states.',
     methods:'GAN scenario generation · adversarial perturbation · systemic risk modeling',
@@ -54,6 +55,7 @@ const researchItems = [
   },
   {
     title:'Reinforcement Learning for Liquidity-Weighted Optimal Trade Execution Strategies',
+    caseStudy:'rl-execution',
     area:'Reinforcement Learning · Trade Execution',
     summary:'Introduces a liquidity-weighted execution framework using order-book imbalance, market impact, slippage, and execution risk for policy learning in quantitative trading.',
     methods:'Policy learning · liquidity-aware reward · trade optimization',
@@ -103,10 +105,9 @@ const mediaGroups = [
   {
     gridId: 'yip-media-grid',
     title: 'YIP / IIT Kharagpur',
-    items: Array.from({length:22}, (_,i) => {
-      const id = i + 1;
-      return {id, src:`assets/media/drive-photo-archive/drive-photo-${String(id).padStart(2,'0')}${id===20?'.png':'.jpg'}`};
-    })
+    items: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22].map(id => ({
+      id, src:`assets/media/drive-photo-archive/drive-photo-${String(id).padStart(2,'0')}.jpg`
+    }))
   },
   {
     gridId: 'heal-media-grid',
@@ -116,7 +117,9 @@ const mediaGroups = [
   {
     gridId: 'page-club-media-grid',
     title: 'The PAGE Club',
-    items: [26,27,28,29,30].map(id => ({id, src:`assets/media/drive-photo-archive/drive-photo-${String(id).padStart(2,'0')}.jpg`}))
+    items: [20,26,27,28,29,30].map(id => ({
+      id, src:id===20?'assets/media/drive-photo-archive/drive-photo-20.png':`assets/media/drive-photo-archive/drive-photo-${String(id).padStart(2,'0')}.jpg`
+    }))
   },
   {
     gridId: 'headboy-media-grid',
@@ -124,7 +127,6 @@ const mediaGroups = [
     items: [
       {id:32, src:'assets/media/video-stills/headboy-ceremony-02.jpg'},
       {id:33, src:'assets/media/video-stills/headboy-ceremony-03.jpg'},
-      {id:34, src:'assets/media/video-stills/headboy-ceremony-04.jpg'},
       {id:35, src:'assets/media/video-stills/headboy-ceremony-05.jpg'}
     ]
   }
@@ -164,6 +166,7 @@ function renderProof() {
       <p>${item.description}</p>
       ${renderPreviewImage(item)}
       <a href="${item.document}" target="_blank" rel="noopener">${item.linkLabel || 'VIEW EVIDENCE ↗'}</a>
+      ${item.caseStudy ? `<button type="button" class="case-study-trigger" data-case-id="${item.caseStudy}">OPEN PROJECT CASE STUDY ↗</button>` : ''}
     </article>
   `).join('');
 }
@@ -187,6 +190,7 @@ function renderResearch() {
         <a href="${item.articleUrl}" target="_blank" rel="noopener">JOURNAL ARTICLE ↗</a>
         <a href="${item.journalUrl}" target="_blank" rel="noopener">JOURNAL ISSUE ↗</a>
       </div>
+      <button type="button" class="case-study-trigger" data-case-id="${item.caseStudy}">OPEN INTERACTIVE CASE STUDY ↗</button>
     </article>
   `).join('');
 }
@@ -307,6 +311,343 @@ function bindModal() {
   });
 }
 
+
+const caseStudyData = {
+  'nus-churn': {
+    eyebrow:'NUS AI INTERNSHIP · TELECOM CHURN',
+    title:'When prediction quality is not the same as decision quality',
+    intro:'A supervised-learning comparison using the IBM Telco Customer Churn dataset. The work examined model performance alongside the practical cost of missing customers likely to churn.',
+    metrics:[
+      {value:'7,043',label:'customer records'},
+      {value:'26.5%',label:'baseline churn rate'},
+      {value:'7',label:'models compared'},
+      {value:'0.846',label:'tuned XGBoost ROC-AUC'}
+    ],
+    sections:[
+      ['Problem framing','Estimate customer churn risk from service, billing, contract, and customer attributes.'],
+      ['Model comparison','Compared seven approaches. The tuned XGBoost model improved ROC-AUC from 0.820 to 0.846. The MLP achieved the highest accuracy in the team comparison but had the weakest recall, illustrating why accuracy alone was insufficient.'],
+      ['Segmentation insight','K-means highlighted a high-risk segment of 1,525 customers. This is a clustering result, not a count of customers flagged by the final XGBoost model.'],
+      ['Takeaway','Evaluation should reflect the decision context: ranking quality, recall, and the cost of missed churn all matter.']
+    ],
+    tags:['Python','EDA','Outlier treatment','XGBoost','K-means','Model evaluation'],
+    links:[['Faculty recommendation','assets/recommendations/LOR_Group1_Avirineni_Jaidev_Chowdary (1).pdf']]
+  },
+  'gan-stress': {
+    eyebrow:'PUBLISHED RESEARCH · GENERATIVE AI',
+    title:'Adversarial stress testing with generated financial scenarios',
+    intro:'A framework exploring how generative models can synthesize challenging financial risk scenarios beyond those directly observed in historical data.',
+    metrics:[
+      {value:'0.79',label:'reported scenario-diversity score'},
+      {value:'19.4%',label:'reported average portfolio loss in a generated stress scenario'}
+    ],
+    sections:[
+      ['Research question','How can dynamic stress-testing frameworks generate diverse and severe scenarios for portfolio-risk analysis?'],
+      ['Method','The paper combines GAN-based scenario generation, adversarial perturbation, and risk-propagation analysis using historical financial indicators.'],
+      ['Reported findings','The paper reports a scenario-diversity score of 0.79 and an average portfolio loss of 19.4% for a generated stress scenario. These are reported experimental results, not evidence of a 19.4% improvement.'],
+      ['Limitations','Generated scenarios and simulated portfolio responses do not by themselves establish how a live portfolio would behave.']
+    ],
+    tags:['GANs','Adversarial scenarios','Financial risk','Stress testing'],
+    links:[['Journal article','https://ijcsmc.com/docs/papers/March2026/V15I3202609.pdf'],['Research paper','research/automated-adversarial-stress-testing.pdf']]
+  },
+  'rl-execution': {
+    eyebrow:'PUBLISHED RESEARCH · REINFORCEMENT LEARNING',
+    title:'Liquidity-weighted optimal trade execution',
+    intro:'A simulated study of reinforcement learning for execution decisions that account for liquidity, order-book conditions, market impact, and slippage.',
+    metrics:[
+      {value:'4',label:'execution approaches in comparison'},
+      {value:'3',label:'classic benchmarks: TWAP, VWAP, Almgren–Chriss'}
+    ],
+    sections:[
+      ['Research question','Can a policy learn execution decisions that adapt to liquidity conditions rather than follow a fixed schedule?'],
+      ['Method','The study frames a liquidity-weighted reward around order-book imbalance, market impact, slippage, and execution risk.'],
+      ['Evaluation','The learned approach is compared with TWAP, VWAP, and Almgren–Chriss in simulated limit-order-book environments.'],
+      ['Limitations','The study is simulation-based. It does not establish live-market profitability or execution superiority.']
+    ],
+    tags:['Reinforcement learning','Trade execution','Liquidity','TWAP','VWAP','Almgren–Chriss'],
+    links:[['Journal article','https://www.propulsiontechjournal.com/index.php/journal/article/view/10595'],['Research paper','research/liquidity-weighted-optimal-trade-execution.pdf']]
+  }
+};
+
+const projectData = {
+  ruralconnect:{
+    eyebrow:'YIP · IIT KHARAGPUR',
+    title:'RuralConnect',
+    intro:'A smart-village systems concept developed by a three-person team for the Young Innovators Program.',
+    details:[['Role','Led the three-person team.'],['Recognition','Finished fourth nationally in YIP 2023.'],['System concept','Combined a village-services app with AI, sensors, Raspberry Pi, and Arduino.'],['Design intent','Connect digital services with practical village-level utility.']],
+    tags:['AI','IoT','Raspberry Pi','Arduino','Sensors'],
+    links:[['Official YIP certificate','assets/evidence/YIP_IIT_Kharagpur_Official_Certificate.pdf'],['IIT appreciation artifact','assets/evidence/certificate-04.jpg'],['YIP photo archive','#yip-media']]
+  },
+  signsethu:{
+    eyebrow:'AI · COMPUTER VISION · ACCESSIBILITY',
+    title:'SignSethu',
+    intro:'An offline Indian Sign Language-to-Telugu accessibility app designed for on-device inference.',
+    details:[['Technology','MediaPipe and TensorFlow Lite.'],['Training material','500 self-collected samples.'],['Deployment','Designed for offline, on-device inference.'],['Public release','Available through the Google Play developer account AVIRINENI JAIDEV CHOWDARY.']],
+    tags:['MediaPipe','TensorFlow Lite','Computer Vision','Offline AI'],
+    links:[['Google Play developer page','https://play.google.com/store/apps/developer?id=AVIRINENI+JAIDEV+CHOWDARY']]
+  },
+  'ai-object-finder':{
+    eyebrow:'COMPUTER VISION · INTERACTIVE AI',
+    title:'AI Object Finder',
+    intro:'A real-time webcam detection project that identifies target objects and provides confidence and speech feedback.',
+    details:[['Detection','Browser-based webcam object detection using COCO-SSD.'],['Interaction','Target-object matching and confidence labels.'],['Feedback','Speech feedback makes detections easier to notice.']],
+    tags:['COCO-SSD','Computer Vision','Webcam','Speech feedback'],
+    links:[['GitHub repository','https://github.com/Jaidev39/AI-OBJECT-FINDER']]
+  },
+  'ai-ping-pong':{
+    eyebrow:'COMPUTER VISION · INTERACTIVE SYSTEMS',
+    title:'AI Ping Pong',
+    intro:'A gesture-controlled game that translates pose-estimation signals into a live paddle controller.',
+    details:[['Input','Pose estimation tracks wrist movement.'],['Control','Movement is mapped to an interactive paddle.'],['Focus','Real-time computer vision and responsive gameplay.']],
+    tags:['Pose estimation','MediaPipe','JavaScript','Interactive systems'],
+    links:[['GitHub repository','https://github.com/Jaidev39/AI-PING-PONG']]
+  },
+  'page-club':{
+    eyebrow:'COMMUNITY PRODUCT · WEB DEVELOPMENT',
+    title:'PAGE Club Reflections Hub',
+    intro:'A web application supporting a reading initiative through dedicated sections, routes, and gallery experiences.',
+    details:[['Stack','React and TypeScript.'],['Purpose','Organises reading-program reflections and community experiences.'],['Product design','Dedicated sections, navigation routes, and gallery interfaces.']],
+    tags:['React','TypeScript','Community','Web application'],
+    links:[['GitHub repository','https://github.com/Jaidev39/page-club-reflections-hub-72']]
+  },
+  'real-time-detection':{
+    eyebrow:'COMPUTER VISION · REAL-TIME SYSTEMS',
+    title:'Real-Time Image Detection',
+    intro:'A browser computer-vision prototype for continuous visual processing, detection labels, confidence scores, and live feedback.',
+    details:[['Processing','Continuous visual processing in the browser.'],['Outputs','Detection labels and confidence scores.'],['Interaction','Live feedback as the camera feed changes.']],
+    tags:['Computer Vision','Real-time','JavaScript'],
+    links:[['GitHub repository','https://github.com/Jaidev39/Real-Time-Image-Detection']]
+  }
+};
+
+function renderDialogContent(data, target, id) {
+  if (!data || !target) return;
+  target.innerHTML = `
+    <span class="dialog-eyebrow">${data.eyebrow || ''}</span>
+    <h2 id="${id}">${data.title}</h2>
+    <p class="dialog-intro">${data.intro}</p>
+    ${data.metrics ? `<div class="case-metrics">${data.metrics.map(m=>`<div class="case-metric"><strong>${m.value}</strong><span>${m.label}</span></div>`).join('')}</div>` : ''}
+    ${data.sections ? `<div class="case-sections">${data.sections.map(([heading,body],i)=>`<article><span>0${i+1}</span><div><h3>${heading}</h3><p>${body}</p></div></article>`).join('')}</div>` : ''}
+    ${data.details ? `<div class="case-sections">${data.details.map(([heading,body],i)=>`<article><span>0${i+1}</span><div><h3>${heading}</h3><p>${body}</p></div></article>`).join('')}</div>` : ''}
+    <div class="dialog-tags">${(data.tags||[]).map(tag=>`<span>${tag}</span>`).join('')}</div>
+    <div class="dialog-links">${(data.links||[]).map(([label,url])=>`<a href="${url}" ${/^https?:/.test(url)||url.endsWith('.pdf')||url.endsWith('.jpg')?'target="_blank" rel="noopener"':''}>${label} ↗</a>`).join('')}</div>
+  `;
+}
+
+function openInteractiveDialog(dialog) {
+  if (!dialog) return;
+  dialog.classList.add('is-open');
+  dialog.setAttribute('aria-hidden','false');
+  document.body.classList.add('dialog-open');
+  const closeButton=dialog.querySelector('.dialog-close');
+  if (closeButton) closeButton.focus();
+}
+function closeInteractiveDialog(dialog) {
+  if (!dialog) return;
+  dialog.classList.remove('is-open');
+  dialog.setAttribute('aria-hidden','true');
+  if (!document.querySelector('.interactive-dialog.is-open,.command-palette.is-open')) {
+    document.body.classList.remove('dialog-open');
+  }
+}
+function initCaseStudiesAndProjects() {
+  const caseDialog=document.getElementById('case-study-dialog');
+  const caseContent=document.getElementById('case-study-content');
+  const projectDialog=document.getElementById('project-dialog');
+  const projectContent=document.getElementById('project-dialog-content');
+  document.addEventListener('click',event=>{
+    const caseTrigger=event.target.closest('[data-case-id]');
+    const projectTrigger=event.target.closest('[data-project]');
+    const closer=event.target.closest('[data-dialog-close]');
+    if (caseTrigger) {
+      const item=caseStudyData[caseTrigger.dataset.caseId];
+      renderDialogContent(item,caseContent,'case-study-title');
+      openInteractiveDialog(caseDialog);
+    } else if (projectTrigger) {
+      const item=projectData[projectTrigger.dataset.project];
+      renderDialogContent(item,projectContent,'project-dialog-title');
+      openInteractiveDialog(projectDialog);
+    } else if (closer) {
+      closeInteractiveDialog(closer.closest('.interactive-dialog'));
+    }
+  });
+  document.addEventListener('keydown',event=>{
+    if(event.key==='Escape') {
+      closeInteractiveDialog(caseDialog);
+      closeInteractiveDialog(projectDialog);
+    }
+  });
+}
+
+const commandItems = [
+  {title:'Research papers',detail:'GAN stress testing and reinforcement-learning execution',href:'#research',icon:'⌘',keywords:'research publication paper gan rl finance'},
+  {title:'NUS AI internship case study',detail:'Telecom churn · seven models · XGBoost',action:'nus-churn',icon:'◈',keywords:'nus internship churn xgboost machine learning'},
+  {title:'GAN stress-testing case study',detail:'Generative scenarios · portfolio risk',action:'gan-stress',icon:'◉',keywords:'gan adversarial stress financial risk'},
+  {title:'Reinforcement-learning case study',detail:'Liquidity-weighted trade execution',action:'rl-execution',icon:'⌁',keywords:'reinforcement learning twap vwap almgren chriss'},
+  {title:'Technical projects',detail:'SignSethu, RuralConnect and computer vision builds',href:'#work',icon:'⌘',keywords:'projects software signsethu ruralconnect computer vision'},
+  {title:'Achievements and evidence',detail:'Certificates, awards and programme recognition',href:'#evidence',icon:'✳',keywords:'awards achievements certificate proof'},
+  {title:'The journey',detail:'Selected milestones across the portfolio',href:'#journey',icon:'↗',keywords:'timeline milestones journey'},
+  {title:'Community impact',detail:'HEAL Paradise and PAGE Club',href:'#impact',icon:'✦',keywords:'heal page club teaching volunteering'},
+  {title:'GitHub repositories',detail:'Code, prototypes and engineering work',href:'#github',icon:'⌘',keywords:'github repositories code'},
+  {title:'Media archive',detail:'Photographs grouped by activity',href:'#media',icon:'▧',keywords:'photos media archive yip heal page club head boy'},
+  {title:'Visual Lab',detail:'Compare creative interface directions',href:'visual-lab.html',icon:'◌',keywords:'visual lab design animations styles'}
+];
+let commandSelection=0;
+function renderCommandResults(query='') {
+  const results=document.getElementById('command-results');
+  if(!results)return;
+  const q=query.trim().toLowerCase();
+  const matches=commandItems.filter(item=>`${item.title} ${item.detail} ${item.keywords}`.toLowerCase().includes(q));
+  commandSelection=0;
+  results.innerHTML=matches.length?matches.map((item,index)=>`
+    <button type="button" class="command-result${index===0?' is-selected':''}" role="option" aria-selected="${index===0}" data-command-index="${index}" data-command-action="${item.action||''}" data-command-href="${item.href||''}">
+      <span class="command-result-icon">${item.icon}</span><span class="command-result-copy"><strong>${item.title}</strong><small>${item.detail}</small></span><kbd>↵</kbd>
+    </button>
+  `).join(''):`<p class="command-empty">No matching destination. Try “research”, “project” or “evidence”.</p>`;
+  results._matches=matches;
+}
+function closeCommandPalette() {
+  const palette=document.getElementById('command-palette');
+  if(!palette)return;
+  palette.classList.remove('is-open');
+  palette.setAttribute('aria-hidden','true');
+  if(!document.querySelector('.interactive-dialog.is-open'))document.body.classList.remove('dialog-open');
+}
+function openCommandPalette() {
+  const palette=document.getElementById('command-palette');
+  const input=document.getElementById('command-input');
+  if(!palette||!input)return;
+  palette.classList.add('is-open');
+  palette.setAttribute('aria-hidden','false');
+  document.body.classList.add('dialog-open');
+  renderCommandResults('');
+  input.value='';
+  input.focus();
+}
+function initCommandPalette() {
+  const input=document.getElementById('command-input');
+  const results=document.getElementById('command-results');
+  const palette=document.getElementById('command-palette');
+  if(!input||!results||!palette)return;
+  document.querySelectorAll('[data-open-command]').forEach(button=>button.addEventListener('click',openCommandPalette));
+  document.addEventListener('keydown',event=>{
+    if((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==='k') {
+      event.preventDefault();openCommandPalette();return;
+    }
+    if(event.key==='Escape')closeCommandPalette();
+    if(!palette.classList.contains('is-open'))return;
+    const matches=results._matches||[];
+    if(event.key==='ArrowDown'||event.key==='ArrowUp') {
+      event.preventDefault();
+      if(matches.length===0)return;
+      commandSelection=(commandSelection+(event.key==='ArrowDown'?1:-1)+matches.length)%matches.length;
+      updateCommandSelection();
+    }
+    if(event.key==='Enter') {
+      event.preventDefault();
+      const selected=matches[commandSelection];
+      if(selected)activateCommand(selected);
+    }
+  });
+  input.addEventListener('input',()=>renderCommandResults(input.value));
+  results.addEventListener('click',event=>{
+    const button=event.target.closest('[data-command-index]');
+    if(!button)return;
+    const item=(results._matches||[])[Number(button.dataset.commandIndex)];
+    if(item)activateCommand(item);
+  });
+  palette.addEventListener('click',event=>{
+    if(event.target.closest('[data-command-close]'))closeCommandPalette();
+  });
+}
+function updateCommandSelection() {
+  const buttons=[...document.querySelectorAll('.command-result')];
+  buttons.forEach((button,index)=>{
+    const active=index===commandSelection;
+    button.classList.toggle('is-selected',active);
+    button.setAttribute('aria-selected',String(active));
+    if(active)button.scrollIntoView({block:'nearest'});
+  });
+}
+function activateCommand(item) {
+  closeCommandPalette();
+  if(item.action) {
+    const data=caseStudyData[item.action];
+    renderDialogContent(data,document.getElementById('case-study-content'),'case-study-title');
+    openInteractiveDialog(document.getElementById('case-study-dialog'));
+  } else if(item.href) {
+    if(item.href.startsWith('#')) {
+      const target=document.querySelector(item.href);
+      if(target)target.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+      history.replaceState(null,'',item.href);
+    } else location.href=item.href;
+  }
+}
+
+function initNeuralCanvas() {
+  const canvas=document.getElementById('neural-canvas');
+  if(!canvas)return;
+  const context=canvas.getContext('2d');
+  if(!context)return;
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const coarse=window.matchMedia('(pointer: coarse)').matches;
+  let width=0,height=0,particles=[],raf=0,visible=true;
+  const pointer={x:-1000,y:-1000};
+  const count=coarse?34:58;
+  function resize() {
+    const rect=canvas.getBoundingClientRect();
+    const dpr=Math.min(window.devicePixelRatio||1,1.6);
+    width=rect.width;height=rect.height;
+    canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);
+    context.setTransform(dpr,0,0,dpr,0,0);
+    particles=Array.from({length:count},(_,i)=>({
+      x:Math.random()*width,y:Math.random()*height,
+      vx:(Math.random()-.5)*.24,vy:(Math.random()-.5)*.24,
+      r:1.2+Math.random()*1.5,phase:Math.random()*Math.PI*2
+    }));
+    draw(0);
+  }
+  function draw(time) {
+    context.clearRect(0,0,width,height);
+    const maxDist=coarse?105:145;
+    for(let i=0;i<particles.length;i++){
+      const p=particles[i];
+      if(!reduce&&visible){p.x+=p.vx;p.y+=p.vy;
+        if(p.x<0||p.x>width)p.vx*=-1;
+        if(p.y<0||p.y>height)p.vy*=-1;
+      }
+      if(!coarse){
+        const dx=p.x-pointer.x,dy=p.y-pointer.y,dist=Math.hypot(dx,dy);
+        if(dist<125&&dist>0&&!reduce){p.x+=dx/dist*.14;p.y+=dy/dist*.14;}
+      }
+      for(let k=i+1;k<particles.length;k++){
+        const q=particles[k],dx=p.x-q.x,dy=p.y-q.y,dist=Math.hypot(dx,dy);
+        if(dist<maxDist){
+          context.strokeStyle=`rgba(126,224,207,${(1-dist/maxDist)*.15})`;
+          context.lineWidth=.7;context.beginPath();context.moveTo(p.x,p.y);context.lineTo(q.x,q.y);context.stroke();
+        }
+      }
+      const pulse=reduce?1:0.78+Math.sin(time*.001+p.phase)*.18;
+      context.fillStyle=`rgba(157,238,224,${pulse*.7})`;
+      context.beginPath();context.arc(p.x,p.y,p.r,0,Math.PI*2);context.fill();
+    }
+    if(!reduce&&visible)raf=requestAnimationFrame(draw);
+  }
+  canvas.addEventListener('pointermove',event=>{
+    const r=canvas.getBoundingClientRect();pointer.x=event.clientX-r.left;pointer.y=event.clientY-r.top;
+  },{passive:true});
+  canvas.addEventListener('pointerleave',()=>{pointer.x=-1000;pointer.y=-1000;});
+  window.addEventListener('resize',resize,{passive:true});
+  if('IntersectionObserver'in window) {
+    new IntersectionObserver(entries=>{
+      visible=entries[0].isIntersecting;
+      if(visible&&!reduce&&!raf)raf=requestAnimationFrame(draw);
+      if(!visible&&raf){cancelAnimationFrame(raf);raf=0;}
+    }).observe(canvas);
+  }
+  resize();
+  if(!reduce)raf=requestAnimationFrame(draw);
+}
+
 function bindMenu() {
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.getElementById('site-nav');
@@ -360,7 +701,7 @@ function bindMotion() {
   document.querySelectorAll('[data-tilt]:not(.tilt-bound)').forEach(card => {
     card.classList.add('tilt-bound');
     card.addEventListener('pointermove', (event) => {
-      if (window.matchMedia('(pointer: coarse)').matches) return;
+      if (window.matchMedia('(pointer: coarse)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       const rect = card.getBoundingClientRect();
       const x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
       const y = ((event.clientY - rect.top) / rect.height) * 2 - 1;
@@ -481,6 +822,9 @@ function init() {
   bindCertificateFilters();
   bindMotion();
   bindDynamicPolish();
+  initNeuralCanvas();
+  initCaseStudiesAndProjects();
+  initCommandPalette();
 }
 
 init();

@@ -72,13 +72,16 @@
         <a href="#evidence">Evidence</a>
         <a href="#github">GitHub</a>
         <a href="#about">About</a>
+        <a href="visual-lab.html">Visual Lab ↗</a>
       </nav>
+      <button class="command-trigger" type="button" data-open-command aria-label="Open portfolio search"><span aria-hidden="true">⌕</span><span class="command-trigger-label">Search</span><kbd>Ctrl K</kbd></button>
       <a class="header-cta" href="#contact">Contact</a>
     </div>
   </header>
 
   <main id="top">
     <section class="hero section-wrap" data-reveal>
+      <canvas class="neural-canvas" id="neural-canvas" aria-hidden="true"></canvas>
       <div class="hero-grid">
         <div class="hero-main">
         <p class="kicker">STUDENT RESEARCHER · AI DEVELOPER · BUILDER</p>
@@ -134,6 +137,23 @@
       </div>
     </section>
 
+    <section id="journey" class="section-wrap section journey-section">
+      <div class="section-heading compact">
+        <div>
+          <p class="section-kicker">THE JOURNEY</p>
+          <h2>Building, researching, and bringing ideas into use.</h2>
+          <p class="section-note">Selected milestones across innovation, education, accessible technology, industry experience, and applied research.</p>
+        </div>
+      </div>
+      <div class="journey-timeline">
+        <article class="journey-item" data-reveal><span class="journey-year">2023</span><div class="journey-marker"></div><div class="journey-card"><span class="journey-tag">NATIONAL INNOVATION</span><h3>Young Innovators Program · IIT Kharagpur</h3><p>Led a three-person RuralConnect team combining AI, sensors, Raspberry Pi, and Arduino, finishing fourth nationally.</p><a href="assets/evidence/YIP_IIT_Kharagpur_Official_Certificate.pdf" target="_blank" rel="noopener">VIEW OFFICIAL CERTIFICATE ↗</a></div></article>
+        <article class="journey-item" data-reveal><span class="journey-year">16 MONTHS</span><div class="journey-marker"></div><div class="journey-card"><span class="journey-tag">COMMUNITY LEARNING</span><h3>HEAL Paradise · Quantitative Literacy</h3><p>Built and sustained a weekend learning programme for more than 40 rural students, connecting numeracy, data, and practical computer skills.</p><a href="#recommendations">VIEW RECOMMENDATION ↗</a></div></article>
+        <article class="journey-item" data-reveal><span class="journey-year">2026</span><div class="journey-marker"></div><div class="journey-card"><span class="journey-tag">ACCESSIBILITY ENGINEERING</span><h3>SignSethu · Offline Sign-Language Technology</h3><p>Developed an Indian Sign Language-to-Telugu app using MediaPipe and TensorFlow Lite, trained on 500 self-collected samples for on-device use.</p><a href="https://play.google.com/store/apps/developer?id=AVIRINENI+JAIDEV+CHOWDARY" target="_blank" rel="noopener">VIEW GOOGLE PLAY ↗</a></div></article>
+        <article class="journey-item" data-reveal><span class="journey-year">2026</span><div class="journey-marker"></div><div class="journey-card"><span class="journey-tag">INDUSTRY EXPERIENCE</span><h3>NUS AI Internship · Cognivance</h3><p>Worked on applied machine learning at NUS and completed a 200-hour international internship programme with Cognivance Inc.</p><a href="#evidence">EXPLORE EVIDENCE ↗</a></div></article>
+        <article class="journey-item" data-reveal><span class="journey-year">2026</span><div class="journey-marker"></div><div class="journey-card"><span class="journey-tag">PUBLISHED RESEARCH</span><h3>Generative AI · Quantitative Finance</h3><p>Published two research papers exploring adversarial financial stress scenarios and reinforcement-learning-based trade execution.</p><a href="#research">EXPLORE RESEARCH ↗</a></div></article>
+      </div>
+    </section>
+
     <section id="proof" class="section-wrap section">
       <div class="section-heading compact">
         <div>
@@ -169,7 +189,8 @@
             <div class="project-actions">
               <a href="assets/evidence/YIP_IIT_Kharagpur_Official_Certificate.pdf" target="_blank" rel="noopener">OPEN OFFICIAL YIP CERTIFICATE ↗</a>
               <a href="assets/evidence/certificate-04.jpg" target="_blank" rel="noopener">VIEW IIT APPRECIATION ↗</a>
-              <a href="#yip-media" rel="noopener">VIEW YIP / IIT KHARAGPUR PHOTOS (01–22) ↗</a>
+              <a href="#yip-media" rel="noopener">VIEW YIP / IIT KHARAGPUR PHOTOS (01–19, 21–22) ↗</a>
+              <button type="button" class="project-open-trigger" data-project="ruralconnect">EXPLORE RURALCONNECT ↗</button>
             </div>
           </div>
         </article>
@@ -206,6 +227,7 @@
             </div>
             <div class="project-actions">
               <a href="https://play.google.com/store/apps/developer?id=AVIRINENI+JAIDEV+CHOWDARY" target="_blank" rel="noopener">SIGNSETHU ON GOOGLE PLAY ↗</a>
+              <button type="button" class="project-open-trigger" data-project="signsethu">EXPLORE SIGNSETHU ↗</button>
             </div>
           </div>
         </article>
@@ -228,6 +250,7 @@
             <p>Computer-vision experimentation around tracking, interaction, and responsive gameplay.</p>
             <div class="chip-row"><span>MediaPipe</span><span>JavaScript</span><span>Computer Vision</span></div>
             <a href="https://github.com/Jaidev39/AI-PING-PONG" target="_blank" rel="noopener">VIEW REPOSITORY ↗</a>
+          <button type="button" class="project-open-trigger" data-project="ai-ping-pong">EXPLORE PROJECT ↗</button>
           </article>
           <article class="archive-card">
             <h4>Educational and community projects</h4>
@@ -282,11 +305,15 @@
           <p>Built a sustained reading movement across apartments, clubs, and libraries, creating a visible reading culture and broad community reach.</p>
           <strong>2+ years · 15 newspaper outlets</strong>
           <div class="impact-links">
-            <a href="#page-club-media" class="mini-link">SELECTED PAGE CLUB PHOTOS (26–30) ↗</a>
+            <a href="#page-club-media" class="mini-link">SELECTED PAGE CLUB PHOTOS (20, 26–30) ↗</a>
           </div>
-          <div class="impact-media">
+          <div class="impact-media page-club-recognition">
             <img src="assets/media/drive-photo-archive/drive-photo-26.jpg" alt="The PAGE Club selected campaign and reading-event photograph" loading="lazy">
-            <span>Recognition and meeting with former Vice President M. Venkaiah Naidu</span>
+            <div class="impact-recognition">
+              <span class="recognition-kicker">PUBLIC RECOGNITION</span>
+              <strong>Meeting with the Former Vice President of India, M. Venkaiah Naidu</strong>
+              <span class="recognition-context">The PAGE Club · Reading and community initiative</span>
+            </div>
           </div>
         </article>
       </div>
@@ -356,6 +383,7 @@
           <h3>AI Object Finder</h3>
           <p>Real-time webcam detection with COCO-SSD, target-object matching, confidence labels, and speech feedback.</p>
           <a href="https://github.com/Jaidev39/AI-OBJECT-FINDER" target="_blank" rel="noopener">VIEW REPOSITORY ↗</a>
+          <button type="button" class="project-open-trigger" data-project="ai-object-finder">EXPLORE PROJECT ↗</button>
         </article>
         <article class="repo-feature" data-tilt data-reveal>
           <span class="repo-rank">02 · INTERACTIVE AI</span>
@@ -368,12 +396,14 @@
           <h3>PAGE Club Reflections Hub</h3>
           <p>React + TypeScript web application supporting the reading initiative through dedicated sections, routes, and gallery experiences.</p>
           <a href="https://github.com/Jaidev39/page-club-reflections-hub-72" target="_blank" rel="noopener">VIEW REPOSITORY ↗</a>
+          <button type="button" class="project-open-trigger" data-project="page-club">EXPLORE PROJECT ↗</button>
         </article>
         <article class="repo-feature" data-tilt data-reveal>
           <span class="repo-rank">04 · COMPUTER VISION</span>
           <h3>Real-Time Image Detection</h3>
           <p>Browser computer-vision prototype for continuous visual processing, detection labels, confidence scores, and live feedback.</p>
           <a href="https://github.com/Jaidev39/Real-Time-Image-Detection" target="_blank" rel="noopener">VIEW REPOSITORY ↗</a>
+          <button type="button" class="project-open-trigger" data-project="real-time-detection">EXPLORE PROJECT ↗</button>
         </article>
       </div>
       <div class="github-toolbar">
@@ -395,8 +425,8 @@
       <div id="media-grid" class="media-groups" aria-live="polite">
         <section class="media-group" id="yip-media">
           <div class="media-group-heading">
-            <div><p class="section-kicker">01–22 · YIP / IIT KHARAGPUR</p><h3>RuralConnect and national-final photographs</h3></div>
-            <span class="media-range">22 images</span>
+            <div><p class="section-kicker">01–19, 21–22 · YIP / IIT KHARAGPUR</p><h3>RuralConnect and national-final photographs</h3></div>
+            <span class="media-range">21 images</span>
           </div>
           <div id="yip-media-grid" class="media-grid"></div>
         </section>
@@ -409,15 +439,15 @@
         </section>
         <section class="media-group" id="page-club-media">
           <div class="media-group-heading">
-            <div><p class="section-kicker">26–30 · THE PAGE CLUB</p><h3>Reading campaigns and community events</h3></div>
-            <span class="media-range">5 images</span>
+            <div><p class="section-kicker">20, 26–30 · THE PAGE CLUB</p><h3>Reading campaigns and community events</h3></div>
+            <span class="media-range">6 images</span>
           </div>
           <div id="page-club-media-grid" class="media-grid"></div>
         </section>
         <section class="media-group" id="headboy-media">
           <div class="media-group-heading">
-            <div><p class="section-kicker">32–35 · HEAD BOY</p><h3>Student leadership and Head Boy ceremony stills</h3></div>
-            <span class="media-range">4 images</span>
+            <div><p class="section-kicker">32–33, 35 · HEAD BOY</p><h3>Student leadership and Head Boy ceremony stills</h3></div>
+            <span class="media-range">3 images</span>
           </div>
           <div id="headboy-media-grid" class="media-grid"></div>
         </section>
@@ -480,6 +510,29 @@
     </div>
   </div>
 
+  <div class="interactive-dialog" id="case-study-dialog" aria-hidden="true">
+    <div class="dialog-backdrop" data-dialog-close></div>
+    <section class="dialog-panel case-study-panel" role="dialog" aria-modal="true" aria-labelledby="case-study-title">
+      <button type="button" class="dialog-close" data-dialog-close aria-label="Close case study">×</button>
+      <div id="case-study-content"></div>
+    </section>
+  </div>
+  <div class="interactive-dialog" id="project-dialog" aria-hidden="true">
+    <div class="dialog-backdrop" data-dialog-close></div>
+    <section class="dialog-panel project-dialog-panel" role="dialog" aria-modal="true" aria-labelledby="project-dialog-title">
+      <button type="button" class="dialog-close" data-dialog-close aria-label="Close project details">×</button>
+      <div id="project-dialog-content"></div>
+    </section>
+  </div>
+  <div class="command-palette" id="command-palette" aria-hidden="true">
+    <div class="command-backdrop" data-command-close></div>
+    <section class="command-panel" role="dialog" aria-modal="true" aria-labelledby="command-title">
+      <div class="command-heading"><div><span class="section-kicker">PORTFOLIO INDEX</span><h2 id="command-title">Where would you like to go?</h2></div><kbd>ESC</kbd></div>
+      <label class="command-search-wrap"><span aria-hidden="true">⌕</span><input id="command-input" type="search" autocomplete="off" placeholder="Search research, projects, evidence…" aria-label="Search portfolio"></label>
+      <div id="command-results" class="command-results" role="listbox" aria-label="Portfolio destinations"></div>
+      <div class="command-footer"><span>↑ ↓ to navigate</span><span>↵ to open</span><span>ESC to close</span></div>
+    </section>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
