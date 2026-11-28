@@ -349,6 +349,57 @@
     .mock-site.theme-field .mock-stat:nth-child(2) strong{color:#1F5140}
     .mock-site.theme-field .mock-work-card:nth-child(3) .mock-work-art{background:#EAD1C2}
     @media(max-width:480px){.palette-chip i{height:22px}.palette-chip strong{font-size:.45rem}.palette-chip small{font-size:.42rem}}
+
+    /* Workspace polish: compact the outer design controls without touching any preview canvas. */
+    .workspace{grid-template-columns:310px minmax(0,1fr);gap:18px;padding-bottom:28px}
+    .control-panel{padding:14px;top:14px}
+    .direction-list{gap:7px}
+    .direction{grid-template-columns:72px minmax(0,1fr);gap:10px;padding:7px}
+    .panel-tip{margin-top:11px;padding:10px 11px}
+    .stage-toolbar{margin-bottom:10px}
+    .below-stage{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:12px;align-items:stretch}
+    .design-summary,.design-spec{height:100%;padding:16px}
+    .design-summary h2{font-size:1.16rem;line-height:1.22}
+    .design-summary p{max-width:60ch}
+    .design-spec .spec-tags{margin-top:9px}
+    .palette-grid{gap:8px;margin-top:13px}
+    .palette-chip i{height:30px}
+    .shortlist{margin-top:11px}
+    .theme-apply-block{margin-top:15px;padding-top:13px;border-top:1px solid rgba(140,227,209,.17)}
+    .theme-apply-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:5px}
+    .theme-apply-heading span{color:#8ba8bb;font:500 .57rem "DM Mono",monospace;letter-spacing:.13em}
+    .theme-apply-heading strong{color:#dff9f1;font:600 .69rem "Space Grotesk",sans-serif;text-align:right}
+    .theme-apply-block>p{margin:0 0 10px;color:#90a9bb;font-size:.67rem;line-height:1.55}
+    .theme-apply-actions{display:grid;grid-template-columns:1fr;gap:7px}
+    .theme-apply-actions button{min-height:39px;padding:9px 12px;border-radius:9px;font-size:.65rem;font-weight:800;letter-spacing:.045em;cursor:pointer;transition:transform .2s,border-color .2s,background .2s}
+    .apply-theme-button{border:1px solid rgba(140,227,209,.55);background:linear-gradient(110deg,#9be9d8,#6fcdbd);color:#062019;box-shadow:0 8px 22px rgba(80,207,178,.12)}
+    .apply-theme-button:hover{transform:translateY(-1px);background:#b3f4e5}
+    .reset-theme-button{border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.025);color:#aec1ce}
+    .reset-theme-button:hover:not(:disabled){border-color:rgba(255,255,255,.32);background:rgba(255,255,255,.06);color:#f0f7fb}
+    .reset-theme-button:disabled{opacity:.35;cursor:not-allowed}
+    .theme-apply-feedback{display:block;min-height:0;margin-top:7px;color:#a5e8d9;font-size:.64rem;line-height:1.45}
+    .theme-apply-actions button:focus-visible{outline:2px solid #b5f4e6;outline-offset:3px}
+    .references{padding-top:13px}
+    @media(max-width:1020px){
+      .workspace{grid-template-columns:280px minmax(0,1fr);gap:14px}
+      .direction{grid-template-columns:64px minmax(0,1fr)}
+      .below-stage{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:760px){
+      .workspace{grid-template-columns:1fr;gap:14px;padding-bottom:20px}
+      .control-panel{position:static}
+      .direction-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .direction{grid-template-columns:58px minmax(0,1fr)}
+      .below-stage{grid-template-columns:1fr}
+      .theme-apply-actions{grid-template-columns:1.15fr .85fr}
+    }
+    @media(max-width:480px){
+      .below-stage{gap:9px}
+      .theme-apply-actions{grid-template-columns:1fr}
+      .theme-apply-heading{align-items:flex-start;flex-direction:column}
+      .theme-apply-heading strong{text-align:left}
+    }
+
 </style>
 </head>
 <body>
@@ -361,7 +412,7 @@
       <div>
         <div class="eyebrow">INTERACTIVE DESIGN PLAYGROUND · 08 DIRECTIONS</div>
         <h1>Eight visual worlds.<br>One body of work.</h1>
-        <p class="intro-copy">Explore how the same research, projects and achievements feel across eight distinct art directions. Switch page views, resize the canvas and replay the motion. This is a design study only; your main portfolio stays unchanged until we choose a direction.</p>
+        <p class="intro-copy">Explore the same research, projects and achievements across eight distinct art directions. Switch page views, resize the canvas and replay the motion. When a direction feels right, apply it to the live portfolio. Your choice stays active until you reset it.</p>
       </div>
       <div class="live-pill"><span class="live-dot"></span> LIVE PREVIEW / SELECT A DIRECTION</div>
     </section>
@@ -434,7 +485,21 @@
         </div>
 
         <div class="below-stage">
-          <div class="design-summary"><div class="summary-kicker">CURRENT ART DIRECTION</div><h2 id="direction-title">01 · Neural Aurora</h2><p id="direction-description">A cinematic but restrained network atmosphere. The existing navy and teal identity evolves into a living research interface.</p><div class="spec-tags" id="direction-tags"><span>Atmospheric</span><span>Network</span><span>Dark</span><span>Teal</span></div></div>
+          <div class="design-summary">
+            <div class="summary-kicker">CURRENT ART DIRECTION</div>
+            <h2 id="direction-title">01 · Neon Circuit</h2>
+            <p id="direction-description">A high-voltage digital identity: almost-black navy, electric cyan, hot pink signal accents, luminous network lines, and geometric sans typography.</p>
+            <div class="spec-tags" id="direction-tags"><span>Electric cyan</span><span>Hot pink</span><span>Near-black</span><span>Neural grid</span></div>
+            <div class="theme-apply-block">
+              <div class="theme-apply-heading"><span>LIVE PORTFOLIO</span><strong id="applied-theme-state">Original portfolio style</strong></div>
+              <p>Apply the selected direction to the full website. Your choice is saved on this device and can be reset at any time.</p>
+              <div class="theme-apply-actions">
+                <button type="button" class="apply-theme-button" id="apply-theme">APPLY NEON CIRCUIT TO MAIN WEBSITE ↗</button>
+                <button type="button" class="reset-theme-button" id="reset-theme">RESTORE ORIGINAL STYLE</button>
+              </div>
+              <span class="theme-apply-feedback" id="theme-apply-feedback" role="status" aria-live="polite"></span>
+            </div>
+          </div>
           <div class="design-spec"><div class="summary-kicker">DESIGN CHARACTER</div><div class="spec-tags" id="direction-specs"><span>Motion: Reactive</span><span>Density: Medium</span><span>Type: Geometric</span><span>Contrast: AA+</span></div><div class="palette-grid" id="direction-palette" aria-label="Current colour palette"></div><div class="contrast-readout" id="contrast-readout">Text contrast verified against WCAG AA</div><div class="shortlist"><div><span>Direction shortlist</span><br><strong id="shortlist-state">No direction selected yet</strong></div><button type="button" id="shortlist-button">＋ Shortlist this</button></div></div>
         </div>
       </div>
@@ -466,7 +531,41 @@
     const preview=document.getElementById('mock-site');
     const count=document.getElementById('direction-count');
     const index=document.getElementById('preview-index');
+    const THEME_STORAGE_KEY='jaidev-portfolio-theme';
     let activeTheme='aurora',activeScene='home',activeSize='desktop',shortlisted=new Set();
+    const appliedThemeState=document.getElementById('applied-theme-state');
+    const applyThemeButton=document.getElementById('apply-theme');
+    const resetThemeButton=document.getElementById('reset-theme');
+    const themeApplyFeedback=document.getElementById('theme-apply-feedback');
+    function getAppliedTheme(){
+      try {
+        const saved=localStorage.getItem(THEME_STORAGE_KEY);
+        return Object.prototype.hasOwnProperty.call(directions,saved)?saved:null;
+      } catch(error) { return null; }
+    }
+    function syncApplyThemeControls(){
+      const saved=getAppliedTheme();
+      appliedThemeState.textContent=saved?'Currently applied: '+directions[saved].name:'Original portfolio style';
+      applyThemeButton.textContent='APPLY '+directions[activeTheme].name.toUpperCase()+' TO MAIN WEBSITE ↗';
+      resetThemeButton.disabled=!saved;
+    }
+    function applySelectedTheme(){
+      try {
+        localStorage.setItem(THEME_STORAGE_KEY,activeTheme);
+        themeApplyFeedback.textContent=directions[activeTheme].name+' saved. Opening the updated portfolio…';
+        window.location.assign('index.html#top');
+      } catch(error) {
+        themeApplyFeedback.textContent='Browser storage is unavailable. Enable site storage to apply a saved style.';
+      }
+    }
+    function restoreOriginalTheme(){
+      try {
+        localStorage.removeItem(THEME_STORAGE_KEY);
+        window.location.assign('index.html#top');
+      } catch(error) {
+        themeApplyFeedback.textContent='Browser storage is unavailable. The original style could not be restored.';
+      }
+    }
     function setTheme(theme){
       if(!directions[theme])return;
       activeTheme=theme;
@@ -486,6 +585,7 @@
       document.getElementById('contrast-readout').textContent='TEXT / SURFACE '+bodyRatio.toFixed(1)+':1 · MUTED '+mutedRatio.toFixed(1)+':1 · ACCENTS '+Math.min(accentRatio,signalRatio).toFixed(1)+':1 (AA ≥ 4.5)';
       document.getElementById('shortlist-state').textContent=shortlisted.size?Array.from(shortlisted).join(' · '):'No direction selected yet';
       document.getElementById('shortlist-button').textContent=shortlisted.has(item.name)?'✓ Shortlisted':'＋ Shortlist this';
+      syncApplyThemeControls();
     }
     function setScene(scene){
       activeScene=scene;
@@ -509,13 +609,15 @@
     document.querySelectorAll('[data-scene]').forEach(b=>b.addEventListener('click',()=>setScene(b.dataset.scene)));
     document.querySelectorAll('[data-size]').forEach(b=>b.addEventListener('click',()=>setSize(b.dataset.size)));
     document.getElementById('replay-motion').addEventListener('click',replay);
+    applyThemeButton.addEventListener('click',applySelectedTheme);
+    resetThemeButton.addEventListener('click',restoreOriginalTheme);
     document.getElementById('shortlist-button').addEventListener('click',()=>{
       const name=directions[activeTheme].name;
       if(shortlisted.has(name))shortlisted.delete(name);else shortlisted.add(name);
       document.getElementById('shortlist-state').textContent=shortlisted.size?Array.from(shortlisted).join(' · '):'No direction selected yet';
       document.getElementById('shortlist-button').textContent=shortlisted.has(name)?'✓ Shortlisted':'＋ Shortlist this';
     });
-    setTheme('aurora');setScene('home');setSize('desktop');
+    setTheme('aurora');setScene('home');setSize('desktop');syncApplyThemeControls();
   </script>
 </body>
 </html>

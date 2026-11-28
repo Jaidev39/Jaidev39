@@ -54,8 +54,18 @@
   <title>Jaidev Chowdary Avirineni | Student Researcher · AI Developer · Builder</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    (() => {
+      try {
+        const allowed = ['aurora','orbit','editorial','quant','glass','mono','signal','field'];
+        const saved = localStorage.getItem('jaidev-portfolio-theme');
+        if (allowed.includes(saved)) document.documentElement.dataset.portfolioTheme = saved;
+      } catch (error) {}
+    })();
+  </script>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="portfolio-themes.css">
 </head>
 <body>
   <div class="cursor-spotlight" aria-hidden="true"></div>
